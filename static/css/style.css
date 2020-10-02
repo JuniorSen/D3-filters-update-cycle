@@ -1,0 +1,474 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    padding-top: 30px;
+
+  }
+  #tooltip {
+      background: #cacaca;
+      font-size: 15px;
+    border: 2px solid black;
+  }
+
+#tooltip td
+{
+  text-align: center;
+    /* background: #0f0; */
+}
+
+#tooltip td:nth-child(4n+3),
+#tooltip td:nth-child(4n+5)
+{
+    /* background: #f00; */
+    border-left: 2px solid gray;
+}
+#tooltip th
+{
+  text-align: center;
+    /* background: #0f0; */
+}
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 200;
+    background: rgb(53, 53, 53);
+  }
+
+  #right-panel {
+    background: rgb(43, 43, 43)!important;
+  
+  }
+.chart{
+    padding-bottom: 1%;
+}
+/* colors axes for d3 visuals */
+.domain, .tick line,.tick text {
+  stroke: #ffffff;
+  opacity: 0.9;
+  font-family: sans-serif;
+  font-size: 10;
+}
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+text.name {
+  fill: #cacaca;
+}
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+
+  }
+ 
+  .container_btns {
+    align-items: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(53, 53, 53);
+    padding-top: 2px;
+    height:100%;
+    width: 200%
+  }
+  
+  h1 {
+    text-align: left;
+    color: #444;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.4em;
+    font-size: 1em;
+  }
+  h2 {
+      color: #cacaca;
+      font-size: 16px;
+  }
+  
+  p, .glossList li {
+    text-align: left;
+    color: #cacaca;
+    letter-spacing: 0.05em;
+    font-size: 0.8em;
+    margin: 0 0 2em;
+  }
+  .divider{
+    width:auto;
+    height:2px;
+    display:inline-block;
+}
+  
+  .btn {
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 150%;
+    max-width: 100%;
+    padding: 4% 6% 6% 4%;
+    position: relative;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    width: 100%;
+  }
+  .btn:hover {
+    text-decoration: none;
+  }
+  
+  /*btn_background*/
+  .effect01 {
+    color: #FFF;
+    border: 4px solid #d1d1d1;
+    box-shadow:0px 0px 0px 1px rgb(109, 107, 218) inset;
+    background-color: rgb(109, 107, 218);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  .effect01:hover {
+    border: 4px solid #666;
+    background-color: #FFF;
+    box-shadow:0px 0px 0px 4px #EEE inset;
+  }
+  
+  /*btn_text*/
+  .effect01 span {
+    transition: all 0.2s ease-out;
+    z-index: 2;
+  }
+  .effect01:hover span{
+    letter-spacing: 0.13em;
+    color: #333;
+  }
+  
+  /*highlight*/
+  .effect01:after {
+    background: #FFF;
+    border: 0px solid #000;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .8;
+    position: absolute;
+    top: -50px;
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+    width: 50px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);/*easeOutCirc*/
+    z-index: 1;
+  }
+  .effect01:hover:after {
+    background: #FFF;
+    border: 20px solid #000;
+    opacity: 0;
+    left: 120%;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+  a {
+      padding-top: 1px;
+      padding-bottom: 1px;
+  }
+
+
+  .submit-btn {
+    color: #494949 !important;
+    /* text-transform: uppercase; */
+    text-decoration: none;
+    background: #ffffff;
+    padding: 1px;
+    border: 2px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    }
+
+.submit-btn:hover {
+        color: #ffffff !important;
+        background: #f6b93b;
+        border-color: #f6b93b !important;
+        transition: all 0.4s ease 0s;
+        }
+
+div.formTooltip {
+  position: absolute;
+  text-align: center;
+  width: auto;
+  height: 36px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: #cacaca;
+  border: 1px solid black;
+  border-radius: 4px;
+  pointer-events: none;
+}
+/* 
+.navbar-nav>li {             
+    float: none;
+    text-align: center;
+} */
+
+
+/* form svg button */
+.button rect {
+  stroke: #999faa; /* navy 40% */
+  stroke-width: 2px;
+}
+/* 
+.button rect.pressed {
+  fill: #000f2b; /* navy 100% */
+/* }  */
+
+
+.button #gradient-start {
+  stop-color: #999faa; /* navy 40% */
+  stop-opacity: 1;
+}
+
+.button #gradient-stop {
+  stop-color: #4d576b; /* navy 70% */
+  stop-opacity: 1;
+}
+
+.button #gradient-start.active, .button #gradient-start.pressed {
+  stop-color: #4d576b; /* navy 70% */
+}
+
+.button #gradient-stop.active, .button #gradient-stop.pressed {
+  stop-color: #000f2b; /* navy 100% */
+}
+
+.button text {
+  font-size: 12px;
+  fill: #eee;
+  pointer-events: none;
+  text-anchor: middle;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  h2 {
+    color: #cacaca;
+    font-size: 14px;
+}
+  .btn {
+    letter-spacing: 0.1em;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 150%;
+    max-width: 100%;
+    position: relative;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    width: 100%;
+  }
+  .btn:hover {
+    text-decoration: none;
+  }
+  
+  /*btn_background*/
+  .effect01 {
+    color: #FFF;
+    border: 4px solid #d1d1d1;
+    box-shadow:0px 0px 0px 1px rgb(109, 107, 218) inset;
+    background-color: rgb(109, 107, 218);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  .effect01:hover {
+    border: 4px solid #666;
+    background-color: #FFF;
+    box-shadow:0px 0px 0px 4px #EEE inset;
+  }
+  
+  /*btn_text*/
+  .effect01 span {
+    transition: all 0.2s ease-out;
+    z-index: 2;
+  }
+  .effect01:hover span{
+    letter-spacing: 0.13em;
+    color: #333;
+  }
+  
+  /*highlight*/
+  .effect01:after {
+    background: #FFF;
+    border: 0px solid #000;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .8;
+    position: absolute;
+    top: -50px;
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+    width: 50px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);/*easeOutCirc*/
+    z-index: 1;
+  }
+  .effect01:hover:after {
+    background: #FFF;
+    border: 20px solid #000;
+    opacity: 0;
+    left: 120%;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+  #tooltip {
+    background: #a19999;
+    font-size: 13px;
+  /* top:2%; */
+  border: 2px solid black;
+}
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  h2 {
+    color: #cacaca;
+    font-size: 12px;
+}
+  #tooltip {
+    background: #a19999;
+    font-size: 11px;
+  /* top:2%; */
+  border: 2px solid black;
+}
+  .btn {
+    letter-spacing: 0.1em;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 5px;
+    font-weight: 400;
+    line-height: 120%;
+    max-width: 140%;
+    position: relative;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    width: 140%;
+  }
+  .btn:hover {
+    text-decoration: none;
+  }
+  
+  /*btn_background*/
+  .effect01 {
+    color: #FFF;
+    border: 2px solid #d1d1d1;
+    box-shadow:0px 0px 0px 1px rgb(109, 107, 218) inset;
+    background-color: rgb(109, 107, 218);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  .effect01:hover {
+    border: 2px solid #666;
+    background-color: #FFF;
+    box-shadow:0px 0px 0px 2px #EEE inset;
+  }
+  
+  /*btn_text*/
+  .effect01 span {
+    transition: all 0.2s ease-out;
+    z-index: 2;
+  }
+  .effect01:hover span{
+    letter-spacing: 0.13em;
+    color: #333;
+  }
+  
+  /*highlight*/
+  .effect01:after {
+    background: #FFF;
+    border: 0px solid #000;
+    content: "";
+    height: 140px;
+    left: -75px;
+    opacity: .8;
+    position: absolute;
+    top: -50px;
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+    width: 50px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);/*easeOutCirc*/
+    z-index: 1;
+  }
+  .effect01:hover:after {
+    background: #FFF;
+    border: 15px solid #000;
+    opacity: 0;
+    left: 120%;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  h2 {
+    color: #cacaca;
+    font-size: 14px;
+}
+  body{ overflow: auto;}
+  .btn {
+    letter-spacing: 0.1em;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 5px;
+    font-weight: 400;
+    line-height: 125%;
+    max-width: 100%;
+    position: relative;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    width: 100%;
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+
+}
+
+.glossList {
+  width: 70%;
+  margin: auto;
+}
+.glossList li{
+  color: #ffffff;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

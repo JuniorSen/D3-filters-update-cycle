@@ -1,0 +1,761 @@
+,PointsTotal,DateParse,Squad,HA,P_color,rank,matchup,score_H,score_A,Points
+22,0,2017-08-11,Leicester City,A,#0053a0 ,20.0,Arsenal vs. Leicester City,4,3,0
+25,3,2017-08-11,Arsenal,H,#ef0107 ,1.0,Arsenal vs. Leicester City,4,3,3
+27,0,2017-08-12,Bournemouth,A,#8b0304 ,17.0,West Bromwich Albion vs. Bournemouth,1,0,0
+30,1,2017-08-12,Watford,H,#fbee23 ,8.0,Watford vs. Liverpool,3,3,1
+31,0,2017-08-12,Stoke City,A,#e03a3e,18.0,Everton vs. Stoke City,1,0,0
+36,3,2017-08-12,West Bromwich Albion,H,#122f67,5.0,West Bromwich Albion vs. Bournemouth,1,0,3
+37,1,2017-08-12,Southampton,H,#ed1a3b ,9.0,Southampton vs. Swansea City,0,0,1
+38,1,2017-08-12,Swansea City,A,#ffffff ,10.0,Southampton vs. Swansea City,0,0,1
+39,3,2017-08-12,Manchester City,A,#6caddf ,2.0,Brighton vs. Manchester City,0,2,3
+40,0,2017-08-12,Crystal Palace,H,#27409b ,20.0,Crystal Palace vs. Huddersfield Town,0,3,0
+41,0,2017-08-12,Brighton,H,#005daa ,19.0,Brighton vs. Manchester City,0,2,0
+44,3,2017-08-12,Huddersfield Town,A,#176fc0,1.0,Crystal Palace vs. Huddersfield Town,0,3,3
+45,0,2017-08-12,Chelsea,H,#034694 ,16.0,Chelsea vs. Burnley,2,3,0
+47,3,2017-08-12,Burnley,A,#800000 ,4.0,Chelsea vs. Burnley,2,3,3
+48,1,2017-08-12,Liverpool,A,#dd0000 ,7.0,Watford vs. Liverpool,3,3,1
+49,3,2017-08-12,Everton,H,#0d00e9 ,6.0,Everton vs. Stoke City,1,0,3
+51,0,2017-08-13,West Ham,A,#7f0000 ,20.0,Manchester Utd vs. West Ham,4,0,0
+53,0,2017-08-13,Newcastle Utd,H,#fafafa ,18.0,Newcastle Utd vs. Tottenham,0,2,0
+54,3,2017-08-13,Tottenham,A,#fafafa ,4.0,Newcastle Utd vs. Tottenham,0,2,3
+55,3,2017-08-13,Manchester Utd,H,#b40509 ,1.0,Manchester Utd vs. West Ham,4,0,3
+71,0,2017-08-19,Bournemouth,H,#8b0304 ,17.0,Bournemouth vs. Watford,0,2,0
+75,3,2017-08-19,Burnley,H,#800000 ,12.0,Burnley vs. West Bromwich Albion,0,1,0
+85,0,2017-08-19,Brighton,A,#005daa ,18.0,Leicester City vs. Brighton,2,0,0
+88,6,2017-08-19,West Bromwich Albion,A,#122f67,2.0,Burnley vs. West Bromwich Albion,0,1,3
+91,4,2017-08-19,Liverpool,H,#dd0000 ,4.0,Liverpool vs. Crystal Palace,1,0,3
+93,0,2017-08-19,Crystal Palace,A,#27409b ,19.0,Liverpool vs. Crystal Palace,1,0,0
+96,3,2017-08-19,Arsenal,A,#ef0107 ,11.0,Stoke City vs. Arsenal,1,0,0
+97,4,2017-08-19,Southampton,H,#ed1a3b ,5.0,Southampton vs. West Ham,3,2,3
+99,3,2017-08-19,Stoke City,H,#e03a3e,13.0,Stoke City vs. Arsenal,1,0,3
+101,1,2017-08-19,Swansea City,H,#ffffff ,14.0,Swansea City vs. Manchester Utd,0,4,0
+104,3,2017-08-19,Leicester City,H,#0053a0 ,9.0,Leicester City vs. Brighton,2,0,3
+106,0,2017-08-19,West Ham,A,#7f0000 ,20.0,Southampton vs. West Ham,3,2,0
+108,6,2017-08-19,Manchester Utd,A,#b40509 ,1.0,Swansea City vs. Manchester Utd,0,4,3
+112,4,2017-08-19,Watford,A,#fbee23 ,3.0,Bournemouth vs. Watford,0,2,3
+135,3,2017-08-20,Tottenham,H,#fafafa ,9.0,Tottenham vs. Chelsea,1,2,0
+141,6,2017-08-20,Huddersfield Town,H,#176fc0,2.0,Huddersfield Town vs. Newcastle Utd,1,0,3
+144,0,2017-08-20,Newcastle Utd,A,#fafafa ,17.0,Huddersfield Town vs. Newcastle Utd,1,0,0
+151,3,2017-08-20,Chelsea,A,#034694 ,11.0,Tottenham vs. Chelsea,1,2,3
+152,4,2017-08-21,Everton,A,#0d00e9 ,8.0,Manchester City vs. Everton,1,1,1
+153,4,2017-08-21,Manchester City,H,#6caddf ,5.0,Manchester City vs. Everton,1,1,1
+169,3,2017-08-26,Leicester City,A,#0053a0 ,16.0,Manchester Utd vs. Leicester City,2,0,0
+170,9,2017-08-26,Manchester Utd,H,#b40509 ,1.0,Manchester Utd vs. Leicester City,2,0,3
+172,3,2017-08-26,Newcastle Utd,H,#fafafa ,13.0,Newcastle Utd vs. West Ham,3,0,3
+173,0,2017-08-26,Crystal Palace,H,#27409b ,19.0,Crystal Palace vs. Swansea City,0,2,0
+174,7,2017-08-26,Manchester City,A,#6caddf ,3.0,Bournemouth vs. Manchester City,1,2,3
+176,7,2017-08-26,Huddersfield Town,H,#176fc0,2.0,Huddersfield Town vs. Southampton,0,0,1
+178,5,2017-08-26,Southampton,A,#ed1a3b ,6.0,Huddersfield Town vs. Southampton,0,0,1
+183,1,2017-08-26,Brighton,A,#005daa ,17.0,Watford vs. Brighton,0,0,1
+188,0,2017-08-26,Bournemouth,H,#8b0304 ,18.0,Bournemouth vs. Manchester City,1,2,0
+197,0,2017-08-26,West Ham,A,#7f0000 ,20.0,Newcastle Utd vs. West Ham,3,0,0
+199,5,2017-08-26,Watford,H,#fbee23 ,5.0,Watford vs. Brighton,0,0,1
+202,4,2017-08-26,Swansea City,A,#ffffff ,9.0,Crystal Palace vs. Swansea City,0,2,3
+219,4,2017-08-27,Tottenham,H,#fafafa ,9.0,Tottenham vs. Burnley,1,1,1
+231,3,2017-08-27,Arsenal,A,#ef0107 ,16.0,Liverpool vs. Arsenal,4,0,0
+233,4,2017-08-27,Stoke City,A,#e03a3e,11.0,West Bromwich Albion vs. Stoke City,1,1,1
+239,4,2017-08-27,Everton,A,#0d00e9 ,12.0,Chelsea vs. Everton,2,0,0
+241,6,2017-08-27,Chelsea,H,#034694 ,6.0,Chelsea vs. Everton,2,0,3
+246,7,2017-08-27,Liverpool,H,#dd0000 ,2.0,Liverpool vs. Arsenal,4,0,3
+251,4,2017-08-27,Burnley,A,#800000 ,10.0,Tottenham vs. Burnley,1,1,1
+255,7,2017-08-27,West Bromwich Albion,H,#122f67,5.0,West Bromwich Albion vs. Stoke City,1,1,1
+266,6,2017-09-09,Arsenal,H,#ef0107 ,9.0,Arsenal vs. Bournemouth,3,0,3
+270,10,2017-09-09,Manchester City,H,#6caddf ,2.0,Manchester City vs. Liverpool,5,0,3
+272,5,2017-09-09,Southampton,H,#ed1a3b ,11.0,Southampton vs. Watford,0,2,0
+273,4,2017-09-09,Brighton,H,#005daa ,13.0,Brighton vs. West Bromwich Albion,3,1,3
+277,9,2017-09-09,Chelsea,A,#034694 ,3.0,Leicester City vs. Chelsea,1,2,3
+283,7,2017-09-09,Tottenham,A,#fafafa ,5.0,Everton vs. Tottenham,0,3,3
+284,7,2017-09-09,Liverpool,A,#dd0000 ,7.0,Manchester City vs. Liverpool,5,0,0
+289,4,2017-09-09,Everton,H,#0d00e9 ,15.0,Everton vs. Tottenham,0,3,0
+290,5,2017-09-09,Stoke City,H,#e03a3e,10.0,Stoke City vs. Manchester Utd,2,2,1
+292,3,2017-09-09,Leicester City,H,#0053a0 ,17.0,Leicester City vs. Chelsea,1,2,0
+296,10,2017-09-09,Manchester Utd,A,#b40509 ,1.0,Stoke City vs. Manchester Utd,2,2,1
+300,8,2017-09-09,Watford,A,#fbee23 ,4.0,Southampton vs. Watford,0,2,3
+301,7,2017-09-09,West Bromwich Albion,A,#122f67,8.0,Brighton vs. West Bromwich Albion,3,1,0
+302,0,2017-09-09,Bournemouth,A,#8b0304 ,19.0,Arsenal vs. Bournemouth,3,0,0
+321,7,2017-09-10,Burnley,H,#800000 ,7.0,Burnley vs. Crystal Palace,1,0,3
+322,6,2017-09-10,Newcastle Utd,A,#fafafa ,10.0,Swansea City vs. Newcastle Utd,0,1,3
+335,4,2017-09-10,Swansea City,H,#ffffff ,15.0,Swansea City vs. Newcastle Utd,0,1,0
+346,0,2017-09-10,Crystal Palace,A,#27409b ,19.0,Burnley vs. Crystal Palace,1,0,0
+349,7,2017-09-11,Huddersfield Town,A,#176fc0,6.0,West Ham vs. Huddersfield Town,2,0,0
+350,3,2017-09-11,West Ham,H,#7f0000 ,18.0,West Ham vs. Huddersfield Town,2,0,3
+353,3,2017-09-15,Bournemouth,H,#8b0304 ,19.0,Bournemouth vs. Brighton,2,1,3
+355,4,2017-09-15,Brighton,A,#005daa ,14.0,Bournemouth vs. Brighton,2,1,0
+362,8,2017-09-16,Tottenham,H,#fafafa ,5.0,Tottenham vs. Swansea City,0,0,1
+363,13,2017-09-16,Manchester City,A,#6caddf ,1.0,Watford vs. Manchester City,0,6,3
+365,5,2017-09-16,Swansea City,A,#ffffff ,14.0,Tottenham vs. Swansea City,0,0,1
+366,5,2017-09-16,Stoke City,A,#e03a3e,13.0,Newcastle Utd vs. Stoke City,2,1,0
+368,8,2017-09-16,West Bromwich Albion,H,#122f67,9.0,West Bromwich Albion vs. West Ham,0,0,1
+379,8,2017-09-16,Southampton,A,#ed1a3b ,10.0,Crystal Palace vs. Southampton,0,1,3
+380,8,2017-09-16,Watford,H,#fbee23 ,11.0,Watford vs. Manchester City,0,6,0
+382,0,2017-09-16,Crystal Palace,H,#27409b ,20.0,Crystal Palace vs. Southampton,0,1,0
+385,8,2017-09-16,Burnley,A,#800000 ,7.0,Liverpool vs. Burnley,1,1,1
+388,4,2017-09-16,West Ham,A,#7f0000 ,18.0,West Bromwich Albion vs. West Ham,0,0,1
+394,8,2017-09-16,Liverpool,H,#dd0000 ,8.0,Liverpool vs. Burnley,1,1,1
+398,9,2017-09-16,Newcastle Utd,H,#fafafa ,4.0,Newcastle Utd vs. Stoke City,2,1,3
+399,4,2017-09-16,Leicester City,A,#0053a0 ,15.0,Huddersfield Town vs. Leicester City,1,1,1
+406,8,2017-09-16,Huddersfield Town,H,#176fc0,6.0,Huddersfield Town vs. Leicester City,1,1,1
+414,10,2017-09-17,Chelsea,H,#034694 ,3.0,Chelsea vs. Arsenal,0,0,1
+425,13,2017-09-17,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. Everton,4,0,3
+426,7,2017-09-17,Arsenal,A,#ef0107 ,12.0,Chelsea vs. Arsenal,0,0,1
+442,4,2017-09-17,Everton,A,#0d00e9 ,18.0,Manchester Utd vs. Everton,4,0,0
+519,5,2017-09-23,Stoke City,H,#e03a3e,15.0,Stoke City vs. Chelsea,0,4,0
+526,9,2017-09-23,Huddersfield Town,A,#176fc0,8.0,Burnley vs. Huddersfield Town,0,0,1
+529,9,2017-09-23,Burnley,H,#800000 ,9.0,Burnley vs. Huddersfield Town,0,0,1
+531,11,2017-09-23,Tottenham,A,#fafafa ,4.0,West Ham vs. Tottenham,2,3,3
+540,16,2017-09-23,Manchester City,H,#6caddf ,1.0,Manchester City vs. Crystal Palace,5,0,3
+544,4,2017-09-23,West Ham,H,#7f0000 ,18.0,West Ham vs. Tottenham,2,3,0
+545,4,2017-09-23,Leicester City,H,#0053a0 ,16.0,Leicester City vs. Liverpool,2,3,0
+546,8,2017-09-23,Southampton,H,#ed1a3b ,11.0,Southampton vs. Manchester Utd,0,1,0
+549,3,2017-09-23,Bournemouth,A,#8b0304 ,19.0,Everton vs. Bournemouth,2,1,0
+551,5,2017-09-23,Swansea City,H,#ffffff ,14.0,Swansea City vs. Watford,1,2,0
+552,16,2017-09-23,Manchester Utd,A,#b40509 ,2.0,Southampton vs. Manchester Utd,0,1,3
+556,11,2017-09-23,Watford,A,#fbee23 ,6.0,Swansea City vs. Watford,1,2,3
+557,0,2017-09-23,Crystal Palace,A,#27409b ,20.0,Manchester City vs. Crystal Palace,5,0,0
+558,7,2017-09-23,Everton,H,#0d00e9 ,13.0,Everton vs. Bournemouth,2,1,3
+561,11,2017-09-23,Liverpool,A,#dd0000 ,5.0,Leicester City vs. Liverpool,2,3,3
+565,13,2017-09-23,Chelsea,A,#034694 ,3.0,Stoke City vs. Chelsea,0,4,3
+589,9,2017-09-24,Newcastle Utd,A,#fafafa ,9.0,Brighton vs. Newcastle Utd,1,0,0
+598,7,2017-09-24,Brighton,H,#005daa ,13.0,Brighton vs. Newcastle Utd,1,0,3
+603,10,2017-09-25,Arsenal,H,#ef0107 ,7.0,Arsenal vs. West Bromwich Albion,2,0,3
+605,8,2017-09-25,West Bromwich Albion,A,#122f67,12.0,Arsenal vs. West Bromwich Albion,2,0,0
+612,9,2017-09-30,Huddersfield Town,H,#176fc0,11.0,Huddersfield Town vs. Tottenham,0,4,0
+613,0,2017-09-30,Crystal Palace,A,#27409b ,20.0,Manchester Utd vs. Crystal Palace,4,0,0
+614,7,2017-09-30,West Ham,H,#7f0000 ,15.0,West Ham vs. Swansea City,1,0,3
+615,19,2017-09-30,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. Crystal Palace,4,0,3
+616,9,2017-09-30,West Bromwich Albion,H,#122f67,10.0,West Bromwich Albion vs. Watford,2,2,1
+623,4,2017-09-30,Bournemouth,H,#8b0304 ,19.0,Bournemouth vs. Leicester City,0,0,1
+625,12,2017-09-30,Watford,A,#fbee23 ,5.0,West Bromwich Albion vs. Watford,2,2,1
+631,8,2017-09-30,Southampton,A,#ed1a3b ,12.0,Stoke City vs. Southampton,2,1,0
+632,8,2017-09-30,Stoke City,H,#e03a3e,13.0,Stoke City vs. Southampton,2,1,3
+641,19,2017-09-30,Manchester City,A,#6caddf ,1.0,Chelsea vs. Manchester City,0,1,3
+648,13,2017-09-30,Chelsea,H,#034694 ,4.0,Chelsea vs. Manchester City,0,1,0
+652,14,2017-09-30,Tottenham,A,#fafafa ,3.0,Huddersfield Town vs. Tottenham,0,4,3
+654,5,2017-09-30,Leicester City,A,#0053a0 ,17.0,Bournemouth vs. Leicester City,0,0,1
+657,5,2017-09-30,Swansea City,A,#ffffff ,18.0,West Ham vs. Swansea City,1,0,0
+658,12,2017-10-01,Burnley,A,#800000 ,6.0,Everton vs. Burnley,0,1,3
+661,7,2017-10-01,Everton,H,#0d00e9 ,16.0,Everton vs. Burnley,0,1,0
+665,10,2017-10-01,Newcastle Utd,H,#fafafa ,9.0,Newcastle Utd vs. Liverpool,1,1,1
+668,12,2017-10-01,Liverpool,A,#dd0000 ,7.0,Newcastle Utd vs. Liverpool,1,1,1
+697,7,2017-10-01,Brighton,A,#005daa ,14.0,Arsenal vs. Brighton,2,0,0
+701,13,2017-10-01,Arsenal,H,#ef0107 ,5.0,Arsenal vs. Brighton,2,0,3
+708,22,2017-10-14,Manchester City,H,#6caddf ,1.0,Manchester City vs. Stoke City,7,2,3
+710,8,2017-10-14,West Ham,A,#7f0000 ,14.0,Burnley vs. West Ham,1,1,1
+711,9,2017-10-14,Huddersfield Town,A,#176fc0,11.0,Swansea City vs. Huddersfield Town,2,0,0
+712,17,2017-10-14,Tottenham,H,#fafafa ,3.0,Tottenham vs. Bournemouth,1,0,3
+713,13,2017-10-14,Liverpool,H,#dd0000 ,8.0,Liverpool vs. Manchester Utd,0,0,1
+716,8,2017-10-14,Stoke City,A,#e03a3e,15.0,Manchester City vs. Stoke City,7,2,0
+718,15,2017-10-14,Watford,H,#fbee23 ,4.0,Watford vs. Arsenal,2,1,3
+720,8,2017-10-14,Swansea City,H,#ffffff ,13.0,Swansea City vs. Huddersfield Town,2,0,3
+724,13,2017-10-14,Burnley,H,#800000 ,7.0,Burnley vs. West Ham,1,1,1
+726,13,2017-10-14,Chelsea,A,#034694 ,5.0,Crystal Palace vs. Chelsea,2,1,0
+741,13,2017-10-14,Arsenal,A,#ef0107 ,6.0,Watford vs. Arsenal,2,1,0
+743,4,2017-10-14,Bournemouth,A,#8b0304 ,19.0,Tottenham vs. Bournemouth,1,0,0
+746,20,2017-10-14,Manchester Utd,A,#b40509 ,2.0,Liverpool vs. Manchester Utd,0,0,1
+749,3,2017-10-14,Crystal Palace,H,#27409b ,20.0,Crystal Palace vs. Chelsea,2,1,3
+761,8,2017-10-15,Everton,A,#0d00e9 ,16.0,Brighton vs. Everton,1,1,1
+762,8,2017-10-15,Brighton,H,#005daa ,14.0,Brighton vs. Everton,1,1,1
+765,11,2017-10-15,Newcastle Utd,A,#fafafa ,9.0,Southampton vs. Newcastle Utd,2,2,1
+768,9,2017-10-15,Southampton,H,#ed1a3b ,10.0,Southampton vs. Newcastle Utd,2,2,1
+796,6,2017-10-16,Leicester City,H,#0053a0 ,18.0,Leicester City vs. West Bromwich Albion,1,1,1
+797,10,2017-10-16,West Bromwich Albion,A,#122f67,10.0,Leicester City vs. West Bromwich Albion,1,1,1
+804,8,2017-10-20,West Ham,H,#7f0000 ,17.0,West Ham vs. Brighton,0,3,0
+805,11,2017-10-20,Brighton,A,#005daa ,10.0,West Ham vs. Brighton,0,3,3
+807,8,2017-10-21,Swansea City,H,#ffffff ,15.0,Swansea City vs. Leicester City,1,2,0
+809,14,2017-10-21,Newcastle Utd,H,#fafafa ,6.0,Newcastle Utd vs. Crystal Palace,1,0,3
+812,3,2017-10-21,Crystal Palace,A,#27409b ,20.0,Newcastle Utd vs. Crystal Palace,1,0,0
+813,9,2017-10-21,Leicester City,A,#0053a0 ,14.0,Swansea City vs. Leicester City,1,2,3
+814,7,2017-10-21,Bournemouth,A,#8b0304 ,19.0,Stoke City vs. Bournemouth,1,2,3
+817,15,2017-10-21,Watford,A,#fbee23 ,5.0,Chelsea vs. Watford,4,2,0
+818,12,2017-10-21,Huddersfield Town,H,#176fc0,11.0,Huddersfield Town vs. Manchester Utd,2,1,3
+830,13,2017-10-21,Burnley,A,#800000 ,9.0,Manchester City vs. Burnley,3,0,0
+832,12,2017-10-21,Southampton,H,#ed1a3b ,10.0,Southampton vs. West Bromwich Albion,1,0,3
+834,10,2017-10-21,West Bromwich Albion,A,#122f67,13.0,Southampton vs. West Bromwich Albion,1,0,0
+836,20,2017-10-21,Manchester Utd,A,#b40509 ,2.0,Huddersfield Town vs. Manchester Utd,2,1,0
+841,25,2017-10-21,Manchester City,H,#6caddf ,1.0,Manchester City vs. Burnley,3,0,3
+844,16,2017-10-21,Chelsea,H,#034694 ,4.0,Chelsea vs. Watford,4,2,3
+847,8,2017-10-21,Stoke City,H,#e03a3e,18.0,Stoke City vs. Bournemouth,1,2,0
+855,8,2017-10-22,Everton,H,#0d00e9 ,18.0,Everton vs. Arsenal,2,5,0
+861,13,2017-10-22,Liverpool,A,#dd0000 ,9.0,Tottenham vs. Liverpool,4,1,0
+870,16,2017-10-22,Arsenal,A,#ef0107 ,5.0,Everton vs. Arsenal,2,5,3
+892,20,2017-10-22,Tottenham,H,#fafafa ,3.0,Tottenham vs. Liverpool,4,1,3
+930,7,2017-10-28,Bournemouth,H,#8b0304 ,19.0,Bournemouth vs. Chelsea,0,1,0
+933,9,2017-10-28,West Ham,A,#7f0000 ,16.0,Crystal Palace vs. West Ham,2,2,1
+934,20,2017-10-28,Tottenham,A,#fafafa ,3.0,Manchester Utd vs. Tottenham,1,0,0
+937,23,2017-10-28,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. Tottenham,1,0,3
+938,12,2017-10-28,Huddersfield Town,A,#176fc0,11.0,Liverpool vs. Huddersfield Town,3,0,0
+940,10,2017-10-28,West Bromwich Albion,H,#122f67,14.0,West Bromwich Albion vs. Manchester City,2,3,0
+942,11,2017-10-28,Stoke City,A,#e03a3e,13.0,Watford vs. Stoke City,0,1,3
+944,4,2017-10-28,Crystal Palace,H,#27409b ,20.0,Crystal Palace vs. West Ham,2,2,1
+946,8,2017-10-28,Swansea City,A,#ffffff ,17.0,Arsenal vs. Swansea City,2,1,0
+949,15,2017-10-28,Watford,H,#fbee23 ,7.0,Watford vs. Stoke City,0,1,0
+951,19,2017-10-28,Chelsea,A,#034694 ,4.0,Bournemouth vs. Chelsea,0,1,3
+953,19,2017-10-28,Arsenal,H,#ef0107 ,5.0,Arsenal vs. Swansea City,2,1,3
+960,16,2017-10-28,Liverpool,H,#dd0000 ,6.0,Liverpool vs. Huddersfield Town,3,0,3
+965,28,2017-10-28,Manchester City,A,#6caddf ,1.0,West Bromwich Albion vs. Manchester City,2,3,3
+972,8,2017-10-29,Everton,A,#0d00e9 ,18.0,Leicester City vs. Everton,2,0,0
+981,13,2017-10-29,Southampton,A,#ed1a3b ,9.0,Brighton vs. Southampton,1,1,1
+989,12,2017-10-29,Brighton,H,#005daa ,12.0,Brighton vs. Southampton,1,1,1
+997,12,2017-10-29,Leicester City,H,#0053a0 ,11.0,Leicester City vs. Everton,2,0,3
+1009,16,2017-10-30,Burnley,H,#800000 ,7.0,Burnley vs. Newcastle Utd,1,0,3
+1013,14,2017-10-30,Newcastle Utd,A,#fafafa ,9.0,Burnley vs. Newcastle Utd,1,0,0
+1022,8,2017-11-04,Swansea City,H,#ffffff ,18.0,Swansea City vs. Brighton,0,1,0
+1029,12,2017-11-04,Stoke City,H,#e03a3e,14.0,Stoke City vs. Leicester City,2,2,1
+1034,15,2017-11-04,Brighton,A,#005daa ,8.0,Swansea City vs. Brighton,0,1,3
+1035,13,2017-11-04,Southampton,H,#ed1a3b ,13.0,Southampton vs. Burnley,0,1,0
+1038,9,2017-11-04,West Ham,H,#7f0000 ,17.0,West Ham vs. Liverpool,1,4,0
+1045,10,2017-11-04,Bournemouth,A,#8b0304 ,16.0,Newcastle Utd vs. Bournemouth,0,1,3
+1052,13,2017-11-04,Leicester City,A,#0053a0 ,12.0,Stoke City vs. Leicester City,2,2,1
+1054,10,2017-11-04,West Bromwich Albion,A,#122f67,15.0,Huddersfield Town vs. West Bromwich Albion,1,0,0
+1060,19,2017-11-04,Burnley,A,#800000 ,7.0,Southampton vs. Burnley,0,1,3
+1061,14,2017-11-04,Newcastle Utd,H,#fafafa ,11.0,Newcastle Utd vs. Bournemouth,0,1,0
+1062,19,2017-11-04,Liverpool,A,#dd0000 ,6.0,West Ham vs. Liverpool,1,4,3
+1064,15,2017-11-04,Huddersfield Town,H,#176fc0,10.0,Huddersfield Town vs. West Bromwich Albion,1,0,3
+1071,4,2017-11-05,Crystal Palace,A,#27409b ,20.0,Tottenham vs. Crystal Palace,1,0,0
+1077,15,2017-11-05,Watford,A,#fbee23 ,9.0,Everton vs. Watford,3,2,0
+1086,11,2017-11-05,Everton,H,#0d00e9 ,15.0,Everton vs. Watford,3,2,3
+1090,23,2017-11-05,Manchester Utd,A,#b40509 ,2.0,Chelsea vs. Manchester Utd,1,0,0
+1103,31,2017-11-05,Manchester City,H,#6caddf ,1.0,Manchester City vs. Arsenal,3,1,3
+1104,23,2017-11-05,Tottenham,H,#fafafa ,3.0,Tottenham vs. Crystal Palace,1,0,3
+1108,19,2017-11-05,Arsenal,A,#ef0107 ,6.0,Manchester City vs. Arsenal,3,1,0
+1110,22,2017-11-05,Chelsea,H,#034694 ,4.0,Chelsea vs. Manchester Utd,1,0,3
+1122,15,2017-11-18,Huddersfield Town,A,#176fc0,10.0,Bournemouth vs. Huddersfield Town,4,0,0
+1128,25,2017-11-18,Chelsea,A,#034694 ,3.0,West Bromwich Albion vs. Chelsea,0,4,3
+1129,22,2017-11-18,Arsenal,H,#ef0107 ,6.0,Arsenal vs. Tottenham,2,0,3
+1135,13,2017-11-18,Bournemouth,H,#8b0304 ,13.0,Bournemouth vs. Huddersfield Town,4,0,3
+1137,22,2017-11-18,Burnley,H,#800000 ,7.0,Burnley vs. Swansea City,2,0,3
+1143,13,2017-11-18,Southampton,A,#ed1a3b ,14.0,Liverpool vs. Southampton,3,0,0
+1149,13,2017-11-18,Leicester City,H,#0053a0 ,12.0,Leicester City vs. Manchester City,0,2,0
+1152,8,2017-11-18,Swansea City,A,#ffffff ,19.0,Burnley vs. Swansea City,2,0,0
+1153,34,2017-11-18,Manchester City,A,#6caddf ,1.0,Leicester City vs. Manchester City,0,2,3
+1154,5,2017-11-18,Crystal Palace,H,#27409b ,20.0,Crystal Palace vs. Everton,2,2,1
+1155,14,2017-11-18,Newcastle Utd,A,#fafafa ,11.0,Manchester Utd vs. Newcastle Utd,4,1,0
+1157,10,2017-11-18,West Bromwich Albion,H,#122f67,17.0,West Bromwich Albion vs. Chelsea,0,4,0
+1159,22,2017-11-18,Liverpool,H,#dd0000 ,5.0,Liverpool vs. Southampton,3,0,3
+1160,12,2017-11-18,Everton,A,#0d00e9 ,16.0,Crystal Palace vs. Everton,2,2,1
+1161,23,2017-11-18,Tottenham,A,#fafafa ,4.0,Arsenal vs. Tottenham,2,0,0
+1163,26,2017-11-18,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. Newcastle Utd,4,1,3
+1186,9,2017-11-19,West Ham,A,#7f0000 ,18.0,Watford vs. West Ham,2,0,0
+1192,18,2017-11-19,Watford,H,#fbee23 ,8.0,Watford vs. West Ham,2,0,3
+1206,16,2017-11-20,Brighton,H,#005daa ,9.0,Brighton vs. Stoke City,2,2,1
+1207,13,2017-11-20,Stoke City,A,#e03a3e,15.0,Brighton vs. Stoke City,2,2,1
+1217,10,2017-11-24,West Ham,H,#7f0000 ,18.0,West Ham vs. Leicester City,1,1,1
+1218,14,2017-11-24,Leicester City,A,#0053a0 ,11.0,West Ham vs. Leicester City,1,1,1
+1225,13,2017-11-25,Stoke City,A,#e03a3e,15.0,Crystal Palace vs. Stoke City,2,1,0
+1234,24,2017-11-25,Tottenham,H,#fafafa ,4.0,Tottenham vs. West Bromwich Albion,1,1,1
+1239,14,2017-11-25,Newcastle Utd,H,#fafafa ,13.0,Newcastle Utd vs. Watford,0,3,0
+1244,26,2017-11-25,Chelsea,A,#034694 ,3.0,Liverpool vs. Chelsea,1,1,1
+1245,23,2017-11-25,Liverpool,H,#dd0000 ,5.0,Liverpool vs. Chelsea,1,1,1
+1246,29,2017-11-25,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. Brighton,1,0,3
+1248,16,2017-11-25,Brighton,A,#005daa ,9.0,Manchester Utd vs. Brighton,1,0,0
+1258,11,2017-11-25,West Bromwich Albion,A,#122f67,17.0,Tottenham vs. West Bromwich Albion,1,1,1
+1259,9,2017-11-25,Swansea City,H,#ffffff ,19.0,Swansea City vs. Bournemouth,0,0,1
+1264,14,2017-11-25,Bournemouth,A,#8b0304 ,12.0,Swansea City vs. Bournemouth,0,0,1
+1265,21,2017-11-25,Watford,A,#fbee23 ,8.0,Newcastle Utd vs. Watford,0,3,3
+1270,8,2017-11-25,Crystal Palace,H,#27409b ,20.0,Crystal Palace vs. Stoke City,2,1,3
+1276,25,2017-11-26,Arsenal,A,#ef0107 ,4.0,Burnley vs. Arsenal,0,1,3
+1278,12,2017-11-26,Everton,A,#0d00e9 ,16.0,Southampton vs. Everton,4,1,0
+1285,22,2017-11-26,Burnley,H,#800000 ,7.0,Burnley vs. Arsenal,0,1,0
+1289,15,2017-11-26,Huddersfield Town,H,#176fc0,11.0,Huddersfield Town vs. Manchester City,1,2,0
+1293,37,2017-11-26,Manchester City,A,#6caddf ,1.0,Huddersfield Town vs. Manchester City,1,2,3
+1301,16,2017-11-26,Southampton,H,#ed1a3b ,10.0,Southampton vs. Everton,4,1,3
+1311,17,2017-11-28,Leicester City,H,#0053a0 ,9.0,Leicester City vs. Tottenham,2,1,3
+1317,32,2017-11-28,Manchester Utd,A,#b40509 ,2.0,Watford vs. Manchester Utd,2,4,3
+1318,15,2017-11-28,Newcastle Utd,A,#fafafa ,12.0,West Bromwich Albion vs. Newcastle Utd,2,2,1
+1319,9,2017-11-28,Crystal Palace,A,#27409b ,20.0,Brighton vs. Crystal Palace,0,0,1
+1320,12,2017-11-28,West Bromwich Albion,H,#122f67,16.0,West Bromwich Albion vs. Newcastle Utd,2,2,1
+1321,24,2017-11-28,Tottenham,A,#fafafa ,5.0,Leicester City vs. Tottenham,2,1,0
+1322,17,2017-11-28,Brighton,H,#005daa ,10.0,Brighton vs. Crystal Palace,0,0,1
+1323,21,2017-11-28,Watford,H,#fbee23 ,8.0,Watford vs. Manchester Utd,2,4,0
+1328,15,2017-11-29,Huddersfield Town,A,#176fc0,14.0,Arsenal vs. Huddersfield Town,5,0,0
+1331,28,2017-11-29,Arsenal,H,#ef0107 ,4.0,Arsenal vs. Huddersfield Town,5,0,3
+1333,13,2017-11-29,Stoke City,H,#e03a3e,16.0,Stoke City vs. Liverpool,0,3,0
+1334,14,2017-11-29,Bournemouth,H,#8b0304 ,15.0,Bournemouth vs. Burnley,1,2,0
+1336,9,2017-11-29,Swansea City,A,#ffffff ,19.0,Chelsea vs. Swansea City,1,0,0
+1337,26,2017-11-29,Liverpool,A,#dd0000 ,5.0,Stoke City vs. Liverpool,0,3,3
+1341,16,2017-11-29,Southampton,A,#ed1a3b ,11.0,Manchester City vs. Southampton,2,1,0
+1343,25,2017-11-29,Burnley,A,#800000 ,6.0,Bournemouth vs. Burnley,1,2,3
+1345,40,2017-11-29,Manchester City,H,#6caddf ,1.0,Manchester City vs. Southampton,2,1,3
+1346,29,2017-11-29,Chelsea,H,#034694 ,3.0,Chelsea vs. Swansea City,1,0,3
+1347,10,2017-11-29,West Ham,A,#7f0000 ,18.0,Everton vs. West Ham,4,0,0
+1348,15,2017-11-29,Everton,H,#0d00e9 ,13.0,Everton vs. West Ham,4,0,3
+1360,17,2017-12-02,Brighton,H,#005daa ,11.0,Brighton vs. Liverpool,1,5,0
+1361,18,2017-12-02,Everton,H,#0d00e9 ,10.0,Everton vs. Huddersfield Town,2,0,3
+1362,25,2017-12-02,Burnley,A,#800000 ,7.0,Leicester City vs. Burnley,1,0,0
+1364,29,2017-12-02,Liverpool,A,#dd0000 ,4.0,Brighton vs. Liverpool,1,5,3
+1365,15,2017-12-02,Newcastle Utd,A,#fafafa ,14.0,Chelsea vs. Newcastle Utd,3,1,0
+1367,22,2017-12-02,Watford,H,#fbee23 ,8.0,Watford vs. Tottenham,1,1,1
+1375,10,2017-12-02,Crystal Palace,A,#27409b ,18.0,West Bromwich Albion vs. Crystal Palace,0,0,1
+1378,35,2017-12-02,Manchester Utd,A,#b40509 ,2.0,Arsenal vs. Manchester Utd,1,3,3
+1382,25,2017-12-02,Tottenham,A,#fafafa ,6.0,Watford vs. Tottenham,1,1,1
+1387,32,2017-12-02,Chelsea,H,#034694 ,3.0,Chelsea vs. Newcastle Utd,3,1,3
+1390,16,2017-12-02,Stoke City,H,#e03a3e,13.0,Stoke City vs. Swansea City,2,1,3
+1393,28,2017-12-02,Arsenal,H,#ef0107 ,5.0,Arsenal vs. Manchester Utd,1,3,0
+1396,13,2017-12-02,West Bromwich Albion,H,#122f67,17.0,West Bromwich Albion vs. Crystal Palace,0,0,1
+1397,20,2017-12-02,Leicester City,H,#0053a0 ,9.0,Leicester City vs. Burnley,1,0,3
+1401,15,2017-12-02,Huddersfield Town,A,#176fc0,15.0,Everton vs. Huddersfield Town,2,0,0
+1404,9,2017-12-02,Swansea City,A,#ffffff ,20.0,Stoke City vs. Swansea City,2,1,0
+1410,10,2017-12-03,West Ham,A,#7f0000 ,19.0,Manchester City vs. West Ham,2,1,0
+1418,15,2017-12-03,Bournemouth,H,#8b0304 ,14.0,Bournemouth vs. Southampton,1,1,1
+1427,43,2017-12-03,Manchester City,H,#6caddf ,1.0,Manchester City vs. West Ham,2,1,3
+1430,17,2017-12-03,Southampton,A,#ed1a3b ,11.0,Bournemouth vs. Southampton,1,1,1
+1455,28,2017-12-09,Tottenham,H,#fafafa ,5.0,Tottenham vs. Stoke City,5,1,3
+1456,18,2017-12-09,Huddersfield Town,H,#176fc0,11.0,Huddersfield Town vs. Brighton,2,0,3
+1458,23,2017-12-09,Leicester City,A,#0053a0 ,8.0,Newcastle Utd vs. Leicester City,2,3,3
+1461,16,2017-12-09,Stoke City,A,#e03a3e,15.0,Tottenham vs. Stoke City,5,1,0
+1462,12,2017-12-09,Swansea City,H,#ffffff ,19.0,Swansea City vs. West Bromwich Albion,1,0,3
+1464,13,2017-12-09,West Bromwich Albion,A,#122f67,17.0,Swansea City vs. West Bromwich Albion,1,0,0
+1466,13,2017-12-09,West Ham,H,#7f0000 ,18.0,West Ham vs. Chelsea,1,0,3
+1470,22,2017-12-09,Watford,A,#fbee23 ,9.0,Burnley vs. Watford,1,0,0
+1477,16,2017-12-09,Bournemouth,A,#8b0304 ,14.0,Crystal Palace vs. Bournemouth,2,2,1
+1481,15,2017-12-09,Newcastle Utd,H,#fafafa ,16.0,Newcastle Utd vs. Leicester City,2,3,0
+1485,11,2017-12-09,Crystal Palace,H,#27409b ,20.0,Crystal Palace vs. Bournemouth,2,2,1
+1486,32,2017-12-09,Chelsea,A,#034694 ,3.0,West Ham vs. Chelsea,1,0,0
+1488,17,2017-12-09,Brighton,A,#005daa ,13.0,Huddersfield Town vs. Brighton,2,0,0
+1494,28,2017-12-09,Burnley,H,#800000 ,7.0,Burnley vs. Watford,1,0,3
+1507,18,2017-12-10,Southampton,H,#ed1a3b ,11.0,Southampton vs. Arsenal,1,1,1
+1512,46,2017-12-10,Manchester City,A,#6caddf ,1.0,Manchester Utd vs. Manchester City,1,2,3
+1513,35,2017-12-10,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. Manchester City,1,2,0
+1521,19,2017-12-10,Everton,A,#0d00e9 ,10.0,Liverpool vs. Everton,1,1,1
+1524,29,2017-12-10,Arsenal,A,#ef0107 ,5.0,Southampton vs. Arsenal,1,1,1
+1525,30,2017-12-10,Liverpool,H,#dd0000 ,4.0,Liverpool vs. Everton,1,1,1
+1545,31,2017-12-12,Burnley,H,#800000 ,4.0,Burnley vs. Stoke City,1,0,3
+1546,18,2017-12-12,Huddersfield Town,H,#176fc0,12.0,Huddersfield Town vs. Chelsea,1,3,0
+1548,14,2017-12-12,Crystal Palace,H,#27409b ,17.0,Crystal Palace vs. Watford,2,1,3
+1551,35,2017-12-12,Chelsea,A,#034694 ,3.0,Huddersfield Town vs. Chelsea,1,3,3
+1555,16,2017-12-12,Stoke City,A,#e03a3e,15.0,Burnley vs. Stoke City,1,0,0
+1559,22,2017-12-12,Watford,A,#fbee23 ,9.0,Crystal Palace vs. Watford,2,1,0
+1560,49,2017-12-13,Manchester City,A,#6caddf ,1.0,Swansea City vs. Manchester City,0,4,3
+1561,38,2017-12-13,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. Bournemouth,1,0,3
+1562,22,2017-12-13,Everton,A,#0d00e9 ,10.0,Newcastle Utd vs. Everton,0,1,3
+1563,31,2017-12-13,Tottenham,H,#fafafa ,4.0,Tottenham vs. Brighton,2,0,3
+1564,15,2017-12-13,Newcastle Utd,H,#fafafa ,16.0,Newcastle Utd vs. Everton,0,1,0
+1565,31,2017-12-13,Liverpool,H,#dd0000 ,5.0,Liverpool vs. West Bromwich Albion,0,0,1
+1568,14,2017-12-13,West Bromwich Albion,A,#122f67,17.0,Liverpool vs. West Bromwich Albion,0,0,1
+1570,26,2017-12-13,Leicester City,A,#0053a0 ,8.0,Southampton vs. Leicester City,1,4,3
+1571,14,2017-12-13,West Ham,H,#7f0000 ,19.0,West Ham vs. Arsenal,0,0,1
+1572,17,2017-12-13,Brighton,A,#005daa ,13.0,Tottenham vs. Brighton,2,0,0
+1573,16,2017-12-13,Bournemouth,A,#8b0304 ,14.0,Manchester Utd vs. Bournemouth,1,0,0
+1577,30,2017-12-13,Arsenal,A,#ef0107 ,7.0,West Ham vs. Arsenal,0,0,1
+1578,12,2017-12-13,Swansea City,H,#ffffff ,20.0,Swansea City vs. Manchester City,0,4,0
+1580,18,2017-12-13,Southampton,H,#ed1a3b ,11.0,Southampton vs. Leicester City,1,4,0
+1592,38,2017-12-16,Chelsea,H,#034694 ,3.0,Chelsea vs. Southampton,1,0,3
+1596,18,2017-12-16,Southampton,A,#ed1a3b ,12.0,Chelsea vs. Southampton,1,0,0
+1599,18,2017-12-16,Brighton,H,#005daa ,13.0,Brighton vs. Burnley,0,0,1
+1604,15,2017-12-16,Newcastle Utd,A,#fafafa ,18.0,Arsenal vs. Newcastle Utd,1,0,0
+1613,26,2017-12-16,Leicester City,H,#0053a0 ,8.0,Leicester City vs. Crystal Palace,0,3,0
+1615,31,2017-12-16,Tottenham,A,#fafafa ,7.0,Manchester City vs. Tottenham,4,1,0
+1617,16,2017-12-16,Stoke City,H,#e03a3e,17.0,Stoke City vs. West Ham,0,3,0
+1618,32,2017-12-16,Burnley,A,#800000 ,5.0,Brighton vs. Burnley,0,0,1
+1625,21,2017-12-16,Huddersfield Town,A,#176fc0,11.0,Watford vs. Huddersfield Town,1,4,3
+1626,52,2017-12-16,Manchester City,H,#6caddf ,1.0,Manchester City vs. Tottenham,4,1,3
+1634,17,2017-12-16,Crystal Palace,A,#27409b ,14.0,Leicester City vs. Crystal Palace,0,3,3
+1636,22,2017-12-16,Watford,H,#fbee23 ,9.0,Watford vs. Huddersfield Town,1,4,0
+1637,17,2017-12-16,West Ham,A,#7f0000 ,15.0,Stoke City vs. West Ham,0,3,3
+1639,33,2017-12-16,Arsenal,H,#ef0107 ,4.0,Arsenal vs. Newcastle Utd,1,0,3
+1646,41,2017-12-17,Manchester Utd,A,#b40509 ,2.0,West Bromwich Albion vs. Manchester Utd,1,2,3
+1657,14,2017-12-17,West Bromwich Albion,H,#122f67,19.0,West Bromwich Albion vs. Manchester Utd,1,2,0
+1660,34,2017-12-17,Liverpool,A,#dd0000 ,4.0,Bournemouth vs. Liverpool,0,4,3
+1670,16,2017-12-17,Bournemouth,H,#8b0304 ,16.0,Bournemouth vs. Liverpool,0,4,0
+1676,25,2017-12-18,Everton,H,#0d00e9 ,9.0,Everton vs. Swansea City,3,1,3
+1678,12,2017-12-18,Swansea City,A,#ffffff ,20.0,Everton vs. Swansea City,3,1,0
+1712,34,2017-12-22,Arsenal,H,#ef0107 ,5.0,Arsenal vs. Liverpool,3,3,1
+1713,35,2017-12-22,Liverpool,A,#dd0000 ,4.0,Arsenal vs. Liverpool,3,3,1
+1720,19,2017-12-23,Southampton,H,#ed1a3b ,13.0,Southampton vs. Huddersfield Town,1,1,1
+1724,16,2017-12-23,Bournemouth,A,#8b0304 ,18.0,Manchester City vs. Bournemouth,4,0,0
+1725,55,2017-12-23,Manchester City,H,#6caddf ,1.0,Manchester City vs. Bournemouth,4,0,3
+1726,19,2017-12-23,Stoke City,H,#e03a3e,14.0,Stoke City vs. West Bromwich Albion,3,1,3
+1727,13,2017-12-23,Swansea City,H,#ffffff ,20.0,Swansea City vs. Crystal Palace,1,1,1
+1730,22,2017-12-23,Watford,A,#fbee23 ,10.0,Brighton vs. Watford,1,0,0
+1731,17,2017-12-23,West Ham,H,#7f0000 ,17.0,West Ham vs. Newcastle Utd,2,3,0
+1733,14,2017-12-23,West Bromwich Albion,A,#122f67,19.0,Stoke City vs. West Bromwich Albion,3,1,0
+1737,21,2017-12-23,Brighton,H,#005daa ,12.0,Brighton vs. Watford,1,0,3
+1741,39,2017-12-23,Chelsea,A,#034694 ,3.0,Everton vs. Chelsea,0,0,1
+1742,18,2017-12-23,Newcastle Utd,A,#fafafa ,15.0,West Ham vs. Newcastle Utd,2,3,3
+1744,34,2017-12-23,Tottenham,A,#fafafa ,5.0,Burnley vs. Tottenham,0,3,3
+1745,18,2017-12-23,Crystal Palace,A,#27409b ,16.0,Swansea City vs. Crystal Palace,1,1,1
+1746,32,2017-12-23,Burnley,H,#800000 ,7.0,Burnley vs. Tottenham,0,3,0
+1748,26,2017-12-23,Everton,H,#0d00e9 ,9.0,Everton vs. Chelsea,0,0,1
+1755,42,2017-12-23,Manchester Utd,A,#b40509 ,2.0,Leicester City vs. Manchester Utd,2,2,1
+1756,22,2017-12-23,Huddersfield Town,A,#176fc0,11.0,Southampton vs. Huddersfield Town,1,1,1
+1757,27,2017-12-23,Leicester City,H,#0053a0 ,8.0,Leicester City vs. Manchester Utd,2,2,1
+1760,15,2017-12-26,West Bromwich Albion,H,#122f67,19.0,West Bromwich Albion vs. Everton,0,0,1
+1761,43,2017-12-26,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. Burnley,2,2,1
+1762,38,2017-12-26,Liverpool,H,#dd0000 ,4.0,Liverpool vs. Swansea City,5,0,3
+1763,42,2017-12-26,Chelsea,H,#034694 ,3.0,Chelsea vs. Brighton,2,0,3
+1764,13,2017-12-26,Swansea City,A,#ffffff ,20.0,Liverpool vs. Swansea City,5,0,0
+1765,27,2017-12-26,Everton,A,#0d00e9 ,9.0,West Bromwich Albion vs. Everton,0,0,1
+1766,18,2017-12-26,West Ham,A,#7f0000 ,17.0,Bournemouth vs. West Ham,3,3,1
+1767,23,2017-12-26,Huddersfield Town,H,#176fc0,11.0,Huddersfield Town vs. Stoke City,1,1,1
+1768,19,2017-12-26,Southampton,A,#ed1a3b ,14.0,Tottenham vs. Southampton,5,2,0
+1769,37,2017-12-26,Tottenham,H,#fafafa ,5.0,Tottenham vs. Southampton,5,2,3
+1770,25,2017-12-26,Watford,H,#fbee23 ,10.0,Watford vs. Leicester City,2,1,3
+1771,27,2017-12-26,Leicester City,A,#0053a0 ,8.0,Watford vs. Leicester City,2,1,0
+1772,20,2017-12-26,Stoke City,A,#e03a3e,13.0,Huddersfield Town vs. Stoke City,1,1,1
+1773,21,2017-12-26,Brighton,A,#005daa ,12.0,Chelsea vs. Brighton,2,0,0
+1774,33,2017-12-26,Burnley,A,#800000 ,7.0,Manchester Utd vs. Burnley,2,2,1
+1775,17,2017-12-26,Bournemouth,H,#8b0304 ,18.0,Bournemouth vs. West Ham,3,3,1
+1776,58,2017-12-27,Manchester City,A,#6caddf ,1.0,Newcastle Utd vs. Manchester City,0,1,3
+1777,18,2017-12-27,Newcastle Utd,H,#fafafa ,15.0,Newcastle Utd vs. Manchester City,0,1,0
+1778,18,2017-12-28,Crystal Palace,H,#27409b ,16.0,Crystal Palace vs. Arsenal,2,3,0
+1779,37,2017-12-28,Arsenal,A,#ef0107 ,6.0,Crystal Palace vs. Arsenal,2,3,3
+1782,24,2017-12-30,Huddersfield Town,H,#176fc0,11.0,Huddersfield Town vs. Burnley,0,0,1
+1783,41,2017-12-30,Liverpool,H,#dd0000 ,4.0,Liverpool vs. Leicester City,2,1,3
+1785,22,2017-12-30,Brighton,A,#005daa ,12.0,Newcastle Utd vs. Brighton,0,0,1
+1787,20,2017-12-30,Southampton,A,#ed1a3b ,13.0,Manchester Utd vs. Southampton,0,0,1
+1793,27,2017-12-30,Everton,A,#0d00e9 ,9.0,Bournemouth vs. Everton,2,1,0
+1795,19,2017-12-30,Newcastle Utd,H,#fafafa ,16.0,Newcastle Utd vs. Brighton,0,0,1
+1798,45,2017-12-30,Chelsea,H,#034694 ,2.0,Chelsea vs. Stoke City,5,0,3
+1803,44,2017-12-30,Manchester Utd,H,#b40509 ,3.0,Manchester Utd vs. Southampton,0,0,1
+1804,34,2017-12-30,Burnley,A,#800000 ,7.0,Huddersfield Town vs. Burnley,0,0,1
+1807,25,2017-12-30,Watford,H,#fbee23 ,10.0,Watford vs. Swansea City,1,2,0
+1808,20,2017-12-30,Stoke City,A,#e03a3e,15.0,Chelsea vs. Stoke City,5,0,0
+1809,27,2017-12-30,Leicester City,A,#0053a0 ,8.0,Liverpool vs. Leicester City,2,1,0
+1812,20,2017-12-30,Bournemouth,H,#8b0304 ,14.0,Bournemouth vs. Everton,2,1,3
+1813,16,2017-12-30,Swansea City,A,#ffffff ,19.0,Watford vs. Swansea City,1,2,3
+1814,38,2017-12-31,Arsenal,A,#ef0107 ,5.0,West Bromwich Albion vs. Arsenal,1,1,1
+1815,19,2017-12-31,Crystal Palace,H,#27409b ,17.0,Crystal Palace vs. Manchester City,0,0,1
+1816,59,2017-12-31,Manchester City,A,#6caddf ,1.0,Crystal Palace vs. Manchester City,0,0,1
+1817,16,2017-12-31,West Bromwich Albion,H,#122f67,19.0,West Bromwich Albion vs. Arsenal,1,1,1
+1818,47,2018-01-01,Manchester Utd,A,#b40509 ,2.0,Everton vs. Manchester Utd,0,2,3
+1819,44,2018-01-01,Liverpool,A,#dd0000 ,4.0,Burnley vs. Liverpool,1,2,3
+1820,30,2018-01-01,Leicester City,H,#0053a0 ,8.0,Leicester City vs. Huddersfield Town,3,0,3
+1821,24,2018-01-01,Huddersfield Town,A,#176fc0,11.0,Leicester City vs. Huddersfield Town,3,0,0
+1822,27,2018-01-01,Everton,H,#0d00e9 ,9.0,Everton vs. Manchester Utd,0,2,0
+1823,34,2018-01-01,Burnley,H,#800000 ,7.0,Burnley vs. Liverpool,1,2,0
+1824,20,2018-01-01,Stoke City,H,#e03a3e,16.0,Stoke City vs. Newcastle Utd,0,1,0
+1825,22,2018-01-01,Newcastle Utd,A,#fafafa ,13.0,Stoke City vs. Newcastle Utd,0,1,3
+1826,21,2018-01-01,Bournemouth,A,#8b0304 ,14.0,Brighton vs. Bournemouth,2,2,1
+1827,23,2018-01-01,Brighton,H,#005daa ,12.0,Brighton vs. Bournemouth,2,2,1
+1828,25,2018-01-02,Watford,A,#fbee23 ,10.0,Manchester City vs. Watford,3,1,0
+1829,22,2018-01-02,Crystal Palace,A,#27409b ,14.0,Southampton vs. Crystal Palace,1,2,3
+1830,40,2018-01-02,Tottenham,A,#fafafa ,5.0,Swansea City vs. Tottenham,0,2,3
+1831,16,2018-01-02,West Bromwich Albion,A,#122f67,19.0,West Ham vs. West Bromwich Albion,2,1,0
+1832,16,2018-01-02,Swansea City,H,#ffffff ,20.0,Swansea City vs. Tottenham,0,2,0
+1833,20,2018-01-02,Southampton,H,#ed1a3b ,17.0,Southampton vs. Crystal Palace,1,2,0
+1834,21,2018-01-02,West Ham,H,#7f0000 ,16.0,West Ham vs. West Bromwich Albion,2,1,3
+1835,62,2018-01-02,Manchester City,H,#6caddf ,1.0,Manchester City vs. Watford,3,1,3
+1836,46,2018-01-03,Chelsea,A,#034694 ,3.0,Arsenal vs. Chelsea,2,2,1
+1837,39,2018-01-03,Arsenal,H,#ef0107 ,6.0,Arsenal vs. Chelsea,2,2,1
+1838,22,2018-01-04,West Ham,A,#7f0000 ,15.0,Tottenham vs. West Ham,1,1,1
+1839,41,2018-01-04,Tottenham,H,#fafafa ,5.0,Tottenham vs. West Ham,1,1,1
+1887,25,2018-01-13,West Ham,A,#7f0000 ,11.0,Huddersfield Town vs. West Ham,1,4,3
+1890,23,2018-01-13,Brighton,A,#005daa ,15.0,West Bromwich Albion vs. Brighton,2,0,0
+1892,44,2018-01-13,Tottenham,H,#fafafa ,5.0,Tottenham vs. Everton,4,0,3
+1895,34,2018-01-13,Burnley,A,#800000 ,7.0,Crystal Palace vs. Burnley,1,0,0
+1897,23,2018-01-13,Newcastle Utd,H,#fafafa ,14.0,Newcastle Utd vs. Swansea City,1,1,1
+1906,24,2018-01-13,Huddersfield Town,H,#176fc0,13.0,Huddersfield Town vs. West Ham,1,4,0
+1911,31,2018-01-13,Leicester City,A,#0053a0 ,8.0,Chelsea vs. Leicester City,0,0,1
+1912,21,2018-01-13,Southampton,A,#ed1a3b ,16.0,Watford vs. Southampton,2,2,1
+1918,17,2018-01-13,Swansea City,A,#ffffff ,20.0,Newcastle Utd vs. Swansea City,1,1,1
+1919,26,2018-01-13,Watford,H,#fbee23 ,10.0,Watford vs. Southampton,2,2,1
+1920,19,2018-01-13,West Bromwich Albion,H,#122f67,19.0,West Bromwich Albion vs. Brighton,2,0,3
+1921,27,2018-01-13,Everton,A,#0d00e9 ,9.0,Tottenham vs. Everton,4,0,0
+1923,25,2018-01-13,Crystal Palace,H,#27409b ,12.0,Crystal Palace vs. Burnley,1,0,3
+1931,47,2018-01-13,Chelsea,H,#034694 ,3.0,Chelsea vs. Leicester City,0,0,1
+1934,62,2018-01-14,Manchester City,A,#6caddf ,1.0,Liverpool vs. Manchester City,4,3,0
+1942,24,2018-01-14,Bournemouth,H,#8b0304 ,13.0,Bournemouth vs. Arsenal,2,1,3
+1949,39,2018-01-14,Arsenal,A,#ef0107 ,6.0,Bournemouth vs. Arsenal,2,1,0
+1952,47,2018-01-14,Liverpool,H,#dd0000 ,3.0,Liverpool vs. Manchester City,4,3,3
+1956,20,2018-01-15,Stoke City,A,#e03a3e,18.0,Manchester Utd vs. Stoke City,3,0,0
+1957,50,2018-01-15,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. Stoke City,3,0,3
+1986,50,2018-01-20,Chelsea,A,#034694 ,3.0,Brighton vs. Chelsea,0,4,3
+1989,34,2018-01-20,Burnley,H,#800000 ,8.0,Burnley vs. Manchester Utd,0,1,0
+1991,23,2018-01-20,Brighton,H,#005daa ,16.0,Brighton vs. Chelsea,0,4,0
+2004,24,2018-01-20,Huddersfield Town,A,#176fc0,14.0,Stoke City vs. Huddersfield Town,2,0,0
+2007,28,2018-01-20,Everton,H,#0d00e9 ,9.0,Everton vs. West Bromwich Albion,1,1,1
+2008,65,2018-01-20,Manchester City,H,#6caddf ,1.0,Manchester City vs. Newcastle Utd,3,1,3
+2009,25,2018-01-20,Crystal Palace,A,#27409b ,13.0,Arsenal vs. Crystal Palace,4,1,0
+2010,26,2018-01-20,West Ham,H,#7f0000 ,11.0,West Ham vs. Bournemouth,1,1,1
+2012,23,2018-01-20,Stoke City,H,#e03a3e,17.0,Stoke City vs. Huddersfield Town,2,0,3
+2013,26,2018-01-20,Watford,A,#fbee23 ,10.0,Leicester City vs. Watford,2,0,0
+2014,23,2018-01-20,Newcastle Utd,A,#fafafa ,15.0,Manchester City vs. Newcastle Utd,3,1,0
+2017,20,2018-01-20,West Bromwich Albion,A,#122f67,19.0,Everton vs. West Bromwich Albion,1,1,1
+2019,25,2018-01-20,Bournemouth,A,#8b0304 ,12.0,West Ham vs. Bournemouth,1,1,1
+2029,42,2018-01-20,Arsenal,H,#ef0107 ,6.0,Arsenal vs. Crystal Palace,4,1,3
+2030,53,2018-01-20,Manchester Utd,A,#b40509 ,2.0,Burnley vs. Manchester Utd,0,1,3
+2031,34,2018-01-20,Leicester City,H,#0053a0 ,7.0,Leicester City vs. Watford,2,0,3
+2039,45,2018-01-21,Tottenham,A,#fafafa ,5.0,Southampton vs. Tottenham,1,1,1
+2044,22,2018-01-21,Southampton,H,#ed1a3b ,18.0,Southampton vs. Tottenham,1,1,1
+2072,47,2018-01-22,Liverpool,A,#dd0000 ,4.0,Swansea City vs. Liverpool,1,0,0
+2075,20,2018-01-22,Swansea City,H,#ffffff ,20.0,Swansea City vs. Liverpool,1,0,3
+2158,26,2018-01-30,Crystal Palace,A,#27409b ,12.0,West Ham vs. Crystal Palace,1,1,1
+2159,42,2018-01-30,Arsenal,A,#ef0107 ,6.0,Swansea City vs. Arsenal,3,1,0
+2160,27,2018-01-30,West Ham,H,#7f0000 ,10.0,West Ham vs. Crystal Palace,1,1,1
+2161,50,2018-01-30,Liverpool,A,#dd0000 ,4.0,Huddersfield Town vs. Liverpool,0,3,3
+2162,24,2018-01-30,Huddersfield Town,H,#176fc0,14.0,Huddersfield Town vs. Liverpool,0,3,0
+2163,23,2018-01-30,Swansea City,H,#ffffff ,17.0,Swansea City vs. Arsenal,3,1,3
+2164,31,2018-01-31,Everton,H,#0d00e9 ,9.0,Everton vs. Leicester City,2,1,3
+2165,24,2018-01-31,Brighton,A,#005daa ,15.0,Southampton vs. Brighton,1,1,1
+2166,23,2018-01-31,Southampton,H,#ed1a3b ,18.0,Southampton vs. Brighton,1,1,1
+2167,27,2018-01-31,Watford,A,#fbee23 ,11.0,Stoke City vs. Watford,0,0,1
+2168,28,2018-01-31,Bournemouth,A,#8b0304 ,10.0,Chelsea vs. Bournemouth,0,3,3
+2169,20,2018-01-31,West Bromwich Albion,A,#122f67,20.0,Manchester City vs. West Bromwich Albion,3,0,0
+2170,35,2018-01-31,Burnley,A,#800000 ,7.0,Newcastle Utd vs. Burnley,1,1,1
+2171,68,2018-01-31,Manchester City,H,#6caddf ,1.0,Manchester City vs. West Bromwich Albion,3,0,3
+2172,24,2018-01-31,Stoke City,H,#e03a3e,16.0,Stoke City vs. Watford,0,0,1
+2173,34,2018-01-31,Leicester City,A,#0053a0 ,8.0,Everton vs. Leicester City,2,1,0
+2174,53,2018-01-31,Manchester Utd,A,#b40509 ,2.0,Tottenham vs. Manchester Utd,2,0,0
+2175,50,2018-01-31,Chelsea,H,#034694 ,4.0,Chelsea vs. Bournemouth,0,3,0
+2176,48,2018-01-31,Tottenham,H,#fafafa ,5.0,Tottenham vs. Manchester Utd,2,0,3
+2177,24,2018-01-31,Newcastle Utd,H,#fafafa ,14.0,Newcastle Utd vs. Burnley,1,1,1
+2184,27,2018-02-03,West Ham,A,#7f0000 ,12.0,Brighton vs. West Ham,3,1,0
+2190,45,2018-02-03,Arsenal,H,#ef0107 ,6.0,Arsenal vs. Everton,5,1,3
+2194,56,2018-02-03,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. Huddersfield Town,2,0,3
+2196,69,2018-02-03,Manchester City,A,#6caddf ,1.0,Burnley vs. Manchester City,1,1,1
+2200,24,2018-02-03,Stoke City,A,#e03a3e,18.0,Bournemouth vs. Stoke City,2,1,0
+2206,24,2018-02-03,Swansea City,A,#ffffff ,17.0,Leicester City vs. Swansea City,1,1,1
+2209,31,2018-02-03,Bournemouth,H,#8b0304 ,9.0,Bournemouth vs. Stoke City,2,1,3
+2212,24,2018-02-03,Huddersfield Town,A,#176fc0,19.0,Manchester Utd vs. Huddersfield Town,2,0,0
+2213,26,2018-02-03,Southampton,A,#ed1a3b ,14.0,West Bromwich Albion vs. Southampton,2,3,3
+2215,27,2018-02-03,Brighton,H,#005daa ,13.0,Brighton vs. West Ham,3,1,3
+2216,20,2018-02-03,West Bromwich Albion,H,#122f67,20.0,West Bromwich Albion vs. Southampton,2,3,0
+2219,35,2018-02-03,Leicester City,H,#0053a0 ,8.0,Leicester City vs. Swansea City,1,1,1
+2224,31,2018-02-03,Everton,A,#0d00e9 ,10.0,Arsenal vs. Everton,5,1,0
+2230,36,2018-02-03,Burnley,H,#800000 ,7.0,Burnley vs. Manchester City,1,1,1
+2247,27,2018-02-04,Crystal Palace,H,#27409b ,14.0,Crystal Palace vs. Newcastle Utd,1,1,1
+2249,49,2018-02-04,Tottenham,A,#fafafa ,5.0,Liverpool vs. Tottenham,2,2,1
+2250,25,2018-02-04,Newcastle Utd,A,#fafafa ,16.0,Crystal Palace vs. Newcastle Utd,1,1,1
+2260,51,2018-02-04,Liverpool,H,#dd0000 ,3.0,Liverpool vs. Tottenham,2,2,1
+2270,30,2018-02-05,Watford,H,#fbee23 ,11.0,Watford vs. Chelsea,4,1,3
+2273,50,2018-02-05,Chelsea,A,#034694 ,4.0,Watford vs. Chelsea,4,1,0
+2282,35,2018-02-10,Leicester City,A,#0053a0 ,8.0,Manchester City vs. Leicester City,5,1,0
+2284,30,2018-02-10,Watford,A,#fbee23 ,11.0,West Ham vs. Watford,2,0,0
+2288,27,2018-02-10,Swansea City,H,#ffffff ,15.0,Swansea City vs. Burnley,1,0,3
+2293,28,2018-02-10,Brighton,A,#005daa ,13.0,Stoke City vs. Brighton,1,1,1
+2296,45,2018-02-10,Arsenal,A,#ef0107 ,6.0,Tottenham vs. Arsenal,1,0,0
+2303,34,2018-02-10,Everton,H,#0d00e9 ,9.0,Everton vs. Crystal Palace,3,1,3
+2315,72,2018-02-10,Manchester City,H,#6caddf ,1.0,Manchester City vs. Leicester City,5,1,3
+2318,25,2018-02-10,Stoke City,H,#e03a3e,18.0,Stoke City vs. Brighton,1,1,1
+2319,52,2018-02-10,Tottenham,H,#fafafa ,3.0,Tottenham vs. Arsenal,1,0,3
+2320,30,2018-02-10,West Ham,H,#7f0000 ,12.0,West Ham vs. Watford,2,0,3
+2325,36,2018-02-10,Burnley,A,#800000 ,7.0,Swansea City vs. Burnley,1,0,0
+2326,27,2018-02-10,Crystal Palace,A,#27409b ,14.0,Everton vs. Crystal Palace,3,1,0
+2336,27,2018-02-11,Huddersfield Town,H,#176fc0,17.0,Huddersfield Town vs. Bournemouth,4,1,3
+2339,26,2018-02-11,Southampton,H,#ed1a3b ,18.0,Southampton vs. Liverpool,0,2,0
+2342,28,2018-02-11,Newcastle Utd,H,#fafafa ,13.0,Newcastle Utd vs. Manchester Utd,1,0,3
+2343,56,2018-02-11,Manchester Utd,A,#b40509 ,2.0,Newcastle Utd vs. Manchester Utd,1,0,0
+2348,54,2018-02-11,Liverpool,A,#dd0000 ,3.0,Southampton vs. Liverpool,0,2,3
+2352,31,2018-02-11,Bournemouth,A,#8b0304 ,10.0,Huddersfield Town vs. Bournemouth,4,1,0
+2368,20,2018-02-12,West Bromwich Albion,A,#122f67,20.0,Chelsea vs. West Bromwich Albion,3,0,0
+2371,53,2018-02-12,Chelsea,H,#034694 ,4.0,Chelsea vs. West Bromwich Albion,3,0,3
+2462,57,2018-02-24,Liverpool,H,#dd0000 ,2.0,Liverpool vs. West Ham,4,1,3
+2470,30,2018-02-24,West Ham,A,#7f0000 ,13.0,Liverpool vs. West Ham,4,1,0
+2472,30,2018-02-24,Huddersfield Town,A,#176fc0,14.0,West Bromwich Albion vs. Huddersfield Town,1,2,3
+2476,33,2018-02-24,Watford,H,#fbee23 ,10.0,Watford vs. Everton,1,0,3
+2477,36,2018-02-24,Leicester City,H,#0053a0 ,8.0,Leicester City vs. Stoke City,1,1,1
+2480,37,2018-02-24,Burnley,H,#800000 ,7.0,Burnley vs. Southampton,1,1,1
+2482,31,2018-02-24,Brighton,H,#005daa ,12.0,Brighton vs. Swansea City,4,1,3
+2483,26,2018-02-24,Stoke City,A,#e03a3e,19.0,Leicester City vs. Stoke City,1,1,1
+2487,29,2018-02-24,Newcastle Utd,A,#fafafa ,15.0,Bournemouth vs. Newcastle Utd,2,2,1
+2490,32,2018-02-24,Bournemouth,H,#8b0304 ,11.0,Bournemouth vs. Newcastle Utd,2,2,1
+2491,27,2018-02-24,Southampton,A,#ed1a3b ,16.0,Burnley vs. Southampton,1,1,1
+2496,20,2018-02-24,West Bromwich Albion,H,#122f67,20.0,West Bromwich Albion vs. Huddersfield Town,1,2,0
+2499,27,2018-02-24,Swansea City,A,#ffffff ,18.0,Brighton vs. Swansea City,4,1,0
+2506,34,2018-02-24,Everton,A,#0d00e9 ,9.0,Watford vs. Everton,1,0,0
+2515,55,2018-02-25,Tottenham,A,#fafafa ,4.0,Crystal Palace vs. Tottenham,0,1,3
+2517,27,2018-02-25,Crystal Palace,H,#27409b ,17.0,Crystal Palace vs. Tottenham,0,1,0
+2518,59,2018-02-25,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. Chelsea,2,1,3
+2525,53,2018-02-25,Chelsea,A,#034694 ,5.0,Manchester Utd vs. Chelsea,2,1,0
+2563,45,2018-03-01,Arsenal,H,#ef0107 ,6.0,Arsenal vs. Manchester City,0,3,0
+2567,75,2018-03-01,Manchester City,A,#6caddf ,1.0,Arsenal vs. Manchester City,0,3,3
+2576,58,2018-03-03,Tottenham,H,#fafafa ,4.0,Tottenham vs. Huddersfield Town,2,0,3
+2577,20,2018-03-03,West Bromwich Albion,A,#122f67,20.0,Watford vs. West Bromwich Albion,1,0,0
+2584,33,2018-03-03,Bournemouth,A,#8b0304 ,11.0,Leicester City vs. Bournemouth,1,1,1
+2589,28,2018-03-03,Southampton,H,#ed1a3b ,17.0,Southampton vs. Stoke City,0,0,1
+2591,30,2018-03-03,Swansea City,H,#ffffff ,13.0,Swansea City vs. West Ham,4,1,3
+2595,37,2018-03-03,Leicester City,H,#0053a0 ,8.0,Leicester City vs. Bournemouth,1,1,1
+2597,60,2018-03-03,Liverpool,H,#dd0000 ,2.0,Liverpool vs. Newcastle Utd,2,0,3
+2600,27,2018-03-03,Stoke City,A,#e03a3e,19.0,Southampton vs. Stoke City,0,0,1
+2602,34,2018-03-03,Everton,A,#0d00e9 ,10.0,Burnley vs. Everton,2,1,0
+2606,36,2018-03-03,Watford,H,#fbee23 ,9.0,Watford vs. West Bromwich Albion,1,0,3
+2607,40,2018-03-03,Burnley,H,#800000 ,7.0,Burnley vs. Everton,2,1,3
+2610,30,2018-03-03,Huddersfield Town,A,#176fc0,15.0,Tottenham vs. Huddersfield Town,2,0,0
+2617,29,2018-03-03,Newcastle Utd,A,#fafafa ,16.0,Liverpool vs. Newcastle Utd,2,0,0
+2626,30,2018-03-03,West Ham,A,#7f0000 ,14.0,Swansea City vs. West Ham,4,1,0
+2631,34,2018-03-04,Brighton,H,#005daa ,10.0,Brighton vs. Arsenal,2,1,3
+2634,53,2018-03-04,Chelsea,A,#034694 ,5.0,Manchester City vs. Chelsea,1,0,0
+2643,78,2018-03-04,Manchester City,H,#6caddf ,1.0,Manchester City vs. Chelsea,1,0,3
+2648,45,2018-03-04,Arsenal,A,#ef0107 ,6.0,Brighton vs. Arsenal,2,1,0
+2650,27,2018-03-05,Crystal Palace,H,#27409b ,18.0,Crystal Palace vs. Manchester Utd,2,3,0
+2651,62,2018-03-05,Manchester Utd,A,#b40509 ,2.0,Crystal Palace vs. Manchester Utd,2,3,3
+2662,37,2018-03-10,Everton,H,#0d00e9 ,9.0,Everton vs. Brighton,2,0,3
+2669,31,2018-03-10,Huddersfield Town,H,#176fc0,15.0,Huddersfield Town vs. Swansea City,0,0,1
+2670,31,2018-03-10,Swansea City,A,#ffffff ,14.0,Huddersfield Town vs. Swansea City,0,0,1
+2672,27,2018-03-10,Crystal Palace,A,#27409b ,18.0,Chelsea vs. Crystal Palace,2,1,0
+2674,28,2018-03-10,Southampton,A,#ed1a3b ,17.0,Newcastle Utd vs. Southampton,3,0,0
+2676,32,2018-03-10,Newcastle Utd,H,#fafafa ,13.0,Newcastle Utd vs. Southampton,3,0,3
+2678,40,2018-03-10,Leicester City,A,#0053a0 ,8.0,West Bromwich Albion vs. Leicester City,1,4,3
+2691,60,2018-03-10,Liverpool,A,#dd0000 ,3.0,Manchester Utd vs. Liverpool,2,1,0
+2692,20,2018-03-10,West Bromwich Albion,H,#122f67,20.0,West Bromwich Albion vs. Leicester City,1,4,0
+2693,65,2018-03-10,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. Liverpool,2,1,3
+2700,34,2018-03-10,Brighton,A,#005daa ,11.0,Everton vs. Brighton,2,0,0
+2702,56,2018-03-10,Chelsea,H,#034694 ,5.0,Chelsea vs. Crystal Palace,2,1,3
+2704,43,2018-03-10,Burnley,A,#800000 ,7.0,West Ham vs. Burnley,0,3,3
+2707,30,2018-03-10,West Ham,H,#7f0000 ,16.0,West Ham vs. Burnley,0,3,0
+2708,48,2018-03-11,Arsenal,H,#ef0107 ,6.0,Arsenal vs. Watford,3,0,3
+2716,33,2018-03-11,Bournemouth,H,#8b0304 ,12.0,Bournemouth vs. Tottenham,1,4,0
+2738,61,2018-03-11,Tottenham,A,#fafafa ,3.0,Bournemouth vs. Tottenham,1,4,3
+2744,36,2018-03-11,Watford,A,#fbee23 ,10.0,Arsenal vs. Watford,3,0,0
+2749,27,2018-03-12,Stoke City,H,#e03a3e,19.0,Stoke City vs. Manchester City,0,2,0
+2751,81,2018-03-12,Manchester City,A,#6caddf ,1.0,Stoke City vs. Manchester City,0,2,3
+2766,63,2018-03-17,Liverpool,H,#dd0000 ,3.0,Liverpool vs. Watford,5,0,3
+2771,40,2018-03-17,Everton,A,#0d00e9 ,9.0,Stoke City vs. Everton,1,2,3
+2775,31,2018-03-17,Huddersfield Town,H,#176fc0,15.0,Huddersfield Town vs. Crystal Palace,0,2,0
+2780,30,2018-03-17,Crystal Palace,A,#27409b ,16.0,Huddersfield Town vs. Crystal Palace,0,2,3
+2787,36,2018-03-17,Bournemouth,H,#8b0304 ,10.0,Bournemouth vs. West Bromwich Albion,2,1,3
+2788,27,2018-03-17,Stoke City,H,#e03a3e,19.0,Stoke City vs. Everton,1,2,0
+2792,20,2018-03-17,West Bromwich Albion,A,#122f67,20.0,Bournemouth vs. West Bromwich Albion,2,1,0
+2797,36,2018-03-17,Watford,A,#fbee23 ,11.0,Liverpool vs. Watford,5,0,0
+2844,33,2018-03-31,West Ham,H,#7f0000 ,14.0,West Ham vs. Southampton,3,0,3
+2846,68,2018-03-31,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. Swansea City,2,0,3
+2849,30,2018-03-31,Crystal Palace,H,#27409b ,17.0,Crystal Palace vs. Liverpool,1,2,0
+2850,66,2018-03-31,Liverpool,A,#dd0000 ,3.0,Crystal Palace vs. Liverpool,1,2,3
+2853,34,2018-03-31,Brighton,H,#005daa ,13.0,Brighton vs. Leicester City,0,2,0
+2854,28,2018-03-31,Southampton,A,#ed1a3b ,18.0,West Ham vs. Southampton,3,0,0
+2855,37,2018-03-31,Bournemouth,A,#8b0304 ,10.0,Watford vs. Bournemouth,2,2,1
+2857,43,2018-03-31,Leicester City,A,#0053a0 ,8.0,Brighton vs. Leicester City,0,2,3
+2859,20,2018-03-31,West Bromwich Albion,H,#122f67,20.0,West Bromwich Albion vs. Burnley,1,2,0
+2862,37,2018-03-31,Watford,H,#fbee23 ,11.0,Watford vs. Bournemouth,2,2,1
+2865,31,2018-03-31,Swansea City,A,#ffffff ,15.0,Manchester Utd vs. Swansea City,2,0,0
+2868,84,2018-03-31,Manchester City,A,#6caddf ,1.0,Everton vs. Manchester City,1,3,3
+2870,40,2018-03-31,Everton,H,#0d00e9 ,9.0,Everton vs. Manchester City,1,3,0
+2876,31,2018-03-31,Huddersfield Town,A,#176fc0,16.0,Newcastle Utd vs. Huddersfield Town,1,0,0
+2885,46,2018-03-31,Burnley,A,#800000 ,7.0,West Bromwich Albion vs. Burnley,1,2,3
+2888,35,2018-03-31,Newcastle Utd,H,#fafafa ,12.0,Newcastle Utd vs. Huddersfield Town,1,0,3
+2902,56,2018-04-01,Chelsea,H,#034694 ,5.0,Chelsea vs. Tottenham,1,3,0
+2914,27,2018-04-01,Stoke City,A,#e03a3e,19.0,Arsenal vs. Stoke City,3,0,0
+2917,64,2018-04-01,Tottenham,A,#fafafa ,4.0,Chelsea vs. Tottenham,1,3,3
+2923,51,2018-04-01,Arsenal,H,#ef0107 ,6.0,Arsenal vs. Stoke City,3,0,3
+2959,27,2018-04-07,Stoke City,H,#e03a3e,19.0,Stoke City vs. Tottenham,1,2,0
+2964,38,2018-04-07,Bournemouth,H,#8b0304 ,11.0,Bournemouth vs. Crystal Palace,2,2,1
+2966,35,2018-04-07,Brighton,H,#005daa ,13.0,Brighton vs. Huddersfield Town,1,1,1
+2973,41,2018-04-07,Everton,H,#0d00e9 ,9.0,Everton vs. Liverpool,0,0,1
+2976,49,2018-04-07,Burnley,A,#800000 ,7.0,Watford vs. Burnley,1,2,3
+2978,43,2018-04-07,Leicester City,H,#0053a0 ,8.0,Leicester City vs. Newcastle Utd,1,2,0
+2983,32,2018-04-07,Huddersfield Town,A,#176fc0,16.0,Brighton vs. Huddersfield Town,1,1,1
+2987,71,2018-04-07,Manchester Utd,A,#b40509 ,2.0,Manchester City vs. Manchester Utd,2,3,3
+2990,38,2018-04-07,Newcastle Utd,A,#fafafa ,10.0,Leicester City vs. Newcastle Utd,1,2,3
+2992,31,2018-04-07,Crystal Palace,A,#27409b ,17.0,Bournemouth vs. Crystal Palace,2,2,1
+2994,84,2018-04-07,Manchester City,H,#6caddf ,1.0,Manchester City vs. Manchester Utd,2,3,0
+2995,37,2018-04-07,Watford,H,#fbee23 ,12.0,Watford vs. Burnley,1,2,0
+2998,21,2018-04-07,West Bromwich Albion,H,#122f67,20.0,West Bromwich Albion vs. Swansea City,1,1,1
+2999,32,2018-04-07,Swansea City,A,#ffffff ,15.0,West Bromwich Albion vs. Swansea City,1,1,1
+3001,67,2018-04-07,Tottenham,A,#fafafa ,4.0,Stoke City vs. Tottenham,1,2,3
+3008,67,2018-04-07,Liverpool,A,#dd0000 ,3.0,Everton vs. Liverpool,0,0,1
+3012,28,2018-04-08,Southampton,A,#ed1a3b ,18.0,Arsenal vs. Southampton,3,2,0
+3020,34,2018-04-08,West Ham,A,#7f0000 ,14.0,Chelsea vs. West Ham,1,1,1
+3021,54,2018-04-08,Arsenal,H,#ef0107 ,6.0,Arsenal vs. Southampton,3,2,3
+3036,57,2018-04-08,Chelsea,H,#034694 ,5.0,Chelsea vs. West Ham,1,1,1
+3056,52,2018-04-14,Burnley,H,#800000 ,7.0,Burnley vs. Leicester City,2,1,3
+3058,87,2018-04-14,Manchester City,A,#6caddf ,1.0,Tottenham vs. Manchester City,1,3,3
+3059,70,2018-04-14,Liverpool,H,#dd0000 ,3.0,Liverpool vs. Bournemouth,3,0,3
+3062,35,2018-04-14,Brighton,A,#005daa ,13.0,Crystal Palace vs. Brighton,3,2,0
+3072,28,2018-04-14,Southampton,H,#ed1a3b ,18.0,Southampton vs. Chelsea,2,3,0
+3075,38,2018-04-14,Bournemouth,A,#8b0304 ,11.0,Liverpool vs. Bournemouth,3,0,0
+3082,42,2018-04-14,Everton,A,#0d00e9 ,9.0,Swansea City vs. Everton,1,1,1
+3084,35,2018-04-14,Huddersfield Town,H,#176fc0,14.0,Huddersfield Town vs. Watford,1,0,3
+3088,60,2018-04-14,Chelsea,A,#034694 ,5.0,Southampton vs. Chelsea,2,3,3
+3094,37,2018-04-14,Watford,A,#fbee23 ,12.0,Huddersfield Town vs. Watford,1,0,0
+3095,67,2018-04-14,Tottenham,H,#fafafa ,4.0,Tottenham vs. Manchester City,1,3,0
+3098,33,2018-04-14,Swansea City,H,#ffffff ,17.0,Swansea City vs. Everton,1,1,1
+3101,34,2018-04-14,Crystal Palace,H,#27409b ,16.0,Crystal Palace vs. Brighton,3,2,3
+3104,43,2018-04-14,Leicester City,A,#0053a0 ,8.0,Burnley vs. Leicester City,2,1,0
+3111,24,2018-04-15,West Bromwich Albion,A,#122f67,20.0,Manchester Utd vs. West Bromwich Albion,0,1,3
+3117,54,2018-04-15,Arsenal,A,#ef0107 ,6.0,Newcastle Utd vs. Arsenal,2,1,0
+3128,41,2018-04-15,Newcastle Utd,H,#fafafa ,10.0,Newcastle Utd vs. Arsenal,2,1,3
+3141,71,2018-04-15,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. West Bromwich Albion,0,1,0
+3142,28,2018-04-16,Stoke City,A,#e03a3e,19.0,West Ham vs. Stoke City,1,1,1
+3143,35,2018-04-16,West Ham,H,#7f0000 ,14.0,West Ham vs. Stoke City,1,1,1
+3149,68,2018-04-17,Tottenham,A,#fafafa ,4.0,Brighton vs. Tottenham,1,1,1
+3153,36,2018-04-17,Brighton,H,#005daa ,13.0,Brighton vs. Tottenham,1,1,1
+3164,74,2018-04-18,Manchester Utd,A,#b40509 ,2.0,Bournemouth vs. Manchester Utd,0,2,3
+3168,38,2018-04-18,Bournemouth,H,#8b0304 ,11.0,Bournemouth vs. Manchester Utd,0,2,0
+3182,52,2018-04-19,Burnley,H,#800000 ,7.0,Burnley vs. Chelsea,1,2,0
+3185,29,2018-04-19,Southampton,A,#ed1a3b ,18.0,Leicester City vs. Southampton,0,0,1
+3188,63,2018-04-19,Chelsea,A,#034694 ,5.0,Burnley vs. Chelsea,1,2,3
+3192,44,2018-04-19,Leicester City,H,#0053a0 ,8.0,Leicester City vs. Southampton,0,0,1
+3202,38,2018-04-21,Watford,H,#fbee23 ,12.0,Watford vs. Crystal Palace,0,0,1
+3205,25,2018-04-21,West Bromwich Albion,H,#122f67,20.0,West Bromwich Albion vs. Liverpool,2,2,1
+3212,71,2018-04-21,Liverpool,A,#dd0000 ,3.0,West Bromwich Albion vs. Liverpool,2,2,1
+3221,35,2018-04-21,Crystal Palace,A,#27409b ,15.0,Watford vs. Crystal Palace,0,0,1
+3240,29,2018-04-22,Stoke City,H,#e03a3e,19.0,Stoke City vs. Burnley,1,1,1
+3249,90,2018-04-22,Manchester City,H,#6caddf ,1.0,Manchester City vs. Swansea City,5,0,3
+3254,33,2018-04-22,Swansea City,A,#ffffff ,17.0,Manchester City vs. Swansea City,5,0,0
+3255,57,2018-04-22,Arsenal,H,#ef0107 ,6.0,Arsenal vs. West Ham,4,1,3
+3257,53,2018-04-22,Burnley,A,#800000 ,7.0,Stoke City vs. Burnley,1,1,1
+3265,35,2018-04-22,West Ham,A,#7f0000 ,15.0,Arsenal vs. West Ham,4,1,0
+3276,45,2018-04-23,Everton,H,#0d00e9 ,8.0,Everton vs. Newcastle Utd,1,0,3
+3279,41,2018-04-23,Newcastle Utd,A,#fafafa ,10.0,Everton vs. Newcastle Utd,1,0,0
+3294,28,2018-04-28,West Bromwich Albion,A,#122f67,20.0,Newcastle Utd vs. West Bromwich Albion,0,1,3
+3295,38,2018-04-28,Crystal Palace,H,#27409b ,11.0,Crystal Palace vs. Leicester City,5,0,3
+3302,48,2018-04-28,Everton,A,#0d00e9 ,8.0,Huddersfield Town vs. Everton,0,2,3
+3304,30,2018-04-28,Stoke City,A,#e03a3e,19.0,Liverpool vs. Stoke City,0,0,1
+3305,66,2018-04-28,Chelsea,A,#034694 ,5.0,Swansea City vs. Chelsea,0,1,3
+3308,33,2018-04-28,Swansea City,H,#ffffff ,17.0,Swansea City vs. Chelsea,0,1,0
+3309,44,2018-04-28,Leicester City,A,#0053a0 ,9.0,Crystal Palace vs. Leicester City,5,0,0
+3311,32,2018-04-28,Southampton,H,#ed1a3b ,18.0,Southampton vs. Bournemouth,2,1,3
+3318,37,2018-04-28,Brighton,A,#005daa ,14.0,Burnley vs. Brighton,0,0,1
+3319,54,2018-04-28,Burnley,H,#800000 ,7.0,Burnley vs. Brighton,0,0,1
+3321,72,2018-04-28,Liverpool,H,#dd0000 ,3.0,Liverpool vs. Stoke City,0,0,1
+3323,41,2018-04-28,Newcastle Utd,H,#fafafa ,10.0,Newcastle Utd vs. West Bromwich Albion,0,1,0
+3328,38,2018-04-28,Bournemouth,A,#8b0304 ,12.0,Southampton vs. Bournemouth,2,1,0
+3330,35,2018-04-28,Huddersfield Town,H,#176fc0,16.0,Huddersfield Town vs. Everton,0,2,0
+3348,77,2018-04-29,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. Arsenal,2,1,3
+3349,35,2018-04-29,West Ham,H,#7f0000 ,15.0,West Ham vs. Manchester City,1,4,0
+3355,93,2018-04-29,Manchester City,A,#6caddf ,1.0,West Ham vs. Manchester City,1,4,3
+3370,57,2018-04-29,Arsenal,A,#ef0107 ,6.0,Manchester Utd vs. Arsenal,2,1,0
+3376,71,2018-04-30,Tottenham,H,#fafafa ,4.0,Tottenham vs. Watford,2,0,3
+3379,38,2018-04-30,Watford,A,#fbee23 ,13.0,Tottenham vs. Watford,2,0,0
+3381,77,2018-05-04,Manchester Utd,A,#b40509 ,2.0,Brighton vs. Manchester Utd,1,0,0
+3382,40,2018-05-04,Brighton,H,#005daa ,11.0,Brighton vs. Manchester Utd,1,0,3
+3394,31,2018-05-05,West Bromwich Albion,H,#122f67,19.0,West Bromwich Albion vs. Tottenham,1,0,3
+3396,41,2018-05-05,Watford,H,#fbee23 ,13.0,Watford vs. Newcastle Utd,2,1,3
+3411,44,2018-05-05,Leicester City,H,#0053a0 ,9.0,Leicester City vs. West Ham,0,2,0
+3412,33,2018-05-05,Swansea City,A,#ffffff ,18.0,Bournemouth vs. Swansea City,1,0,0
+3413,33,2018-05-05,Southampton,A,#ed1a3b ,17.0,Everton vs. Southampton,1,1,1
+3414,38,2018-05-05,West Ham,A,#7f0000 ,15.0,Leicester City vs. West Ham,0,2,3
+3415,41,2018-05-05,Bournemouth,H,#8b0304 ,12.0,Bournemouth vs. Swansea City,1,0,3
+3417,41,2018-05-05,Newcastle Utd,A,#fafafa ,10.0,Watford vs. Newcastle Utd,2,1,0
+3418,30,2018-05-05,Stoke City,H,#e03a3e,20.0,Stoke City vs. Crystal Palace,1,2,0
+3425,41,2018-05-05,Crystal Palace,A,#27409b ,11.0,Stoke City vs. Crystal Palace,1,2,3
+3426,71,2018-05-05,Tottenham,A,#fafafa ,4.0,West Bromwich Albion vs. Tottenham,1,0,0
+3427,49,2018-05-05,Everton,H,#0d00e9 ,8.0,Everton vs. Southampton,1,1,1
+3434,69,2018-05-06,Chelsea,H,#034694 ,5.0,Chelsea vs. Liverpool,1,0,3
+3437,72,2018-05-06,Liverpool,A,#dd0000 ,3.0,Chelsea vs. Liverpool,1,0,0
+3442,54,2018-05-06,Burnley,A,#800000 ,7.0,Arsenal vs. Burnley,5,0,0
+3450,60,2018-05-06,Arsenal,H,#ef0107 ,6.0,Arsenal vs. Burnley,5,0,3
+3471,36,2018-05-06,Huddersfield Town,A,#176fc0,16.0,Manchester City vs. Huddersfield Town,0,0,1
+3473,94,2018-05-06,Manchester City,H,#6caddf ,1.0,Manchester City vs. Huddersfield Town,0,0,1
+3478,33,2018-05-08,Swansea City,H,#ffffff ,18.0,Swansea City vs. Southampton,0,1,0
+3479,36,2018-05-08,Southampton,A,#ed1a3b ,16.0,Swansea City vs. Southampton,0,1,3
+3480,70,2018-05-09,Chelsea,H,#034694 ,5.0,Chelsea vs. Huddersfield Town,1,1,1
+3481,97,2018-05-09,Manchester City,H,#6caddf ,1.0,Manchester City vs. Brighton,3,1,3
+3482,41,2018-05-09,Newcastle Utd,A,#fafafa ,10.0,Tottenham vs. Newcastle Utd,1,0,0
+3486,74,2018-05-09,Tottenham,H,#fafafa ,3.0,Tottenham vs. Newcastle Utd,1,0,3
+3487,47,2018-05-09,Leicester City,H,#0053a0 ,9.0,Leicester City vs. Arsenal,3,1,3
+3489,60,2018-05-09,Arsenal,A,#ef0107 ,6.0,Leicester City vs. Arsenal,3,1,0
+3490,37,2018-05-09,Huddersfield Town,A,#176fc0,16.0,Chelsea vs. Huddersfield Town,1,1,1
+3491,40,2018-05-09,Brighton,A,#005daa ,14.0,Manchester City vs. Brighton,3,1,0
+3492,78,2018-05-10,Manchester Utd,A,#b40509 ,2.0,West Ham vs. Manchester Utd,0,0,1
+3493,39,2018-05-10,West Ham,H,#7f0000 ,15.0,West Ham vs. Manchester Utd,0,0,1
+3555,49,2018-05-13,Everton,A,#0d00e9 ,8.0,West Ham vs. Everton,3,1,0
+3556,77,2018-05-13,Tottenham,H,#fafafa ,3.0,Tottenham vs. Leicester City,5,4,3
+3557,47,2018-05-13,Leicester City,A,#0053a0 ,9.0,Tottenham vs. Leicester City,5,4,0
+3559,63,2018-05-13,Arsenal,A,#ef0107 ,6.0,Huddersfield Town vs. Arsenal,0,1,3
+3565,75,2018-05-13,Liverpool,H,#dd0000 ,4.0,Liverpool vs. Brighton,4,0,3
+3566,54,2018-05-13,Burnley,H,#800000 ,7.0,Burnley vs. Bournemouth,1,2,0
+3568,42,2018-05-13,West Ham,H,#7f0000 ,13.0,West Ham vs. Everton,3,1,3
+3569,81,2018-05-13,Manchester Utd,H,#b40509 ,2.0,Manchester Utd vs. Watford,1,0,3
+3571,44,2018-05-13,Bournemouth,A,#8b0304 ,12.0,Burnley vs. Bournemouth,1,2,3
+3572,36,2018-05-13,Southampton,H,#ed1a3b ,17.0,Southampton vs. Manchester City,0,1,0
+3574,37,2018-05-13,Huddersfield Town,H,#176fc0,16.0,Huddersfield Town vs. Arsenal,0,1,0
+3575,44,2018-05-13,Crystal Palace,H,#27409b ,11.0,Crystal Palace vs. West Bromwich Albion,2,0,3
+3576,100,2018-05-13,Manchester City,A,#6caddf ,1.0,Southampton vs. Manchester City,0,1,3
+3577,44,2018-05-13,Newcastle Utd,H,#fafafa ,10.0,Newcastle Utd vs. Chelsea,3,0,3
+3580,70,2018-05-13,Chelsea,A,#034694 ,5.0,Newcastle Utd vs. Chelsea,3,0,0
+3583,33,2018-05-13,Swansea City,H,#ffffff ,18.0,Swansea City vs. Stoke City,1,2,0
+3585,40,2018-05-13,Brighton,A,#005daa ,15.0,Liverpool vs. Brighton,4,0,0
+3586,41,2018-05-13,Watford,A,#fbee23 ,14.0,Manchester Utd vs. Watford,1,0,0
+3589,31,2018-05-13,West Bromwich Albion,A,#122f67,20.0,Crystal Palace vs. West Bromwich Albion,2,0,0
+3590,33,2018-05-13,Stoke City,A,#e03a3e,19.0,Swansea City vs. Stoke City,1,2,3

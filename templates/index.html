@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>D3 example</title>
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="../static/lib/css/bootstrap.min.css">
+</head>
+<style>
+div.formTooltip {
+  position: absolute;
+  text-align: center;
+  width: auto;
+  height: 36px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: #cacaca;
+  border: 1px solid black;
+  border-radius: 4px;
+  pointer-events: none;
+}
+#tooltip {
+  background: #cacaca;
+  position: absolute;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 2px;
+  font: 12px sans-serif;
+  border: 1px solid black;
+  border-radius: 4px;
+  pointer-events: none;
+  }
+
+#tooltip td {
+  text-align: center;
+}
+
+#tooltip td:nth-child(4n+3),
+#tooltip td:nth-child(4n+5) {
+    border-left: 2px solid gray;
+}
+#tooltip th {
+  text-align: center;
+}
+</style>
+<body style="font-size: 16px !important;">
+  <div style='width: 60%; float:left;'>
+    <form method="POST">
+      <select  name= "squadA_select" class="js-example-basic-single" id="sqaudA_selector">
+          {% for squada in squad_list_a %}
+          {% if squada == Squad_a %}
+          <option value = "{{squada}}" SELECTED>{{squada}}</option>
+          {% else %}
+          <option value = "{{squada}}">{{squada}}</option>
+          {% endif %}
+          {% endfor %}
+      </select>
+      <select  name= "squadB_select" class="js-example-basic-single" id="sqaudB_selector">
+          {% for squadb in squad_list_b %}
+          {% if squadb == Squad_b %}
+          <option value = "{{squadb}}" SELECTED>{{squadb}}</option>
+          {% else %}
+          <option value = "{{squadb}}">{{squadb}}</option>
+          {% endif %}
+          {% endfor %}
+      </select>
+      <input class="submit-btn" type="submit" value="Go">
+    </form>
+  </div>
+  <div style='width: 40%; float:right;'>
+    <btn id='goalscoringBtn' class="btn effect01" target="_blank"><span style="text-align:center;">Goals</span></btn>
+    <btn id='creatingBtn' class="btn effect01" target="_blank"><span style="text-align:center;">Assists</span></btn>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-8" id="dc-form-chart"></div>
+      <div class="col-4" id="scatter-chart"></div>
+    </div>
+  </div>
+</body>
+  <!-- Bootstrap core JavaScript -->
+<script src="../static/lib/js/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+<script src="../static/lib/js/bootstrap.bundle.min.js"></script>
+<script src="./static/lib/js/d3.min.js"></script>
+<script src='./static/js/d3_example.js' type='text/javascript'></script>
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+</script>
+</html>
+
