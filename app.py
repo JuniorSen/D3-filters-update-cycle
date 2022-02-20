@@ -34,14 +34,11 @@ def patientSurveyData():
         pVal = pData[:,[0]]
         pVal = [val[0] for val in pVal]
         pdf[category] = pVal
-    # pdf['ActivityDate'] = pd.to_datetime(pd['ActivityDate'], dayfirst=True)
-    tempDf = pdf.copy(deep=True)
-    tempDf = tempDf.sort_values(by='ActivityDate')
-    tempDf['ActivityDate'] = tempDf['ActivityDate'].dt.strftime("%d/%m/%Y")
-    print(tempDf.head())
+    
+    pdf['ActivityDate'] = pdf['ActivityDate'].dt.strftime("%d/%m/%Y")
     columns = list(pdf.columns)
-    data = []
-    for idx, row in tempDf.iterrows():
+    data = [{"c1":"mood","c2":"anxiety","c3":"sleep"}]
+    for idx, row in pdf.iterrows():
         dic = {}
         for column in columns:
             dic[column] = row[column]

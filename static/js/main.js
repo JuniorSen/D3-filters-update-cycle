@@ -5,5 +5,5 @@ queue()
 console.log(surveyURL)
 
 function ready(error, attributes) {
-    d3Line(attributes);
+    d3TimeLine(attributes);
 }
