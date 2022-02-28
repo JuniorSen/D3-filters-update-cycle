@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 align-self-start border" id="menu">
+          <h3>Menu</h3>
+        </div>
+        <div class="col-5 align-self-start panel1 border" id="panel1">
+          <h3>Patient 1</h3>
+            <div class="row">
+              <div class="col-5" id="panel1Viz"></div>
+            </div>
+            <div class="row">
+            <form method="POST" action="/survey">
+              <div class="col-5" id="panel1Options">
+                <div class="form-check form-check-inline">
+                    {% if "mood" in ticked%}
+                        Mood  <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="mood" checked/>   
+                    {% else %}
+                        Mood <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="mood"/>
+                    {% endif %}   
+                    {% if "sleep" in ticked%}
+                        Sleep <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="sleep" checked/>
+                    {% else %}
+                        Sleep <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="sleep"/>
+                    {% endif %}
+                    {% if "social" in ticked %}
+                        Social <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="social" checked/>
+                    {% else %}
+                        Social <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="social"/>
+                    {% endif %}
+                    {% if 'anxiety' in ticked %}
+                        Anxiety <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="anxiety" checked/>
+                    {% else %}
+                        Anxiety <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="anxiety"/>
+                    {% endif %}
+                    {% if 'psychosis' in ticked %}
+                        Pyschosis <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="psychosis" checked/>
+                    {% else %}
+                        Pyschosis <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="psychosis"/>
+                    {% endif %}
+                    <input type="submit" class="checkbox" value="Visualize!">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-5 align-self-start panel2 border" id="panel2">
+          <h3>Patient 2</h3>
+          <div class="row">
+              <div class="col-5" id="panel2Viz"></div>
+          </div>
+          <div class="row">
+            <form method="POST" action="/survey">
+              <div class="col-5" id="panel2Options">
+                <div class="form-check form-check-inline">
+                    {% if "mood" in ticked%}
+                        Mood  <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="mood" checked disabled/>   
+                    {% else %}
+                        Mood <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="mood" disabled/>
+                    {% endif %}   
+                    {% if "sleep" in ticked%}
+                        Sleep <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="sleep" checked disabled/>
+                    {% else %}
+                        Sleep <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="sleep" disabled/>
+                    {% endif %}
+                    {% if "social" in ticked %}
+                        Social <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="social" checked disabled/>
+                    {% else %}
+                        Social <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="social" disabled/>
+                    {% endif %}
+                    {% if 'anxiety' in ticked %}
+                        Anxiety <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="anxiety" checked disabled/>
+                    {% else %}
+                        Anxiety <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="anxiety" disabled/>
+                    {% endif %}
+                    {% if 'psychosis' in ticked %}
+                        Pyschosis <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="psychosis" checked disabled/>
+                    {% else %}
+                        Pyschosis <input class="form-check-input checkbox" type="checkbox" name="p2SurveyCols" value="psychosis" disabled/>
+                    {% endif %}
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

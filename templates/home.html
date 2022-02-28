@@ -1,4 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<div id="surveyData"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 align-self-start border" id="menu">
+          <h3>Menu</h3>
+          <form method="POST" action="/survey">
+            <input type="submit" value="Patient vs Patient">
+          </form>
+        </div>
+        <div class="col-5 align-self-start panel1 border" id="panel1">
+          <h3>Panel 1</h3>
+        </div>
+        <div class="col-5 align-self-start panel2 border" id="panel2">
+          <h3>Panel 2</h3>
+        </div>
+    </div>
+</div>
 {% endblock content %}

@@ -7,14 +7,13 @@
     <meta name="Karthik Sama" content="Vislualization App">
     <title>Home page</title>
     
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css" />
-    
     <link href="/static/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css" />
     </head>
     <body>
-        <div class="container-fluid">
+        <div class="container-fluid" id="screen">
         <div class="row">
-        <div class="col-sm-10 mx-auto">
+        <div class="col-12">
         
         {% block content %}{% endblock %}
         </div>
@@ -25,12 +24,15 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <script src="https://d3js.org/queue.v1.min.js"></script>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
         <script>
-        var surveyURL = "{{ url_for('patientSurveyData') }}";
-        console.log(surveyURL);
+        var P1surveyURL = "{{ url_for('panel1Survey') }}";
+        var P2surveyURL = "{{ url_for('panel2Survey') }}";
         </script>
         <script src="{{ url_for('static', filename='js/main.js') }}"></script>
         <script src="{{ url_for('static', filename='js/survey.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/survey2.js') }}"></script>
         <script src="{{ url_for('static', filename='js/updateChart.js') }}"></script>
     </body>
     </html>
