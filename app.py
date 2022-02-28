@@ -1,3 +1,4 @@
+from attr import dataclass
 from flask import Flask,render_template,request,session,jsonify
 import csv
 import pandas as pd
@@ -18,10 +19,78 @@ meta2 = {'columns':['mood'],'panelId':'#panel2Viz','pid':"U7744128165"}
 def index():
     return render_template('home.html')
 
+def dataExtractor():
+    p1 = meta1['pid']
+    print(meta1['columns'])
+    df = pd.read_csv('input/features_'+p1+'.csv')
+    pdf = pd.DataFrame()
+    pcaList = []
+    pdf['ActivityDate'] = pd.to_datetime(df['ActivityDate'],dayfirst=True)
+    categories = ['mood','sleep','anxiety','psychosis','social']
+    for category in categories:
+        columnSubSet = []
+        for column in list(df.columns):
+            if(column[:-1] == category):
+                columnSubSet.append(column)
+        data = df[columnSubSet].values
+        print(category,np.shape(data))
+        pca = PCA(n_components=1)
+        pData = pca.fit_transform(data)
+        pcaList.append(pca)
+        pVal = pData[:,[0]]
+        pVal = [val[0] for val in pVal]
+        pdf[category] = pVal
+    pdf['ActivityDate'] = pdf['ActivityDate'].dt.strftime("%d/%m/%Y")
+    data1 = []
+    meta = {}
+    columns = meta1['columns']
+    for i in range(len(columns)):
+        meta['c'+str(i)] = columns[i]
+    meta['panelId'] = meta1['panelId']
+    data1.append(meta)
+    print(list(pdf.columns))
+    for idx, row in pdf.iterrows():
+        dic = {}
+        dic['ActivityDate'] = row['ActivityDate'] #Constant column
+        for column in columns:
+            dic[column] = row[column]
+        data1.append(dic)
+    p2 = meta2['pid']
+    df = pd.read_csv('input/features_'+p2+'.csv')
+    pdf = pd.DataFrame()
+    pdf['ActivityDate'] = pd.to_datetime(df['ActivityDate'],dayfirst=True)
+    for category, pca in zip(categories,pcaList):
+        columnSubSet = []
+        for column in list(df.columns):
+            if(column[:-1] == category):
+                columnSubSet.append(column)
+        data = df[columnSubSet].values
+        pData = pca.transform(data)
+        pVal = pData[:,[0]]
+        pVal = [val[0] for val in pVal]
+        pdf[category] = pVal
+    pdf['ActivityDate'] = pdf['ActivityDate'].dt.strftime("%d/%m/%Y")
+    data2 = []
+    meta = {}
+    columns = meta1['columns']
+    for i in range(len(columns)):
+        meta['c'+str(i)] = columns[i]
+    meta['panelId'] = meta2['panelId']
+    data2.append(meta)
+    for idx, row in pdf.iterrows():
+        dic = {}
+        dic['ActivityDate'] = row['ActivityDate'] #Constant column
+        for column in columns:
+            dic[column] = row[column]
+        data2.append(dic)
+
+    return [data1,data2]
+
 @app.route('/survey', methods=['GET','POST'])
 def surveyInteraction():
     if request.method == 'POST':
         cols = request.form.getlist('p2SurveyCols')
+        print(cols)
         if(len(cols) != 0):
             meta1['columns'] = cols
         else:
@@ -32,70 +101,41 @@ def surveyInteraction():
 
 @app.route('/panel1Survey', methods=['GET','POST'])
 def panel1Survey():
-    patientId = meta1['pid']
-    df = pd.read_csv('input/features_'+patientId+'.csv')
-    categories = ['social','mood','sleep','psychosis','anxiety']
-    pdf = pd.DataFrame()
-    pdf['ActivityDate'] = pd.to_datetime(df['ActivityDate'],dayfirst=True)
-    for category in meta1['columns']:
-        columnSubSet = []
-        for column in list(df.columns):
-            if(column[:-1] == category):
-                columnSubSet.append(column)
-        data = df[columnSubSet].values
-        pca = PCA(n_components=1)
-        pData = pca.fit_transform(data)
-        pVal = pData[:,[0]]
-        pVal = [val[0] for val in pVal]
-        pdf[category] = pVal
-    pdf['ActivityDate'] = pdf['ActivityDate'].dt.strftime("%d/%m/%Y")
-    meta1['dependency']['pca'] = pca
-    data = []
-    meta = {}
-    columns = meta1['columns']
-    for i in range(len(columns)):
-        meta['c'+str(i)] = columns[i]
-    meta['panelId'] = meta1['panelId']
-    data.append(meta)
-    for idx, row in pdf.iterrows():
-        dic = {}
-        dic['ActivityDate'] = row['ActivityDate'] #Constant column
-        for column in columns:
-            dic[column] = row[column]
-        data.append(dic)
+    data = dataExtractor()[0]
     return jsonify(data)
 
 @app.route('/panel2Survey', methods=['GET','POST'])
 def panel2Survey():
-    patientId = meta2['pid']
-    df = pd.read_csv('input/features_'+patientId+'.csv')
-    pdf = pd.DataFrame()
-    pdf['ActivityDate'] = pd.to_datetime(df['ActivityDate'],dayfirst=True)
-    for category in meta2['columns']:
-        columnSubSet = []
-        for column in list(df.columns):
-            if(column[:-1] == category):
-                columnSubSet.append(column)
-        data = df[columnSubSet].values
-        pca = PCA(n_components=1)
-        pData = pca.fit_transform(data)
-        pVal = pData[:,[0]]
-        pVal = [val[0] for val in pVal]
-        pdf[category] = pVal
-    pdf['ActivityDate'] = pdf['ActivityDate'].dt.strftime("%d/%m/%Y")
-    data = []
-    meta = {}
-    columns = meta2['columns']
-    for i in range(len(columns)):
-        meta['c'+str(i)] = columns[i]
-    meta['panelId'] = meta2['panelId']
-    data.append(meta)
-    for idx, row in pdf.iterrows():
-        dic = {}
-        dic['ActivityDate'] = row['ActivityDate'] #Constant column
-        for column in columns:
-            dic[column] = row[column]
-        data.append(dic)
+    # patientId = meta2['pid']
+    # df = pd.read_csv('input/features_'+patientId+'.csv')
+    # pdf = pd.DataFrame()
+    # pdf['ActivityDate'] = pd.to_datetime(df['ActivityDate'],dayfirst=True)
+    # for category in meta2['columns']:
+    #     columnSubSet = []
+    #     for column in list(df.columns):
+    #         if(column[:-1] == category):
+    #             columnSubSet.append(column)
+    #     data = df[columnSubSet].values
+    #     pca = PCA(n_components=1)
+    #     pData = pca.fit_transform(data)
+    #     pVal = pData[:,[0]]
+    #     pVal = [val[0] for val in pVal]
+    #     pdf[category] = pVal
+    # pdf['ActivityDate'] = pdf['ActivityDate'].dt.strftime("%d/%m/%Y")
+    # data = []
+    # meta = {}
+    # columns = meta2['columns']
+    # for i in range(len(columns)):
+    #     meta['c'+str(i)] = columns[i]
+    # meta['panelId'] = meta2['panelId']
+    # data.append(meta)
+    # for idx, row in pdf.iterrows():
+    #     dic = {}
+    #     dic['ActivityDate'] = row['ActivityDate'] #Constant column
+    #     for column in columns:
+    #         dic[column] = row[column]
+    #     data.append(dic)
+    data = dataExtractor()[1]
     return jsonify(data)
 # @app.route("/", methods = ['GET','POST'])
 # def H2H():

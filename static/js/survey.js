@@ -4,6 +4,7 @@ function d3TimeLine(data){
     var margin = {top: 10, right: 30, bottom: 30, left: 60},
     width = 460 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
+    console.log("data",data)
     metadata = Object.entries(data).slice(0,1).map(entry => entry[1])[0];
     data = Object.entries(data).slice(1,).map(entry => entry[1]);
     console.log("data",Object.entries(data));
