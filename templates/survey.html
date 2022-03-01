@@ -1,12 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container-fluid">
+<!-- <script>
+    console.log({{patientIds}});
+</script> -->
     <div class="row">
         <div class="col-2 align-self-start border" id="menu">
           <h3>Menu</h3>
+          <form method="POST" action="/survey">
+            <input type="submit" value="Survey Data">
+          </form>
+          <form method="GET" action="/">
+            <input type="submit" value="Main Menu">
+          </form>
         </div>
         <div class="col-5 align-self-start panel1 border" id="panel1">
           <h3>Patient 1</h3>
+          <form method="POST" action="/survey">
+              <label for="#patient1">ID:</label>
+              <select id="patient1" name="patient1" onchange="this.form.submit()">
+                <option value="{{ids[0]}}">{{ids[0]}}</option>
+                {% for patient in patientIds %}
+                    <option value="{{patient}}">{{patient}}</option>
+                {% endfor %}
+            </select>
+          </form>
             <div class="row">
               <div class="col-5" id="panel1Viz"></div>
             </div>
@@ -47,6 +64,15 @@
         </div>
         <div class="col-5 align-self-start panel2 border" id="panel2">
           <h3>Patient 2</h3>
+            <form method="POST" action="/survey">
+                <label for="#patient2">ID:</label>
+                <select id="patient2" name="patient2" onchange="this.form.submit()">
+                    <option value="{{ids[0]}}">{{ids[1]}}</option>
+                    {% for patient in patientIds %}
+                        <option value="{{patient}}">{{patient}}</option>
+                    {% endfor %}
+                </select>
+            </form>
           <div class="row">
               <div class="col-5" id="panel2Viz"></div>
           </div>

@@ -13,27 +13,27 @@ filepath = 'input/'
 req = ['mood']
 meta1 = {'columns':['mood'],'panelId':'#panel1Viz','pid':"U1606505063",'dependency':{}}
 meta2 = {'columns':['mood'],'panelId':'#panel2Viz','pid':"U7744128165"}
+categories = ['mood','sleep','anxiety','psychosis','social']
+patientIds = ['U2201583859', 'U7744128165', 'U7331358608', 'U9119126792', 'U4172114993', 'U1954110644', 'U1606505063', 'U1771421483', 'U9938684473', 'U6321806987', 'U5501702863', 'U9864604466', 'U0328336314', 'U8514953341', 'U3826134542', 'U7851221787', 'U2287161257', 'U5342719148', 'U1128597896', 'U1456972679', 'U3600685320']
+userId = []
 
 #homepage
 @app.route('/')
 def index():
-    return render_template('home.html')
+    return render_template('base.html')
 
 def dataExtractor():
     p1 = meta1['pid']
-    print(meta1['columns'])
     df = pd.read_csv('input/features_'+p1+'.csv')
     pdf = pd.DataFrame()
     pcaList = []
     pdf['ActivityDate'] = pd.to_datetime(df['ActivityDate'],dayfirst=True)
-    categories = ['mood','sleep','anxiety','psychosis','social']
     for category in categories:
         columnSubSet = []
         for column in list(df.columns):
             if(column[:-1] == category):
                 columnSubSet.append(column)
         data = df[columnSubSet].values
-        print(category,np.shape(data))
         pca = PCA(n_components=1)
         pData = pca.fit_transform(data)
         pcaList.append(pca)
@@ -48,7 +48,6 @@ def dataExtractor():
         meta['c'+str(i)] = columns[i]
     meta['panelId'] = meta1['panelId']
     data1.append(meta)
-    print(list(pdf.columns))
     for idx, row in pdf.iterrows():
         dic = {}
         dic['ActivityDate'] = row['ActivityDate'] #Constant column
@@ -56,6 +55,7 @@ def dataExtractor():
             dic[column] = row[column]
         data1.append(dic)
     p2 = meta2['pid']
+    print(p2)
     df = pd.read_csv('input/features_'+p2+'.csv')
     pdf = pd.DataFrame()
     pdf['ActivityDate'] = pd.to_datetime(df['ActivityDate'],dayfirst=True)
@@ -89,14 +89,19 @@ def dataExtractor():
 @app.route('/survey', methods=['GET','POST'])
 def surveyInteraction():
     if request.method == 'POST':
+        p1 = request.form.get('patient1')
+        if(p1 != None):
+            meta1['pid'] = p1
+        p2 = request.form.get('patient2')
+        if(p2 != None):
+            meta2['pid'] = p2
         cols = request.form.getlist('p2SurveyCols')
-        print(cols)
         if(len(cols) != 0):
             meta1['columns'] = cols
         else:
             meta1['columns'] = ['mood']
     meta2['columns'] = meta1['columns']
-    return render_template('survey.html', ticked=meta2['columns'])
+    return render_template('survey.html', ticked=meta2['columns'], ids=[meta1['pid'],meta2['pid']], patientIds=patientIds)
     
 
 @app.route('/panel1Survey', methods=['GET','POST'])
@@ -106,35 +111,6 @@ def panel1Survey():
 
 @app.route('/panel2Survey', methods=['GET','POST'])
 def panel2Survey():
-    # patientId = meta2['pid']
-    # df = pd.read_csv('input/features_'+patientId+'.csv')
-    # pdf = pd.DataFrame()
-    # pdf['ActivityDate'] = pd.to_datetime(df['ActivityDate'],dayfirst=True)
-    # for category in meta2['columns']:
-    #     columnSubSet = []
-    #     for column in list(df.columns):
-    #         if(column[:-1] == category):
-    #             columnSubSet.append(column)
-    #     data = df[columnSubSet].values
-    #     pca = PCA(n_components=1)
-    #     pData = pca.fit_transform(data)
-    #     pVal = pData[:,[0]]
-    #     pVal = [val[0] for val in pVal]
-    #     pdf[category] = pVal
-    # pdf['ActivityDate'] = pdf['ActivityDate'].dt.strftime("%d/%m/%Y")
-    # data = []
-    # meta = {}
-    # columns = meta2['columns']
-    # for i in range(len(columns)):
-    #     meta['c'+str(i)] = columns[i]
-    # meta['panelId'] = meta2['panelId']
-    # data.append(meta)
-    # for idx, row in pdf.iterrows():
-    #     dic = {}
-    #     dic['ActivityDate'] = row['ActivityDate'] #Constant column
-    #     for column in columns:
-    #         dic[column] = row[column]
-    #     data.append(dic)
     data = dataExtractor()[1]
     return jsonify(data)
 # @app.route("/", methods = ['GET','POST'])

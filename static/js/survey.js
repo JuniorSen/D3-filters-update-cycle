@@ -4,14 +4,12 @@ function d3TimeLine(data){
     var margin = {top: 10, right: 30, bottom: 30, left: 60},
     width = 460 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
-    console.log("data",data)
     metadata = Object.entries(data).slice(0,1).map(entry => entry[1])[0];
     data = Object.entries(data).slice(1,).map(entry => entry[1]);
-    console.log("data",Object.entries(data));
     for(var ind of Object.keys(data)) {
         data[ind].ActivityDate = d3.timeParse("%d/%m/%Y")(data[ind].ActivityDate);
     }
-    console.log("Meta",metadata);
+
     var svg = d3.select(metadata['panelId'])
             .append("svg")
             .attr("width", width + margin.left + margin.right)
@@ -40,7 +38,6 @@ function d3TimeLine(data){
                         }, {})
                     );
     
-    console.log(columns, metadata['panelId']);
     var res = d3.min(data, function(d) {
         var minVal = Number.MAX_SAFE_INTEGER;
         var maxVal = Number.MIN_SAFE_INTEGER;

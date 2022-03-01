@@ -5,17 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="SHARP dataset Vislualization">
     <meta name="Karthik Sama" content="Vislualization App">
-    <title>Home page</title>
+    <title>SHARP Data Vislualization</title>
     
     <link href="/static/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css" />
     </head>
     <body>
         <div class="container-fluid" id="screen">
-        <div class="row">
-        <div class="col-12">
         
-        {% block content %}{% endblock %}
+        {% block content %}
+        <div class="row">
+            <div class="col-2 align-self-start border" id="menu">
+              <h3>Menu</h3>
+              <form method="POST" action="/survey">
+                <input type="submit" value="Patient vs Patient">
+              </form>
+            </div>
+            <div class="col-5 align-self-start panel1 border" id="panel1">
+              <h3>Panel 1</h3>
+            </div>
+            <div class="col-5 align-self-start panel2 border" id="panel2">
+              <h3>Panel 2</h3>
+            </div>
+        </div>
+        {% endblock %}
         </div>
         </div>
         </div>
@@ -33,6 +46,7 @@
         <script src="{{ url_for('static', filename='js/main.js') }}"></script>
         <script src="{{ url_for('static', filename='js/survey.js') }}"></script>
         <script src="{{ url_for('static', filename='js/updateChart.js') }}"></script>
+        <script>var patients = ['U2201583859', 'U7744128165', 'U7331358608', 'U9119126792', 'U4172114993', 'U1954110644', 'U1606505063', 'U1771421483', 'U9938684473', 'U6321806987', 'U5501702863', 'U9864604466', 'U0328336314', 'U8514953341', 'U3826134542', 'U7851221787', 'U2287161257', 'U5342719148', 'U1128597896', 'U1456972679', 'U3600685320']</script>
     </body>
     </html>
     
