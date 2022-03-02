@@ -1,9 +1,11 @@
 queue()
-	.defer(d3.json, P1surveyURL)
-    .defer(d3.json, P2surveyURL)
+	// .defer(d3.json, P1surveyURL)
+    // .defer(d3.json, P2surveyURL)
+    .defer(d3.json, surveyVizUrl)
     .await(ready);
 
-function ready(error, attributes1, attributes2) {
-    d3TimeLine(attributes1);
-    d3TimeLine(attributes2);
+function ready(error, attributes) {
+    // console.log(attributes);
+    d3TimeLine(attributes[0]);
+    d3TimeLine(attributes[1]);
 }

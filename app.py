@@ -1,3 +1,4 @@
+from email import message
 from attr import dataclass
 from flask import Flask,render_template,request,session,jsonify
 import csv
@@ -9,7 +10,7 @@ import pickle
 
 app = Flask(__name__) #create app instance
 app.secret_key = 'example' #store this in an environment variable for live apps.
-filepath = 'input/'
+surveyFilePath = 'input/surveyData/features_'
 req = ['mood']
 meta1 = {'columns':['mood'],'panelId':'#panel1Viz','pid':"U1606505063",'dependency':{}}
 meta2 = {'columns':['mood'],'panelId':'#panel2Viz','pid':"U7744128165"}
@@ -22,9 +23,13 @@ userId = []
 def index():
     return render_template('base.html')
 
-def dataExtractor():
+@app.route('/surveydata',methods=['GET','POST'])
+def surveyViz():
     p1 = meta1['pid']
-    df = pd.read_csv('input/features_'+p1+'.csv')
+    try:
+        df = pd.read_csv(surveyFilePath+p1+'.csv')
+    except:
+        return render_template('error.html',message="Data for "+p1+" not found")
     pdf = pd.DataFrame()
     pcaList = []
     pdf['ActivityDate'] = pd.to_datetime(df['ActivityDate'],dayfirst=True)
@@ -55,8 +60,10 @@ def dataExtractor():
             dic[column] = row[column]
         data1.append(dic)
     p2 = meta2['pid']
-    print(p2)
-    df = pd.read_csv('input/features_'+p2+'.csv')
+    try:
+        df = pd.read_csv(surveyFilePath+p2+'.csv')
+    except:
+        return render_template('error.html',message="Data for "+p2+" not found")
     pdf = pd.DataFrame()
     pdf['ActivityDate'] = pd.to_datetime(df['ActivityDate'],dayfirst=True)
     for category, pca in zip(categories,pcaList):
@@ -84,7 +91,7 @@ def dataExtractor():
             dic[column] = row[column]
         data2.append(dic)
 
-    return [data1,data2]
+    return jsonify([data1,data2])
 
 @app.route('/survey', methods=['GET','POST'])
 def surveyInteraction():
@@ -92,10 +99,22 @@ def surveyInteraction():
         p1 = request.form.get('patient1')
         if(p1 != None):
             meta1['pid'] = p1
+        else:
+            p1 = meta1['pid']
+        try:
+            pd.read_csv(surveyFilePath+p1+'.csv')
+        except:
+            return render_template('error.html',message="Data for "+p1+" not found")
         p2 = request.form.get('patient2')
         if(p2 != None):
             meta2['pid'] = p2
-        cols = request.form.getlist('p2SurveyCols')
+        else:
+            p2 = meta2['pid']
+        try:
+            pd.read_csv(surveyFilePath+p2+'.csv')
+        except:
+            return render_template('error.html',message="Data for "+p2+" not found")
+        cols = request.form.getlist('SurveyCols')
         if(len(cols) != 0):
             meta1['columns'] = cols
         else:
@@ -104,15 +123,15 @@ def surveyInteraction():
     return render_template('survey.html', ticked=meta2['columns'], ids=[meta1['pid'],meta2['pid']], patientIds=patientIds)
     
 
-@app.route('/panel1Survey', methods=['GET','POST'])
-def panel1Survey():
-    data = dataExtractor()[0]
-    return jsonify(data)
+# @app.route('/panel1Survey', methods=['GET','POST'])
+# def panel1Survey():
+#     data = dataExtractor()[0]
+#     return jsonify(data)
 
-@app.route('/panel2Survey', methods=['GET','POST'])
-def panel2Survey():
-    data = dataExtractor()[1]
-    return jsonify(data)
+# @app.route('/panel2Survey', methods=['GET','POST'])
+# def panel2Survey():
+#     data = dataExtractor()[1]
+#     return jsonify(data)
 # @app.route("/", methods = ['GET','POST'])
 # def H2H():
 #     #set default form values

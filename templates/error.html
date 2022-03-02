@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-2 align-self-start border" id="menu">
+        <!-- <div class="row"> -->
+            <h3>Menu</h3>
+        <!-- </div> -->
+        <!-- <div class"row"> -->
+            <form method="GET" action="/">
+                <input type="submit" value="Main Menu">
+            </form>
+        <!-- </div> -->
+    </div>
+    <div class="col-10 border">
+        <p>{{ message }}</p>
+    </div>
+</div>
+{% endblock content %}
