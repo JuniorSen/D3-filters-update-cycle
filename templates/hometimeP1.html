@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-2 align-self-start border" id="menu">
+        <div class="row">
+            <div class="col-12 border">
+                <h3>Menu</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 justify-content-center">
+                <form method="POST" action="/sigLocP1">
+                    <input type="submit" value="Significant locations">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 justify-content-center">
+                <form method="GET" action="/">
+                    <input type="submit" value="Main Menu">
+                </form>
+            </div>
+        </div>    
+    </div>
+    <div class="col-10 align-self-start">
+        <div class="row justify-content-start">
+            <div class="col-6 align-self-start border">
+                <h3>Hometime</h3>
+            </div>
+            <div class="col-6 align-self-start border">
+                <h3>Day distribution</h3>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-6 border justify-content-center" id="panel1P1home"></div>
+            <div class="col-6 border justify-content-center" id="panel2P1Sig"></div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

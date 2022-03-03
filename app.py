@@ -23,7 +23,31 @@ userId = []
 def index():
     return render_template('base.html')
 
-@app.route('/surveydata',methods=['GET','POST'])
+@app.route('/sigLocP1data')
+def sigLocP1data():
+    df = pd.read_csv("input/SignificantLocations/features_U1606505063.csv")
+    df = df.loc[pd.DatetimeIndex(df.start).month == 11]
+    grouped = df.groupby('start')
+    data = []
+    for name, group in grouped:
+        dic = {}
+        dic['ActivityDate'] = name.split(' ')[0]
+        cols = ['latitude','longitude','proportion']
+        locs = []
+        for i in range(len(group)):
+            locDet = {}
+            for col in cols:
+                locDet[col] = list(group[col])[i]
+            locs.append(locDet)
+        dic['locations'] = locs
+        data.append(dic)
+    return jsonify(data)
+
+@app.route('/sigLocP1', methods=['GET','POST'])
+def sigLocP1():
+    return render_template("hometimeP1.html")
+
+@app.route('/surveydata')
 def surveyViz():
     p1 = meta1['pid']
     try:
@@ -90,7 +114,6 @@ def surveyViz():
         for column in columns:
             dic[column] = row[column]
         data2.append(dic)
-
     return jsonify([data1,data2])
 
 @app.route('/survey', methods=['GET','POST'])
@@ -104,6 +127,7 @@ def surveyInteraction():
         try:
             pd.read_csv(surveyFilePath+p1+'.csv')
         except:
+            meta1["pid"] = "U1606505063"
             return render_template('error.html',message="Data for "+p1+" not found")
         p2 = request.form.get('patient2')
         if(p2 != None):
@@ -113,6 +137,7 @@ def surveyInteraction():
         try:
             pd.read_csv(surveyFilePath+p2+'.csv')
         except:
+            meta2["pid"] = "U7744128165"
             return render_template('error.html',message="Data for "+p2+" not found")
         cols = request.form.getlist('SurveyCols')
         if(len(cols) != 0):
