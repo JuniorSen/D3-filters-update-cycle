@@ -9,5 +9,6 @@ function ready(error, a1, a2) {
     // console.log(attributes);
     d3TimeLine(a1[0]);
     d3TimeLine(a1[1]);
-    p1Calendar(a2);
+    calendarPie(a2);
+
 }

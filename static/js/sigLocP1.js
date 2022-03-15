@@ -25,7 +25,7 @@ function p1Calendar(data) {
     const max = d3.quantile(Y, 0.9975, Math.abs);
     const formatDay = i => "MTWTFSS"[i];
 
-    var svg = d3.select("#panel1P1home")
+    var svg = d3.select("#panel1Viz")
                 .append("svg")
                 .attr("width", cellSize*15+margin.left)
                 .attr("height", cellSize*(Math.ceil(X.length/7)+4)+margin.top)
