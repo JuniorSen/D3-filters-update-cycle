@@ -8,46 +8,232 @@
     <title>SHARP Data Vislualization</title>
     
     <link href="/static/css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Abel|Nunito" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        $("#datepicker").datepicker({
+          format: "MM yyyy",
+          viewMode: "years",
+          minViewMode: "months"
+        });
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
-        <div class="container-fluid" id="screen">
+      <div class="container-fluid" id="screen">
         
         {% block content %}
-        <div class="row">
+        <div class="row h-100">
           <div class="col-2 align-self-start border" id="menu">
             <div class="row">
-                <div class="col-12 border">
-                    <h3>Menu</h3>
+                <div class="col-12">
+                    <h5>S. Smartphone</h5>
+                    <h5>H. Health</h5>
+                    <h5>A. Assessment for</h5>
+                    <h5>R. Relapse</h5>
+                    <h5>P. Prevention</h5>
                 </div>
             </div>
             <div class="row">
-              <div class="col-12 justify-content-center">
-                <form method="POST" action="/survey">
-                  <input type="submit" value="Patient vs Patient Analytics">
-                </form>
-              </div>
+                <div class="col-12 d-flex justify-content-center">
+                  <h5>Visualization Portal</h5>
+                </div>
             </div>
+          </div>
+
+          <!-- Panel 1 -->
+          <div class="col-5 align-self-start panel1 border h-100" id="panel1">
             <div class="row">
-              <div class="col-12 justify-content-center">
-                <form method="POST" action="/sigLocP1">
-                  <input type="submit" value="Single Patient Analytics">
+                <!-- Patient ID -->
+                <div class="col-6 d-flex justify-content-end">
+                  <form method="POST" class="form-inline" action="/">
+                    <div class="form-floating">
+                      <select id="p1ID" name="p1ID" class="form-select" id="inlineFormSelectPref" onchange="this.form.submit()">
+                          <option selected>{{selected['p1ID']}}</option>
+                          {% for patient in patientIds %}
+                            {% if patient != selected['p1ID'] %}
+                              <option value="{{patient}}">{{patient}}</option>
+                            {% endif %}
+                          {% endfor %}
+                      </select>
+                      <label for="p1ID">Patient ID</label>
+                    </div>
+                  </form>
+                </div>
+                <!-- Features-->
+                <div class="col-6 d-flex justify-content-start">
+                  <form method="POST" class="form-inline" action="/">
+                    <div class="form-floating">
+                      <select id="f1" name="f1" class="form-select" id="inlineFormSelectPref" onchange="this.form.submit()">
+                          <option selected>{{selected['f1']}}</option>
+                          {% for feature in options['f1'] %}
+                            {% if feature != selected['f1'] %}
+                              <option value="{{feature}}">{{feature}}</option>
+                            {% endif %}
+                          {% endfor %}
+                      </select>
+                      <label for="f1">Features</label>
+                    </div>
                 </form>
               </div>
             </div>
+            <!--Visualization-->
+            <div class="row h-75">
+              <div class="col-12 border" id="panel1Viz"></div>
+            </div>
+            <!-- Feature options -->
+            <div class="row">
+              <div class="col-12 border d-flex justify-content-center">
+                {% if selected['f1'] == 'Survey PCA' %}
+                  <form method="POST" action="/">
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="mood1">Mood</label>
+                      <input class="form-check-input" id="mood1" type="checkbox" name="svp1_opt" value="mood" {{"checked" if "mood" in options['f1_opt']}} />
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="sleep1">Sleep</label>
+                      <input class="form-check-input" id="sleep1" type="checkbox" name="svp1_opt" value="sleep" {{"checked" if "sleep" in options['f1_opt']}} />      
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="social1">Social</label>
+                      <input class="form-check-input" id="social1" type="checkbox" name="svp1_opt" value="social" {{"checked" if "social" in options['f1_opt']}} />      
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="anxiety1">Anxiety</label>
+                      <input class="form-check-input" id="anxiety1" type="checkbox" name="svp1_opt" value="anxiety" {{"checked" if "anxiety" in options['f1_opt']}} />      
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="pyschosis1">Psychosis</label>
+                      <input class="form-check-input" id="pyschosis1" type="checkbox" name="svp1_opt" value="psychosis" {{"checked" if "psychosis" in options['f1_opt']}} />      
+                    </div>
+                    <button type="submit" class="btn btn-primary">Visualize</button>
+                </form>
+                {% elif selected['f1'] == 'Hometime' or selected['f1'] == 'Significant Location' %}
+                    <form method="POST" action="/">
+                      <div class="form-row">
+                        <div class="col">
+                          <input type="text" id="datepicker1" name="p1MY" class="form-control" placeholder="Month to study" />
+                        </div>
+                        <div class="col">
+                          <button type="submit" class="btn btn-primary">Visualize</button>
+                        </div>
+                      </div>
+                    </form>
+                    <script>
+                      var $datepicker = $('#datepicker1');
+                      $datepicker.datepicker('setDate',new Date(options['f1_opt'][1], options['f1_opt'][0], 1));
+                    </script>
+                {% endif %}
+              </div>
+            </div>
           </div>
-          <div class="col-5 align-self-start panel1 border" id="panel1">
-            <h3>Panel 1</h3>
-          </div>
-          <div class="col-5 align-self-start panel2 border" id="panel2">
-            <h3>Panel 2</h3>
+
+          <!-- Panel 2 -->
+          <div class="col-5 align-self-start panel1 border h-100" id="panel2">
+            <div class="row">
+                <!-- Patient ID -->
+                <div class="col-6 d-flex justify-content-end">
+                  <form method="POST" class="form-inline" action="/">
+                    <div class="form-floating">
+                      <select id="p2ID" name="p2ID" class="form-select" id="inlineFormSelectPref" onchange="this.form.submit()">
+                          <option selected>{{selected['p2ID']}}</option>
+                          {% for patient in patientIds %}
+                            {% if patient != selected['p2ID'] %}
+                              <option value="{{patient}}">{{patient}}</option>
+                            {% endif %}
+                          {% endfor %}
+                      </select>
+                      <label for="p2ID">Patient ID</label>
+                    </div>
+                  </form>
+                </div>
+                <!-- Features-->
+                <div class="col-6 d-flex justify-content-start">
+                  <form method="POST" class="form-inline" action="/">
+                    <div class="form-floating">
+                      <select id="f2" name="f2" class="form-select" id="inlineFormSelectPref" onchange="this.form.submit()">
+                          <option selected>{{selected['f2']}}</option>
+                          {% for feature in options['f2'] %}
+                            {% if feature != selected['f2'] %}
+                              <option value="{{feature}}">{{feature}}</option>
+                            {% endif %}
+                          {% endfor %}
+                      </select>
+                      <label for="f2">Features</label>
+                    </div>
+                </form>
+              </div>
+            </div>
+            <!--Visualization-->
+            <div class="row h-75">
+              <div class="col-12 border" id="panel2Viz"></div>
+            </div>
+            <!-- Feature options -->
+            <div class="row">
+              <div class="col-12 border d-flex justify-content-center">
+                {% if selected['f2'] == 'Survey PCA' %}
+                  <form method="POST" action="/">
+                    <div class="form-check form-check-inline">
+                    <label class="form-check-label" for="mood2">Mood</label>
+                    <input class="form-check-input" id="mood2" type="checkbox" name="svp2_opt" value="mood" {{"checked" if "mood" in options['f2_opt']}} />
+                    </div>  
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="sleep2">Sleep</label>
+                      <input class="form-check-input" id="sleep2" type="checkbox" name="svp2_opt" value="sleep" {{"checked" if "sleep" in options['f2_opt']}} />      
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="social2">Social</label>
+                      <input class="form-check-input" id="social2" type="checkbox" name="svp2_opt" value="social" {{"checked" if "social" in options['f2_opt']}} />      
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="anxiety2">Anxiety</label>
+                      <input class="form-check-input" id="anxiety2" type="checkbox" name="svp2_opt" value="anxiety" {{"checked" if "anxiety" in options['f2_opt']}} />      
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label" for="pyschosis2">Psychosis</label>
+                      <input class="form-check-input" id="pyschosis2" type="checkbox" name="svp2_opt" value="psychosis" {{"checked" if "psychosis" in options['f2_opt']}} />      
+                    </div>
+                    <button type="submit" class="btn btn-primary">Visualize</button>
+                </form>
+                {% elif selected['f2'] == 'Hometime' or selected['f2'] == 'Significant Location' %}
+                  <form method="POST" action="/">
+                    <div class="form-row">
+                      <div class="col">
+                        <input type="text" id="datepicker2" name="p2MY" class="form-control" placeholder="Month to study" />
+                      </div>
+                      <div class="col">
+                        <button type="submit" class="btn btn-primary">Visualize</button>
+                      </div>
+                    </div>
+                  </form>
+                  <script>
+                    var $datepicker = $('#datepicker2');
+                    $datepicker.datepicker('setDate',new Date(options['f2_opt'][1], options['f2_opt'][0], 1));
+                  </script>
+                {% endif %}
+              </div>
+            </div>
           </div>
         </div>
         {% endblock %}
-        </div>
-        </div>
-        </div>
-        
+      </div>
+      <script>
+        $("#datepicker1").datepicker( {
+          format: "mm-yyyy",
+          startView: "months", 
+          minViewMode: "months",
+        });
+        $("#datepicker2").datepicker( {
+          format: "mm-yyyy",
+          startView: "months", 
+          minViewMode: "months",
+        });
+      </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
         <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -57,14 +243,14 @@
         <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
         <script>
         var surveyVizUrl = "{{ url_for('surveyViz')}}";
-        var sigLocP1Url = "{{ url_for('sigLocP1data')}}";
+        var sigLocUrl = "{{ url_for('sigLocdata')}}";
+        var renderUrl = "{{ url_for('render')}}";
         </script>
         <script src="{{ url_for('static', filename='js/main.js') }}"></script>
         <script src="{{ url_for('static', filename='js/survey.js') }}"></script>
         <script src="{{ url_for('static', filename='js/updateChart.js') }}"></script>
         <script src="{{ url_for('static', filename='js/sigLocP1.js') }}"></script>
         <script src="{{ url_for('static', filename='js/calendarPie.js') }}"></script>
-        <!-- <script>var patients = ['U2201583859', 'U7744128165', 'U7331358608', 'U9119126792', 'U4172114993', 'U1954110644', 'U1606505063', 'U1771421483', 'U9938684473', 'U6321806987', 'U5501702863', 'U9864604466', 'U0328336314', 'U8514953341', 'U3826134542', 'U7851221787', 'U2287161257', 'U5342719148', 'U1128597896', 'U1456972679', 'U3600685320']</script> -->
     </body>
     </html>
     

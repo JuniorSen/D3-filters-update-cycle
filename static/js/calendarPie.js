@@ -2,6 +2,9 @@
 monthDays = {1:31, 2:28, 3:31, 4:30, 5:31, 6:30, 7:31, 8:31, 9:30, 10:31, 11:30, 12:31}
 
 function calendarPie(data) {
+    meta = Object.entries(data).slice(0,1)[0][1];
+    panelId = meta['panelId']
+    data = Object.entries(data).slice(1,).map(entry => entry[1]);        
     dates = Object.entries(data).map(entry => d3.timeParse("%Y-%m-%d")(entry[1]['ActivityDate']));
     values =  Object.entries(data).map(entry => (entry[1]['locations']));
     pieData = values[2];
@@ -9,26 +12,11 @@ function calendarPie(data) {
 
     var pie = d3.pie().value(function(d) {
                 return d.proportion;});
-    console.log(pieData);
     var catCol = d3.scaleOrdinal().domain(d3.range(5)).range(d3.schemeCategory10);    
-    
-//     svg.selectAll()
-//         .data(pie(pieData))
-//         .enter()
-//         .append("path")
-//         .attr('d', d3.arc()
-//                 .innerRadius(0)
-//                 .outerRadius(50))
-//         .attr('fill', function(d){return(catCol(d.index))})
-//         .attr("stroke", "black")
-//         .attr('transform',"translate(60 60)")
-//         .style("stroke-width", "1px")
-//         .style("opacity", 0.7)
-    // Compute values.
+
     const X = dates;
-    var margin = {top:40, left:20}
+    var margin = {top: 170, right: 30, bottom: 30, left: 180}
     var curDay = X[0].getDay();
-    console.log("day",curDay);
     const availableDates = X.map(entry => entry.getDate());
     const totalDays = monthDays[X[0].getMonth()+1];
     const Y = Object.entries(data).map(entry => (entry[1]['locations'][0]['proportion']));
@@ -45,7 +33,7 @@ function calendarPie(data) {
     // const max = d3.quantile(Y, 0.9975, Math.abs);
     const formatDay = i => "MTWTFSS"[i];
 
-    var svg = d3.select("#panel1P1home")
+    var svg = d3.select(panelId)
                 .append("svg")
                 .attr("width", cellSize*15+margin.left+100)
                 .attr("height", cellSize*(Math.ceil(X.length/7)+4)+margin.top+100)

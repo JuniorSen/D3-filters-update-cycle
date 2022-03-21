@@ -1,14 +1,30 @@
 queue()
+    .defer(d3.json, renderUrl)
     .defer(d3.json, surveyVizUrl)
-    .defer(d3.json, sigLocP1Url)
+    .defer(d3.json, sigLocUrl)
     .await(ready);
-    // .defer(d3.json, P1surveyURL)
-    // .defer(d3.json, P2surveyURL)
 
-function ready(error, a1, a2) {
-    // console.log(attributes);
-    d3TimeLine(a1[0]);
-    d3TimeLine(a1[1]);
-    calendarPie(a2);
+function ready(error, state, surData, sigLocData) {
 
+    var metaData = state[2]
+    if(metaData['f'] == 'Survey PCA') {
+        d3TimeLine(surData[0]);
+    }
+    else if(metaData['f'] == 'Significant Location') {
+        calendarPie(sigLocData[0]);
+    }
+    else if(metaData['f'] == 'Hometime') {
+        p1Calendar(sigLocData[0]);
+    }
+
+    var metaData = state[3]
+    if(metaData['f'] == 'Survey PCA') {
+        d3TimeLine(surData[1]);
+    }
+    else if(metaData['f'] == 'Significant Location') {
+        calendarPie(sigLocData[1]);
+    }
+    else if(metaData['f'] == 'Hometime') {
+        p1Calendar(sigLocData[1]);
+    }
 }

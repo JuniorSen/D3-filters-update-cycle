@@ -2,16 +2,16 @@
 monthDays = {1:31, 2:28, 3:31, 4:30, 5:31, 6:30, 7:31, 8:31, 9:30, 10:31, 11:30, 12:31}
 
 function p1Calendar(data) {
+    meta = Object.entries(data).slice(0,1)[0][1];
+    console.log(meta);
+    panelId = meta['panelId']
+    data = Object.entries(data).slice(1,).map(entry => entry[1]);
     dates = Object.entries(data).map(entry => d3.timeParse("%Y-%m-%d")(entry[1]['ActivityDate']))
     values =  Object.entries(data).map(entry => (entry[1]['locations'][0]['proportion']))
-    // Compute values.
     const X = dates;
-    var margin = {top:40, left:20}
     var curDay = X[0].getDay();
     const availableDates = X.map(entry => entry.getDate());
     const totalDays = monthDays[X[0].getMonth()+1];
-    console.log(data)
-    console.log(totalDays,X[0].getMonth(),X[0]);
     const Y = values;
     const I = d3.range(totalDays);
     var xind = 0;
@@ -24,8 +24,8 @@ function p1Calendar(data) {
     // is zero, and we want symmetric difference around zero.
     const max = d3.quantile(Y, 0.9975, Math.abs);
     const formatDay = i => "MTWTFSS"[i];
-
-    var svg = d3.select("#panel1Viz")
+    var margin = {top: 170, right: 30, bottom: 30, left: 180}
+    var svg = d3.select(panelId)
                 .append("svg")
                 .attr("width", cellSize*15+margin.left)
                 .attr("height", cellSize*(Math.ceil(X.length/7)+4)+margin.top)
@@ -67,7 +67,6 @@ function p1Calendar(data) {
       .attr("fill",colors(points[ind]))
       .attr("width",cellSize/3)
       .attr("height",sampleHeight/points.length)
-      console.log(points[ind])
     }
     svg.append("text")
     .attr("x", cellSize*8+cellSize/3+3)
@@ -90,7 +89,7 @@ function p1Calendar(data) {
           .attr("height",cellSize)
           .attr("rx",cellSize/10)
           .attr("ry",cellSize/10)
-          .attr("fill",availableDates.includes(ind+1) ? colors(Y[xind++]) : "lightcoral")
+          .attr("fill",availableDates.includes(ind+1) ? colors(Y[xind++]) : "#999997")
           .attr("stroke","black")
           .attr("stroke-width",2)
           .on("click", function(d) {

@@ -1,15 +1,14 @@
-var formatAsInteger = d3.format(",");
-
 function d3TimeLine(data){
-    var margin = {top: 10, right: 30, bottom: 30, left: 60},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+
+    var margin = {top: 200, right: 30, bottom: 30, left: 60},
+    width = 600 - margin.left - margin.right,
+    height = 550 - margin.top - margin.bottom;
     metadata = Object.entries(data).slice(0,1).map(entry => entry[1])[0];
     data = Object.entries(data).slice(1,).map(entry => entry[1]);
     for(var ind of Object.keys(data)) {
         data[ind].ActivityDate = d3.timeParse("%d/%m/%Y")(data[ind].ActivityDate);
     }
-
+    
     var svg = d3.select(metadata['panelId'])
             .append("svg")
             .attr("width", width + margin.left + margin.right)
