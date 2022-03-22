@@ -117,7 +117,7 @@
                     <form method="POST" action="/">
                       <div class="form-row">
                         <div class="col">
-                          <input type="text" id="datepicker1" name="p1MY" class="form-control" placeholder="Month to study" />
+                          <input type="text" id="datepicker1" name="p1MY" class="form-control" placeholder="Month to study" value={{options['f1_opt'][0] ~ '-' ~ options['f1_opt'][1]}}>
                         </div>
                         <div class="col">
                           <button type="submit" class="btn btn-primary">Visualize</button>
@@ -204,7 +204,7 @@
                   <form method="POST" action="/">
                     <div class="form-row">
                       <div class="col">
-                        <input type="text" id="datepicker2" name="p2MY" class="form-control" placeholder="Month to study" />
+                        <input type="text" id="datepicker2" name="p2MY" class="form-control" placeholder="Month to study" value={{options['f2_opt'][0] ~ '-' ~ options['f2_opt'][1]}}>
                       </div>
                       <div class="col">
                         <button type="submit" class="btn btn-primary">Visualize</button>
