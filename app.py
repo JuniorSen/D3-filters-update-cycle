@@ -25,7 +25,7 @@ categories = ['mood','sleep','anxiety','psychosis','social']
 meta1 = {'panelId':'#panel1Viz','f':None,'f_opt':[],'pid':"U1606505063"}
 meta2 = {'panelId':'#panel2Viz','f':None,'f_opt':[],'pid':"U7744128165"}
 
-state = {1:1, 2:1}
+state = {1:0, 2:0}
 
 #homepage
 @app.route('/',methods=['GET','POST'])
@@ -234,7 +234,10 @@ def surveyViz():
         data2 = surveyPCA(meta2)
     return jsonify([data1,data2])
 
-# @app.route('/survey', methods=['GET','POST'])
+@app.route('/trial', methods=['GET','POST'])
+def display():
+    state[1] = -1
+    return render_template('error.html')
 # def surveyInteraction():
 #     if request.method == 'POST':
 #         p1 = request.form.get('patient1')

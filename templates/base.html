@@ -28,8 +28,15 @@
       <div class="container-fluid" id="screen">
         
         {% block content %}
-        <div class="row h-100">
-          <div class="col-2 align-self-start border" id="menu">
+        <div class="row" style="margin-left: 0px; margin-right: 0px; height: 8%;">
+          <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <h5 style="color: aliceblue;">S.H.A.R.P. Visualization Portal</h5>
+            </div>
+          </nav>
+        </div>
+        <div class="row" style="margin-left: 0px; margin-right: 0px; height: 92%;">
+          <!-- <div class="col-2 align-self-start border" id="menu">
             <div class="row">
                 <div class="col-12">
                     <h5>S. Smartphone</h5>
@@ -44,10 +51,10 @@
                   <h5>Visualization Portal</h5>
                 </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Panel 1 -->
-          <div class="col-5 align-self-start panel1 border h-100" id="panel1">
+          <div class="col-6 align-self-start panel1 border h-100" id="panel1">
             <div class="row">
                 <!-- Patient ID -->
                 <div class="col-6 d-flex justify-content-end">
@@ -111,6 +118,7 @@
                       <label class="form-check-label" for="pyschosis1">Psychosis</label>
                       <input class="form-check-input" id="pyschosis1" type="checkbox" name="svp1_opt" value="psychosis" {{"checked" if "psychosis" in options['f1_opt']}} />      
                     </div>
+                    <div class=""></div>
                     <button type="submit" class="btn btn-primary">Visualize</button>
                 </form>
                 {% elif selected['f1'] == 'Hometime' or selected['f1'] == 'Significant Location' %}
@@ -134,7 +142,7 @@
           </div>
 
           <!-- Panel 2 -->
-          <div class="col-5 align-self-start panel1 border h-100" id="panel2">
+          <div class="col-6 align-self-start panel1 border h-100" id="panel2">
             <div class="row">
                 <!-- Patient ID -->
                 <div class="col-6 d-flex justify-content-end">
@@ -245,6 +253,8 @@
         var surveyVizUrl = "{{ url_for('surveyViz')}}";
         var sigLocUrl = "{{ url_for('sigLocdata')}}";
         var renderUrl = "{{ url_for('render')}}";
+        // var svg ;
+        // console.log(svg,"from base");
         </script>
         <script src="{{ url_for('static', filename='js/main.js') }}"></script>
         <script src="{{ url_for('static', filename='js/survey.js') }}"></script>

@@ -27,4 +27,5 @@ function ready(error, state, surData, sigLocData) {
     else if(metaData['f'] == 'Hometime') {
         p1Calendar(sigLocData[1]);
     }
-}
+        
+}   
