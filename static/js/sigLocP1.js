@@ -18,17 +18,21 @@ function p1Calendar(data) {
     const Month = 11;
     const Year = 2021;
     const yFormat = '';
-    const cellSize = 50;
+    const cellSize = 55;
+    var displayHeight = document.getElementById(panelId.substring(1)).clientHeight;
+    var displayWidth = document.getElementById(panelId.substring(1)).clientWidth;
+    var width = cellSize*9;
+    var height = cellSize*8;
     const colors = d3.scaleLinear().domain([d3.min(Y),d3.max(Y)]).range(["paleturquoise", "dodgerblue"]);
     // Compute a color scale. This assumes a diverging color scheme where the pivot
     // is zero, and we want symmetric difference around zero.
     const max = d3.quantile(Y, 0.9975, Math.abs);
     const formatDay = i => "MTWTFSS"[i];
-    var margin = {top: 170, right: 30, bottom: 30, left: 180}
+    var margin = {top: (displayHeight-height)/2, left: (displayWidth-width)/2}
     var svg = d3.select(panelId)
                 .append("svg")
-                .attr("width", cellSize*15+margin.left)
-                .attr("height", cellSize*(Math.ceil(X.length/7)+4)+margin.top)
+                .attr("width", displayWidth)
+                .attr("height", displayHeight)
                 .append("g")
                 .attr("transform",
                 "translate(" + margin.left + "," + margin.top + ")");

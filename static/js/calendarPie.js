@@ -13,9 +13,9 @@ function calendarPie(data) {
     var pie = d3.pie().value(function(d) {
                 return d.proportion;});
     var catCol = d3.scaleOrdinal().domain(d3.range(5)).range(d3.schemeCategory10);    
-
+    var displayHeight = document.getElementById(panelId.substring(1)).clientHeight;
+    var displayWidth = document.getElementById(panelId.substring(1)).clientWidth;
     const X = dates;
-    var margin = {top: 170, right: 30, bottom: 30, left: 180}
     var curDay = X[0].getDay();
     const availableDates = X.map(entry => entry.getDate());
     const totalDays = monthDays[X[0].getMonth()+1];
@@ -25,7 +25,13 @@ function calendarPie(data) {
     const Month = 11;
     const Year = 2021;
     const yFormat = '';
-    const cellSize = 50;
+    const cellSize = 55;
+    var width = cellSize*7;
+    var height = cellSize*8;
+    var margin = {top: (displayHeight-height)/2,left: (displayWidth-width)/2};
+    console.log(panelId, displayHeight, displayWidth);
+    console.log(height, width, margin.top, margin.left);
+    
     const radius = cellSize/2-2;
     const colors = d3.scaleLinear().domain([d3.min(Y),d3.max(Y)]).range(["paleturquoise", "dodgerblue"]);
     // // Compute a color scale. This assumes a diverging color scheme where the pivot
@@ -35,8 +41,8 @@ function calendarPie(data) {
 
     var svg = d3.select(panelId)
                 .append("svg")
-                .attr("width", cellSize*15+margin.left+100)
-                .attr("height", cellSize*(Math.ceil(X.length/7)+4)+margin.top+100)
+                .attr("width", displayWidth)
+                .attr("height", displayHeight)
                 .append("g")
                 .attr("transform",
                 "translate(" + margin.left + "," + margin.top + ")");

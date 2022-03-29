@@ -1,18 +1,21 @@
 function d3TimeLine(data){
-
-    var margin = {top: 200, right: 30, bottom: 30, left: 60},
-    width = 600 - margin.left - margin.right,
-    height = 550 - margin.top - margin.bottom;
     metadata = Object.entries(data).slice(0,1).map(entry => entry[1])[0];
     data = Object.entries(data).slice(1,).map(entry => entry[1]);
+    const panelId = metadata['panelId'];
+    var displayHeight = document.getElementById(panelId.substring(1)).clientHeight;
+    var displayWidth = document.getElementById(panelId.substring(1)).clientWidth;
+    var width = displayWidth*0.6;
+    var height = displayHeight*0.6;
+    var margin = {top: (displayHeight-height)/2, left: (displayWidth-width)/2};
     for(var ind of Object.keys(data)) {
         data[ind].ActivityDate = d3.timeParse("%d/%m/%Y")(data[ind].ActivityDate);
     }
-    
-    var svg = d3.select(metadata['panelId'])
+    var displayHeight = document.getElementById(panelId.substring(1)).clientHeight;
+    var displayWidth = document.getElementById(panelId.substring(1)).clientWidth;
+    var svg = d3.select(panelId)
             .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
+            .attr("width", displayWidth)
+            .attr("height", displayHeight)
             .append("g")
             .attr("transform",
                 "translate(" + margin.left + "," + margin.top + ")");
