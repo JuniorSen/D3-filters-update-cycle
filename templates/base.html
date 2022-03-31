@@ -36,22 +36,6 @@
           </nav>
         </div>
         <div class="row" style="margin-left: 0px; margin-right: 0px; height: 92%;">
-          <!-- <div class="col-2 align-self-start border" id="menu">
-            <div class="row">
-                <div class="col-12">
-                    <h5>S. Smartphone</h5>
-                    <h5>H. Health</h5>
-                    <h5>A. Assessment for</h5>
-                    <h5>R. Relapse</h5>
-                    <h5>P. Prevention</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 d-flex justify-content-center">
-                  <h5>Visualization Portal</h5>
-                </div>
-            </div>
-          </div> -->
 
           <!-- Panel 1 -->
           <div class="col-6 align-self-start panel1 border h-100" id="panel1">
@@ -121,20 +105,31 @@
                     <button type="submit" class="btn btn-primary">Visualize</button>
                 </form>
                 {% elif selected['f1'] == 'Hometime' or selected['f1'] == 'Significant Location' %}
-                    <form method="POST" action="/">
-                      <div class="form-row">
-                        <div class="col">
-                          <input type="text" id="datepicker1" name="p1MY" class="form-control" placeholder="Month to study" value={{options['f1_opt'][0] ~ '-' ~ options['f1_opt'][1]}}>
+                  <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                      <div class="row">
+                        <div class="col-12 d-flex justify-content-center">
+                          <form method="POST" action="/">
+                            <div class="form-row align-items-center">
+                              <div class="col-auto">
+                                <input type="text" id="datepicker1" name="p1MY" class="form-control" placeholder="Month to study" value={{options['f1_opt'][0] ~ '-' ~ options['f1_opt'][1]}}>
+                              </div>
+                              <div class="col-auto">
+                                <button type="submit" class="btn btn-primary">Visualize</button>
+                              </div>
+                            </div>
+                          </form>
+                          <script>
+                            var $datepicker = $('#datepicker1');
+                            $datepicker.datepicker('setDate',new Date(options['f1_opt'][1], options['f1_opt'][0], 1));
+                          </script>
                         </div>
-                        <div class="col">
-                          <button type="submit" class="btn btn-primary">Visualize</button>
+                        <div class="col-12 d-flex justify-content-center">
+                          <p><small>Data available from {{options['f1_opt'][2][1]}}-{{options['f1_opt'][2][0]}} to {{options['f1_opt'][2][3]}}-{{options['f1_opt'][2][2]}}</small></p>
                         </div>
                       </div>
-                    </form>
-                    <script>
-                      var $datepicker = $('#datepicker1');
-                      $datepicker.datepicker('setDate',new Date(options['f1_opt'][1], options['f1_opt'][0], 1));
-                    </script>
+                    </div>
+                  </div>
                 {% endif %}
               </div>
             </div>
@@ -208,20 +203,31 @@
                     <button type="submit" class="btn btn-primary">Visualize</button>
                 </form>
                 {% elif selected['f2'] == 'Hometime' or selected['f2'] == 'Significant Location' %}
-                  <form method="POST" action="/">
-                    <div class="form-row">
-                      <div class="col">
-                        <input type="text" id="datepicker2" name="p2MY" class="form-control" placeholder="Month to study" value={{options['f2_opt'][0] ~ '-' ~ options['f2_opt'][1]}}>
+                <div class="row">
+                  <div class="col-12 d-flex justify-content-center">
+                    <div class="row">
+                      <div class="col-12 d-flex justify-content-center">
+                        <form method="POST" action="/">
+                          <div class="form-row align-items-center">
+                            <div class="col-auto">
+                              <input type="text" id="datepicker2" name="p2MY" class="form-control" placeholder="Month to study" value={{options['f2_opt'][0] ~ '-' ~ options['f2_opt'][1]}}>
+                            </div>
+                            <div class="col-auto">
+                              <button type="submit" class="btn btn-primary">Visualize</button>
+                            </div>
+                          </div>
+                        </form>
+                        <script>
+                          var $datepicker = $('#datepicker2');
+                          $datepicker.datepicker('setDate',new Date(options['f2_opt'][1], options['f2_opt'][0], 1));
+                        </script>
                       </div>
-                      <div class="col">
-                        <button type="submit" class="btn btn-primary">Visualize</button>
+                      <div class="col-12 d-flex justify-content-center">
+                        <p><small>Data available from {{options['f2_opt'][2][1]}}-{{options['f2_opt'][2][0]}} to {{options['f2_opt'][2][3]}}-{{options['f2_opt'][2][2]}}</small></p>
                       </div>
                     </div>
-                  </form>
-                  <script>
-                    var $datepicker = $('#datepicker2');
-                    $datepicker.datepicker('setDate',new Date(options['f2_opt'][1], options['f2_opt'][0], 1));
-                  </script>
+                  </div>
+                </div>
                 {% endif %}
               </div>
             </div>
@@ -257,7 +263,6 @@
         </script>
         <script src="{{ url_for('static', filename='js/main.js') }}"></script>
         <script src="{{ url_for('static', filename='js/survey.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/updateChart.js') }}"></script>
         <script src="{{ url_for('static', filename='js/sigLocP1.js') }}"></script>
         <script src="{{ url_for('static', filename='js/calendarPie.js') }}"></script>
     </body>

@@ -20,8 +20,6 @@ fileFeatures = {
 }
 patientIds = ['U2201583859', 'U7744128165', 'U7331358608', 'U9119126792', 'U4172114993', 'U1954110644', 'U1606505063', 'U1771421483', 'U9938684473', 'U6321806987', 'U5501702863', 'U9864604466', 'U0328336314', 'U8514953341', 'U3826134542', 'U7851221787', 'U2287161257', 'U5342719148', 'U1128597896', 'U1456972679', 'U3600685320']
 
-categories = ['mood','sleep','anxiety','psychosis','social']
-
 meta1 = {'panelId':'#panel1Viz','f':None,'f_opt':[],'pid':"U1606505063"}
 meta2 = {'panelId':'#panel2Viz','f':None,'f_opt':[],'pid':"U7744128165"}
 
@@ -58,10 +56,6 @@ def index():
             state[2] = 0
     elif(meta1['f'] == 'Hometime' or meta1['f'] == 'Significant Location'):
         my = request.form.get('p1MY')
-        try:
-            M, Y = map(int,my.split('-'))
-        except:
-            M, Y = (11, 2021)
         df = pd.read_csv(sigLocFilePath+meta1['pid']+'.csv')
         temp = pd.to_datetime(df['start'],dayfirst=True)
         validMonths = {}
@@ -69,6 +63,7 @@ def index():
         year = temp.min().year
         maxmonth = temp.max().month
         maxyear = temp.max().year
+        minyear = temp.min().year
         while(year <= maxyear):
             yearlist = []
             if(year != maxyear):
@@ -83,10 +78,21 @@ def index():
                     month += 1
                 validMonths[year] = yearlist
             year += 1
-        if(Y not in validMonths or M not in validMonths[Y]):
-            M = maxmonth
-            Y = maxyear
-        meta1['f_opt'] = [M,Y]
+        timeRange = (minyear, min(validMonths[minyear]), maxyear, max(validMonths[maxyear]))        
+        if(my != None):
+            try:
+                M, Y = map(int,my.split('-'))
+                if(Y not in validMonths or M not in validMonths[Y]):
+                    M = maxmonth
+                    Y = maxyear
+            except:
+                M, Y = (timeRange[3], timeRange[2])    
+        else:
+            try:
+                M, Y, _ = meta1['f_opt']
+            except:
+                M, Y = (timeRange[3], timeRange[2])
+        meta1['f_opt'] = [M,Y,timeRange]
 
     
     p2ID = request.form.get('p2ID')
@@ -116,10 +122,6 @@ def index():
             state[2] = 1
     elif(meta2['f'] == 'Hometime' or meta2['f'] == 'Significant Location'):
         my = request.form.get('p2MY')
-        try:
-            M, Y = map(int,my.split('-'))
-        except:
-            M, Y = (11, 2021)
         df = pd.read_csv(sigLocFilePath+meta2['pid']+'.csv')
         temp = pd.to_datetime(df['start'],dayfirst=True)
         validMonths = {}
@@ -127,6 +129,7 @@ def index():
         year = temp.min().year
         maxmonth = temp.max().month
         maxyear = temp.max().year
+        minyear = temp.min().year
         while(year <= maxyear):
             yearlist = []
             if(year != maxyear):
@@ -141,10 +144,21 @@ def index():
                     month += 1
                 validMonths[year] = yearlist
             year += 1
-        if(Y not in validMonths or M not in validMonths[Y]):
-            M = maxmonth
-            Y = maxyear
-        meta2['f_opt'] = [M,Y]
+        timeRange = (minyear, min(validMonths[minyear]), maxyear, max(validMonths[maxyear]))
+        if(my != None):            
+            try:
+                M, Y = map(int,my.split('-'))
+                if(Y not in validMonths or M not in validMonths[Y]):
+                    M = maxmonth
+                    Y = maxyear
+            except:
+                M, Y = (timeRange[3], timeRange[2])
+        else:
+            try:
+                M, Y, _ = meta2['f_opt']
+            except:
+                M, Y = (timeRange[3], timeRange[2])
+        meta2['f_opt'] = [M,Y,timeRange]
 
     selected = {'p1ID':meta1['pid'], 'p2ID':meta2['pid'],
                 'f1':meta1['f'], 'f2':meta2['f']}
@@ -164,7 +178,7 @@ def render():
 
 def sigLocExtract(meta):
     df = pd.read_csv(sigLocFilePath+meta['pid']+'.csv')
-    M, Y = tuple(meta['f_opt'])
+    M, Y, _ = tuple(meta['f_opt'])
     df = df.loc[(pd.DatetimeIndex(df.start).month == M) & (pd.DatetimeIndex(df.start).year == Y)]
     grouped = df.groupby('start')
     data = [meta]
@@ -180,7 +194,6 @@ def sigLocExtract(meta):
             locs.append(locDet)
         dic['locations'] = locs
         data.append(dic)
-    # print(data, M, Y)
     return data
 
 @app.route('/sigLocdata')
@@ -233,37 +246,3 @@ def surveyViz():
     if(meta2['f'] == 'Survey PCA'):
         data2 = surveyPCA(meta2)
     return jsonify([data1,data2])
-
-@app.route('/trial', methods=['GET','POST'])
-def display():
-    state[1] = -1
-    return render_template('error.html')
-# def surveyInteraction():
-#     if request.method == 'POST':
-#         p1 = request.form.get('patient1')
-#         if(p1 != None):
-#             meta1['pid'] = p1
-#         else:
-#             p1 = meta1['pid']
-#         try:
-#             pd.read_csv(surveyFilePath+p1+'.csv')
-#         except:
-#             meta1["pid"] = "U1606505063"
-#             return render_template('error.html',message="Data for "+p1+" not found")
-#         p2 = request.form.get('patient2')
-#         if(p2 != None):
-#             meta2['pid'] = p2
-#         else:
-#             p2 = meta2['pid']
-#         try:
-#             pd.read_csv(surveyFilePath+p2+'.csv')
-#         except:
-#             meta2["pid"] = "U7744128165"
-#             return render_template('error.html',message="Data for "+p2+" not found")
-#         cols = request.form.getlist('SurveyCols')
-#         if(len(cols) != 0):
-#             meta1['columns'] = cols
-#         else:
-#             meta1['columns'] = ['mood']
-#     meta2['columns'] = meta1['columns']
-#     return render_template('survey.html', ticked=meta2['columns'], ids=[meta1['pid'],meta2['pid']], patientIds=patientIds)
