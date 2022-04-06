@@ -3,9 +3,9 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="SHARP dataset Vislualization">
+    <meta name="description" content="Comparitive Visualization Tool">
     <meta name="Karthik Sama" content="Vislualization App">
-    <title>SHARP Data Vislualization</title>
+    <title>Comparitive Vislualization Tool</title>
     
     <link href="/static/css/main.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"/>
@@ -31,7 +31,7 @@
         <div class="row" style="margin-left: 0px; margin-right: 0px; height: 8%;">
           <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
-              <h5 style="color: aliceblue;">S.H.A.R.P. Visualization Portal</h5>
+              <h5 style="color: aliceblue;">Comparitive Visualization Tool</h5>
             </div>
           </nav>
         </div>
@@ -130,6 +130,40 @@
                       </div>
                     </div>
                   </div>
+                {% elif selected['f1'] == 'Survey Performance' %}
+                      <form method="POST" action="/">
+                        <div class="form-row align-items-center">
+                          <div class="col-auto form-check form-check-inline">
+                            <label class="form-check-label" for="agg1">Aggregate</label>
+                            <input class="form-check-input" type="radio" id="agg1" type="checkbox" name="svPer1" value="Aggregate" {{"checked" if "Aggregate" in options['f1_opt']}} />
+                          </div>
+                          <div class="col-auto form-check form-check-inline">
+                            <label class="form-check-label" for="comp1">Complete</label>
+                            <input class="form-check-input" type="radio" id="comp1" type="checkbox" name="svPer1" value="Complete" {{"checked" if "Complete" in options['f1_opt']}} />      
+                          </div>
+                          <div class="col-auto">
+                            <div class="form-floating">
+                              <select id="clusters" name="svPer1" class="form-select" id="inlineFormSelectPref">
+                                {% if options['f1_opt'][1] == 'Natural' %}
+                                  <option selected>Natural clustering</option>
+                                {% else %}
+                                  <option selected>{{options['f1_opt'][1]}}</option>
+                                {% endif %}
+                                  <option value="Natural">Natural clustering</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="5">5</option>
+                                  <option value="10">10</option>
+                                  <option value="15">15</option>
+                              </select>
+                              <label for="clusters" class="form-inline">Number of clusters</label>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <button type="submit" class="btn btn-primary">Visualize</button>
+                          </div>
+                        </div>
+                      </form>
                 {% endif %}
               </div>
             </div>
@@ -228,6 +262,40 @@
                     </div>
                   </div>
                 </div>
+                {% elif selected['f2'] == 'Survey Performance' %}
+                      <form method="POST" action="/">
+                        <div class="form-row align-items-center">
+                          <div class="col-auto form-check form-check-inline">
+                            <label class="form-check-label" for="agg2">Aggregate</label>
+                            <input class="form-check-input" type="radio" id="agg2" type="checkbox" name="svPer2" value="Aggregate" {{"checked" if "Aggregate" in options['f2_opt']}} />
+                          </div>
+                          <div class="col-auto form-check form-check-inline">
+                            <label class="form-check-label" for="comp2">Complete</label>
+                            <input class="form-check-input" type="radio" id="comp2" type="checkbox" name="svPer2" value="Complete" {{"checked" if "Complete" in options['f2_opt']}} />      
+                          </div>
+                          <div class="col-auto">
+                            <div class="form-floating">
+                              <select id="clusters2" name="svPer2" class="form-select" id="inlineFormSelectPref">
+                                {% if options['f2_opt'][1] == 'Natural' %}
+                                  <option selected>Natural clustering</option>
+                                {% else %}
+                                  <option selected>{{options['f2_opt'][1]}}</option>
+                                {% endif %}
+                                  <option value="Natural">Natural clustering</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="5">5</option>
+                                  <option value="10">10</option>
+                                  <option value="15">15</option>
+                              </select>
+                              <label for="clusters2" class="form-inline">Number of clusters</label>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <button type="submit" class="btn btn-primary">Visualize</button>
+                          </div>
+                        </div>
+                      </form>                
                 {% endif %}
               </div>
             </div>
@@ -261,10 +329,10 @@
         // var svg ;
         // console.log(svg,"from base");
         </script>
-        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
         <script src="{{ url_for('static', filename='js/survey.js') }}"></script>
         <script src="{{ url_for('static', filename='js/sigLocP1.js') }}"></script>
         <script src="{{ url_for('static', filename='js/calendarPie.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     </body>
     </html>
     

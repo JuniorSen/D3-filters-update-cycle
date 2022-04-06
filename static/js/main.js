@@ -10,6 +10,9 @@ function ready(error, state, surData, sigLocData) {
     if(metaData['f'] == 'Survey PCA') {
         d3TimeLine(surData[0]);
     }
+    else if(metaData['f'] == 'Survey Performance') {
+        d3heatMap(surData[0]);
+    }
     else if(metaData['f'] == 'Significant Location') {
         calendarPie(sigLocData[0]);
     }
@@ -20,6 +23,9 @@ function ready(error, state, surData, sigLocData) {
     var metaData = state[3]
     if(metaData['f'] == 'Survey PCA') {
         d3TimeLine(surData[1]);
+    }
+    else if(metaData['f'] == 'Survey Performance') {
+        d3heatMap(surData[1]);
     }
     else if(metaData['f'] == 'Significant Location') {
         calendarPie(sigLocData[1]);

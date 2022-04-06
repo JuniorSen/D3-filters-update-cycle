@@ -1,4 +1,5 @@
 from email import message
+from os import stat
 from attr import dataclass
 from flask import Flask,render_template,request,session,jsonify
 import csv
@@ -8,6 +9,18 @@ from sklearn.decomposition import PCA
 from scipy.interpolate import make_interp_spline
 import pickle
 from os.path import exists
+from helperFuncs import co_association_matrix
+from sklearn.cluster import AffinityPropagation
+from sklearn.cluster import DBSCAN
+from sklearn.cluster import OPTICS
+from sklearn.cluster import MeanShift
+from sklearn.cluster import AgglomerativeClustering
+from sklearn.cluster import Birch
+from sklearn.cluster import KMeans
+from sklearn.cluster import MiniBatchKMeans
+from sklearn.cluster import SpectralClustering
+from sklearn.mixture import GaussianMixture
+import sys
 
 app = Flask(__name__) #create app instance
 app.secret_key = 'example' #store this in an environment variable for live apps.
@@ -15,7 +28,7 @@ surveyFilePath = 'input/surveyData/features_'
 sigLocFilePath = 'input/SignificantLocations/features_'
 
 fileFeatures = {
-    surveyFilePath:['Survey PCA'],
+    surveyFilePath:['Survey PCA', 'Survey Performance'],
     sigLocFilePath:['Hometime', 'Significant Location'],
 }
 patientIds = ['U2201583859', 'U7744128165', 'U7331358608', 'U9119126792', 'U4172114993', 'U1954110644', 'U1606505063', 'U1771421483', 'U9938684473', 'U6321806987', 'U5501702863', 'U9864604466', 'U0328336314', 'U8514953341', 'U3826134542', 'U7851221787', 'U2287161257', 'U5342719148', 'U1128597896', 'U1456972679', 'U3600685320']
@@ -48,12 +61,22 @@ def index():
         meta1['f_opt'] = []
     elif(meta1['f'] == 'Survey PCA'):
         optList = request.form.getlist('svp1_opt')
-        if meta1['f_opt'] == [] and optList == []:
+        if (meta1['f_opt'] == []) and optList == [] or meta1['f_opt'][0] not in ['mood','anxiety','social','sleep','psychosis']:
             meta1['f_opt'] = ['mood']
         elif optList != []:
             meta1['f_opt'] = optList
             state[1] = 1
             state[2] = 0
+    elif(meta1['f'] == 'Survey Performance'):
+        optList = request.form.getlist('svPer1')
+        if (meta1['f_opt'] == [] and optList == []) or meta1['f_opt'][0] not in ['Aggregate','Complete']:
+            meta1['f_opt'] = ['Aggregate', "Natural"]
+        if(optList and (optList[0] == 'Aggregate' or optList[0] == 'Complete')):
+            meta1['f_opt'] = [optList[0]]
+            state[1] = 1
+            state[2] = 0
+        if(optList and optList[1]):
+            meta1['f_opt'].append(optList[1])
     elif(meta1['f'] == 'Hometime' or meta1['f'] == 'Significant Location'):
         my = request.form.get('p1MY')
         df = pd.read_csv(sigLocFilePath+meta1['pid']+'.csv')
@@ -80,6 +103,8 @@ def index():
             year += 1
         timeRange = (minyear, min(validMonths[minyear]), maxyear, max(validMonths[maxyear]))        
         if(my != None):
+            state[2] = 0
+            state[1] = 1  
             try:
                 M, Y = map(int,my.split('-'))
                 if(Y not in validMonths or M not in validMonths[Y]):
@@ -114,12 +139,22 @@ def index():
         meta2['f_opt'] = []
     elif(meta2['f'] == 'Survey PCA'):
         optList = request.form.getlist('svp2_opt')
-        if meta2['f_opt'] == [] and optList == []:
+        if (meta2['f_opt'] == [] and optList == []) or meta2['f_opt'][0] not in ['mood','anxiety','social','sleep','psychosis']:
             meta2['f_opt'] = ['mood']
         elif optList != []:
             meta2['f_opt'] = optList
             state[1] = 0
             state[2] = 1
+    elif(meta2['f'] == 'Survey Performance'):
+        optList = request.form.getlist('svPer2')
+        if (meta2['f_opt'] == [] and optList == []) or meta1['f_opt'][0] not in ['Aggregate','Complete']:
+            meta2['f_opt'] = ['Aggregate', "Natural"]
+        if(optList and (optList[0] == 'Aggregate' or optList[0] == 'Complete')):
+            meta2['f_opt'] = [optList[0]]
+            state[1] = 0
+            state[2] = 1
+        if(optList and optList[1]):
+            meta2['f_opt'].append(optList[1])       
     elif(meta2['f'] == 'Hometime' or meta2['f'] == 'Significant Location'):
         my = request.form.get('p2MY')
         df = pd.read_csv(sigLocFilePath+meta2['pid']+'.csv')
@@ -145,7 +180,9 @@ def index():
                 validMonths[year] = yearlist
             year += 1
         timeRange = (minyear, min(validMonths[minyear]), maxyear, max(validMonths[maxyear]))
-        if(my != None):            
+        if(my != None):       
+            state[2] = 1
+            state[1] = 0     
             try:
                 M, Y = map(int,my.split('-'))
                 if(Y not in validMonths or M not in validMonths[Y]):
@@ -237,12 +274,72 @@ def surveyPCA(meta):
         returnData.append(dic)
     return returnData
 
+#Meta format - [Aggregate/Complete, Number of clusters]
+def surveyPerformance(meta):
+    df = pd.read_csv(surveyFilePath+meta['pid']+'.csv')
+    df['ActivityDate'] = pd.to_datetime(df['ActivityDate'],dayfirst=True)
+    df['ActivityDate'] = df['ActivityDate'].dt.strftime("%d/%m/%Y")
+    #Aggregating features
+    if(meta['f_opt'][0] == "Aggregate"):
+        df["social"] = (df['social1'] + df['social2'] + df['social3'] + df['social4'] + df['social5'])/5
+        df["mood"] = (df['mood1'] + df['mood2'] + df['mood3'] + df['mood4'] + df['mood5'] + df['mood6'] + df['mood7'] + df['mood8'] + df['mood9'])/9
+        df["sleep"] = (df["sleep1"] +  df["sleep2"] + df["sleep3"])/3
+        df["psychosis"] = (df['psychosis1'] + df['psychosis2'] + df['psychosis3'] + df['psychosis4'] + df['psychosis5'])/5
+        df["anxiety"] = (df['anxiety1'] + df['anxiety2'] + df['anxiety3'] + df['anxiety4'] + df['anxiety5'] + df['anxiety6'] + df['anxiety7'])/7
+    data = df.drop(columns=["ActivityDate"]).to_numpy()
+    days = df.shape[0]
+    matrixDat = np.zeros((days,days))
+    print(meta['f_opt'][1])
+    if(meta['f_opt'][1] == "Natural"):
+        save_stdout = sys.stdout
+        sys.stdout = open('trash', 'w')
+        model = AffinityPropagation(damping=0.5)
+        matrixDat += co_association_matrix(model, data, days)
+        model = DBSCAN(eps=0.1, min_samples=3)
+        matrixDat += co_association_matrix(model, data, days)
+        model = MeanShift()
+        matrixDat += co_association_matrix(model, data, days)
+        model = OPTICS(eps=0.1, min_samples=3)
+        matrixDat += co_association_matrix(model, data, days)
+        matrixDat /= 4
+        sys.stdout = save_stdout
+    else:
+        save_stdout = sys.stdout
+        try:
+            clusters = int(meta['f_opt'][1])
+            sys.stdout = open('trash', 'w')
+            model = AgglomerativeClustering(n_clusters=clusters)
+            matrixDat += co_association_matrix(model, data, days)
+            model = Birch(threshold=0.01, n_clusters=clusters)
+            matrixDat += co_association_matrix(model, data, days)
+            model = KMeans(n_clusters=clusters)
+            matrixDat += co_association_matrix(model, data, days)
+            model = MiniBatchKMeans(n_clusters=clusters)
+            matrixDat += co_association_matrix(model, data, days)
+            model = SpectralClustering(n_clusters=clusters)
+            matrixDat += co_association_matrix(model, data, days)
+            model = GaussianMixture(n_components=clusters)
+            matrixDat += co_association_matrix(model, data, days)
+            matrixDat /= 6
+            sys.stdout = save_stdout
+        except:
+            print("Couldn't convert string to int")
+        
+    returnData = [{'panelId':meta['panelId']},{'dates':list(df['ActivityDate'].values)},{'data': list(matrixDat.flatten())}]
+    # print("Hi",returnData)
+    return returnData
+
 @app.route('/surveydata')
 def surveyViz():
     data1 = []
     data2 = []
     if(meta1['f'] == 'Survey PCA'):
         data1 = surveyPCA(meta1)
+    elif(meta1['f'] == 'Survey Performance'):
+        data1 = surveyPerformance(meta1)
     if(meta2['f'] == 'Survey PCA'):
         data2 = surveyPCA(meta2)
+    elif(meta2['f'] == 'Survey Performance'):
+        data2 = surveyPerformance(meta2)        
+    # print("hello",data1, data2)
     return jsonify([data1,data2])

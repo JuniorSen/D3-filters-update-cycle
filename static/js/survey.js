@@ -90,3 +90,136 @@ function d3TimeLine(data){
         ind += 1;
     }
 }
+
+function d3heatMap(data) {
+    const metaData = data[0];
+    const panelId = metaData['panelId']
+    const displayHeight = document.getElementById(panelId.substring(1)).clientHeight;
+    const displayWidth = document.getElementById(panelId.substring(1)).clientWidth;
+    const width = Math.min(displayWidth,displayHeight)*0.7;
+    const height = width;
+    const margin = {top: (displayHeight-height)/2, left: (displayWidth-width)/2};
+    var dates = data[1]['dates'];
+    dates = dates.map(d => d.slice(0,-5));
+    const interval = dates.length;
+    var dispData = data[2]['data'];
+    // for(var [ind, val] of dates.entries()) {
+    //     dates[ind] = d3.timeParse("%d/%m/%Y")(val);
+    // }
+    // console.log(data[2]['data']);
+    // // append the svg object to the body of the page
+    var svg = d3.select(panelId)
+    .append("svg")
+    .attr("width", displayWidth)
+    .attr("height", displayHeight)
+    .append("g")
+    .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
+
+    // // Labels of row and columns
+    var myGroups = dates;
+    var myVars = dates;
+
+    // // Build X scales and axis:
+    var x = d3.scaleBand()
+    .range([ 0, width ])
+    .domain(myGroups)
+    .padding(0.01);
+    svg.append("g")
+    .style("font","7px times")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x))
+    .selectAll("text")
+    .style("text-anchor","end")
+    .attr("transform", "rotate(-60)")
+
+
+    // // Build X scales and axis:
+    var y = d3.scaleBand()
+    .range([ height, 0 ])
+    .domain(myVars)
+    .padding(0.01);
+    svg.append("g")
+    .style("font","7px times")
+    .call(d3.axisLeft(y));
+
+    // Build color scale
+    var myColor = d3.scaleLinear()
+    .range(["white", "#69b3a2"])
+    .domain([0,1])
+
+    // //Read the data
+    // d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/heatmap_data.csv", function(data) {
+
+    // // create a tooltip
+    // var tooltip = d3.select(panelId)
+    // .append("div")
+    // .style("opacity", 0)
+    // .attr("class", "tooltip")
+    // .style("background-color", "white")
+    // .style("border", "solid")
+    // .style("border-width", "2px")
+    // .style("border-radius", "5px")
+    // .style("padding", "5px")
+
+    // // Three function that change the tooltip when user hover / move / leave a cell
+    // var mouseover = function(d) {
+    // tooltip.style("opacity", 1)
+    // }
+    // var mousemove = function(d) {
+    // tooltip
+    //     .html("The exact value of<br>this cell is: " + d.value)
+    //     .style("left", (d3.mouse(this)[0]+70) + "px")
+    //     .style("top", (d3.mouse(this)[1]) + "px")
+    // }
+    // var mouseleave = function(d) {
+    // tooltip.style("opacity", 0)
+    // }
+
+    // // add the squares
+    // svg.selectAll()
+    // .data(data, function(d) {return d.group+':'+d.variable;})
+    // .enter()
+    const cellsize = x.bandwidth();
+    for([ind, val] of dispData.entries()) {
+        svg.append("rect")
+        .attr("x", function(d) { return cellsize*(Math.floor(ind%interval))})
+        .attr("y", function(d) { return cellsize*(Math.floor(ind/interval))})
+        .attr("width",  cellsize)
+        .attr("height", cellsize)
+        .style("fill", function(d) { return myColor(val)} );
+    }
+    
+    const matrixHeight = cellsize*interval
+    const colorbarHgt = matrixHeight*0.8;
+    const gap = 2;
+    const step = 0.001;
+    for(var ind of d3.range(0,1,step)) {
+        svg.append("rect")
+            .datum(ind+1)
+            .attr("x", width+cellsize*5)
+            .attr("y", 0.9*matrixHeight-ind*(colorbarHgt))
+            .attr("width", cellsize*2)
+            .attr("height",colorbarHgt*step)
+            .attr("fill",myColor(ind))
+      }
+      svg.append("text")
+      .attr("x",width+cellsize*2)
+      .attr("y",0.08*matrixHeight)
+      .text("Co-relation matrix")
+      .style("font-size",cellsize+"px");
+      svg.append("text")
+      .attr("x",width+cellsize*6+10)
+      .attr("y",0.1*matrixHeight+3*cellsize)
+      .text("1")
+      .style("font-size",2*cellsize+"px");;
+      svg.append("text")
+      .attr("x",width+cellsize*6+10)
+      .attr("y",0.9*matrixHeight)
+      .text("0")
+      .style("font-size",2*cellsize+"px");
+    // .on("mouseover", mouseover)
+    // .on("mousemove", mousemove)
+    // .on("mouseleave", mouseleave)
+    // })
+}
