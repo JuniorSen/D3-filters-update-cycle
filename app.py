@@ -303,38 +303,27 @@ def surveyPerformance(meta):
         matrixDat /= 4.0
         sys.stdout = save_stdout
     else:
-        print("second")
-        print(data)
         save_stdout = sys.stdout
         try:
-            print("thirdd")
             clusters = int(meta['f_opt'][1])
             # sys.stdout = open('trash', 'w')
             model = AgglomerativeClustering(n_clusters=clusters)
             matrixDat += co_association_matrix(model, data, days)
-            print(matrixDat)
             model = Birch(threshold=0.01, n_clusters=clusters)
             matrixDat += co_association_matrix(model, data, days)
-            print(matrixDat)
             model = KMeans(n_clusters=clusters)
             matrixDat += co_association_matrix(model, data, days)
-            print(matrixDat)
             model = MiniBatchKMeans(n_clusters=clusters)
             matrixDat += co_association_matrix(model, data, days)
-            print(matrixDat)
             model = SpectralClustering(n_clusters=clusters)
             matrixDat += co_association_matrix(model, data, days)
-            print(matrixDat)
             model = GaussianMixture(n_components=clusters)
             matrixDat += co_association_matrix(model, data, days)
-            print(matrixDat)
             matrixDat /= 6.0
-            # sys.stdout = save_stdout
-            print("fourth")
+            sys.stdout = save_stdout
         except:
             print("Couldn't convert string to int")
     
-    print(matrixDat)
     returnData = [{'panelId':meta['panelId']},{'dates':list(df['ActivityDate'].values)},{'data': list(matrixDat.flatten())}]
     # print("Hi",returnData)
     return returnData
