@@ -8,8 +8,9 @@ function p1Calendar(data) {
     data = Object.entries(data).slice(1,).map(entry => entry[1]);
     dates = Object.entries(data).map(entry => d3.timeParse("%Y-%m-%d")(entry[1]['ActivityDate']))
     values =  Object.entries(data).map(entry => (entry[1]['locations'][0]['proportion']))
+    console.log(data,"sigloc");
     const X = dates;
-    var curDay = X[0].getDay();
+    var curDay = ((X[0].getDay()-X[0].getDate())%7 + 7)%7;
     const availableDates = X.map(entry => entry.getDate());
     const totalDays = monthDays[X[0].getMonth()+1];
     const Y = values;
@@ -55,7 +56,7 @@ function p1Calendar(data) {
           .style("font-size",String(cellSize/3)+"px")
     }
     
-    points = d3.range(d3.min(Y),d3.max(Y),0.001).reverse();
+    points = d3.range(d3.min(Y),d3.max(Y),0.0005).reverse();
     sampleHeight = Math.ceil(X.length/7)*cellSize
 
     svg.append("text")

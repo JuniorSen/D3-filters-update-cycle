@@ -289,7 +289,6 @@ def surveyPerformance(meta):
     data = df.drop(columns=["ActivityDate"]).to_numpy()
     days = df.shape[0]
     matrixDat = np.zeros((days,days))
-    print(meta['f_opt'][1])
     if(meta['f_opt'][1] == "Natural"):
         save_stdout = sys.stdout
         sys.stdout = open('trash', 'w')
@@ -301,30 +300,41 @@ def surveyPerformance(meta):
         matrixDat += co_association_matrix(model, data, days)
         model = OPTICS(eps=0.1, min_samples=3)
         matrixDat += co_association_matrix(model, data, days)
-        matrixDat /= 4
+        matrixDat /= 4.0
         sys.stdout = save_stdout
     else:
+        print("second")
+        print(data)
         save_stdout = sys.stdout
         try:
+            print("thirdd")
             clusters = int(meta['f_opt'][1])
-            sys.stdout = open('trash', 'w')
+            # sys.stdout = open('trash', 'w')
             model = AgglomerativeClustering(n_clusters=clusters)
             matrixDat += co_association_matrix(model, data, days)
+            print(matrixDat)
             model = Birch(threshold=0.01, n_clusters=clusters)
             matrixDat += co_association_matrix(model, data, days)
+            print(matrixDat)
             model = KMeans(n_clusters=clusters)
             matrixDat += co_association_matrix(model, data, days)
+            print(matrixDat)
             model = MiniBatchKMeans(n_clusters=clusters)
             matrixDat += co_association_matrix(model, data, days)
+            print(matrixDat)
             model = SpectralClustering(n_clusters=clusters)
             matrixDat += co_association_matrix(model, data, days)
+            print(matrixDat)
             model = GaussianMixture(n_components=clusters)
             matrixDat += co_association_matrix(model, data, days)
-            matrixDat /= 6
-            sys.stdout = save_stdout
+            print(matrixDat)
+            matrixDat /= 6.0
+            # sys.stdout = save_stdout
+            print("fourth")
         except:
             print("Couldn't convert string to int")
-        
+    
+    print(matrixDat)
     returnData = [{'panelId':meta['panelId']},{'dates':list(df['ActivityDate'].values)},{'data': list(matrixDat.flatten())}]
     # print("Hi",returnData)
     return returnData

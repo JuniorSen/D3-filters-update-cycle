@@ -6,6 +6,7 @@ function calendarPie(data) {
     panelId = meta['panelId']
     data = Object.entries(data).slice(1,).map(entry => entry[1]);        
     dates = Object.entries(data).map(entry => d3.timeParse("%Y-%m-%d")(entry[1]['ActivityDate']));
+    console.log(data,"pie");
     values =  Object.entries(data).map(entry => (entry[1]['locations']));
     pieData = values[2];
     var margin = {top:40, left:20}
@@ -16,7 +17,7 @@ function calendarPie(data) {
     var displayHeight = document.getElementById(panelId.substring(1)).clientHeight;
     var displayWidth = document.getElementById(panelId.substring(1)).clientWidth;
     const X = dates;
-    var curDay = X[0].getDay();
+    var curDay = ((X[0].getDay()-X[0].getDate())%7 + 7)%7;
     const availableDates = X.map(entry => entry.getDate());
     const totalDays = monthDays[X[0].getMonth()+1];
     const Y = Object.entries(data).map(entry => (entry[1]['locations'][0]['proportion']));
@@ -71,12 +72,12 @@ function calendarPie(data) {
     points = d3.range(d3.min(Y),d3.max(Y),0.001).reverse();
     sampleHeight = Math.ceil(X.length/7)*cellSize
 
-
+    var valueInd = 0;
     console.log(I,"I")
     for(var ind of I) {
-        pieData = values[ind];
+        pieData = values[valueInd];
         // console.log(values,ind,pieData,ind);
-        if(!(typeof pieData === 'undefined') && Object.keys(pieData).length != 0) {
+        if(availableDates.includes(ind+1)) {
                 svg.selectAll('g')
                         .data(pie(pieData))
                         .enter()
@@ -88,16 +89,17 @@ function calendarPie(data) {
                         .attr("stroke", "black")
                         .attr('transform',"translate("+(curDay%7*cellSize+radius+1)+"+"+((Math.floor(curDay/7)+1)*cellSize+radius+1)+")")
                         .style("stroke-width", "1px")
-                        .style("opacity", 0.7)
+                        .style("opacity", 0.7);
+                valueInd += 1;
         }
         else {
                 svg.append("circle")
                 .attr("r",radius)
-                .attr('fill', "grey")
+                .attr('fill', "#999997")
                 .attr("cx",curDay%7*cellSize+radius+1)
                 .attr("cy",(Math.floor(curDay/7)+1)*cellSize+radius+1)
                 .style("stroke-width", "1px")
-                .style("opacity", 0.7)
+                .style("opacity", 1)
         }
         svg.append("text")
                 .attr("x", curDay%7*cellSize+1)
