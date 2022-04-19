@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/2b8039c5-561d-4776-a63b-6b1d4c04162b/resourceGroups/Comparative-Visualization-App_group/providers/Microsoft.Web/sites/Comparative-Visualization-App",
-    "appService.deploySubpath": "."
-}
