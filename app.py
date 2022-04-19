@@ -24,12 +24,9 @@ meta = {"meta1" : {'panelId':'#panel1Viz','f':None,'f_opt':[],'pid':"U1606505063
 
 state = {1:0, 2:0}
 
-@app.route("/")
-def test():
-    return "Hello World!"
 
 #homepage
-@app.route('/tp',methods=['GET','POST'])
+@app.route('/',methods=['GET','POST'])
 def index():
     p1ID = request.form.get('p1ID')
     p1Features = []
