@@ -1,4 +1,6 @@
 node_modules
 trash
 temp.txt
-
+__pycache__
+.vscode
+.github
