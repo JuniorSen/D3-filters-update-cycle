@@ -1,6 +1,5 @@
 from email import message
 from os import stat
-from attr import dataclass
 from flask import Flask,render_template,request,session,jsonify
 import csv
 import pandas as pd
@@ -21,6 +20,7 @@ from sklearn.cluster import MiniBatchKMeans
 from sklearn.cluster import SpectralClustering
 from sklearn.mixture import GaussianMixture
 import sys
+import json
 
 app = Flask(__name__) #create app instance
 app.secret_key = 'example' #store this in an environment variable for live apps.
@@ -342,3 +342,37 @@ def surveyViz():
         data2 = surveyPerformance(meta2)        
     # print("hello",data1, data2)
     return jsonify([data1,data2])
+
+@app.route("/matrix_seriation/<meta_number>", methods=['GET'])
+def matrix_seriation(meta_number):
+    return render_template("matrix_seriation.html", url="/matrix_data/" + meta_number)
+
+
+@app.route("/matrix_data/<meta_number>")
+def matrix_data(meta_number):
+    meta_mapping = {
+        "vis1": meta1,
+        "vis2": meta2,
+    }
+    data = surveyPerformance(meta_mapping[meta_number])
+    json_data = {
+        "nodes": [],
+        "links": []
+    }
+    dates = data[1]['dates']
+    values = data[2]['data']
+    count = 0
+    for i in range(len(dates)): 
+        for j in range(len(dates)): 
+            json_data["links"].append({
+                "source": i,
+                "target": j,
+                "value": values[count]
+            })
+            count += 1
+        json_data["nodes"].append({
+            "name": dates[i],
+            "group": 1
+        })
+
+    return jsonify(json_data)
