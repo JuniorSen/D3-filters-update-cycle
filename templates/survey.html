@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- <script>
+    console.log({{patientIds}});
+</script> -->
+    <div class="row">
+        <div class="col-2 align-self-start border" id="menu">
+            <div class="row">
+                <div class="col-12 border">
+                    <h3>Menu</h3>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-12 justify-content-center">
+                <form method="POST" action="/survey">
+                  <input type="submit" value="Survey Data">
+                </form>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 justify-content-center">
+                <form method="GET" action="/">
+                  <input type="submit" value="Main Menu">
+                </form>
+              </div>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="row justify-content-start">
+                <div class="col-6 align-self-start panel1 border" id="panel1">
+                  <h3>Patient 1</h3>
+                  <form method="POST" action="/survey">
+                      <label for="#patient1">ID:</label>
+                      <select id="patient1" name="patient1" onchange="this.form.submit()">
+                        <option value="{{ids[0]}}">{{ids[0]}}</option>
+                        {% for patient in patientIds %}
+                            <option value="{{patient}}">{{patient}}</option>
+                        {% endfor %}
+                    </select>
+                  </form>
+                </div>
+                <div class="col-6 align-self-start panel2 border" id="panel2">
+                    <h3>Patient 2</h3>
+                      <form method="POST" action="/survey">
+                          <label for="#patient2">ID:</label>
+                          <select id="patient2" name="patient2" onchange="this.form.submit()">
+                              <option value="{{ids[0]}}">{{ids[1]}}</option>
+                              {% for patient in patientIds %}
+                                  <option value="{{patient}}">{{patient}}</option>
+                              {% endfor %}
+                          </select>
+                      </form>
+                  </div>
+            </div>
+            <div class="row">
+                <div class="col-6 justify-content-center border" id="panel1Viz"></div>
+                <div class="col-6 justify-content-center border" id="panel2Viz"></div>
+            </div>
+            <div class="row">
+                <div class="col-12 form-check form-check-inline justify-content-center border" id="panelOptions">
+                    <form method="POST" action="/survey">
+                        {% if "mood" in ticked%}
+                            Mood  <input class="form-check-input checkbox" type="checkbox" name="SurveyCols" value="mood" checked/>   
+                        {% else %}
+                            Mood <input class="form-check-input checkbox" type="checkbox" name="SurveyCols" value="mood"/>
+                        {% endif %}   
+                        {% if "sleep" in ticked%}
+                            Sleep <input class="form-check-input checkbox" type="checkbox" name="SurveyCols" value="sleep" checked/>
+                        {% else %}
+                            Sleep <input class="form-check-input checkbox" type="checkbox" name="SurveyCols" value="sleep"/>
+                        {% endif %}
+                        {% if "social" in ticked %}
+                            Social <input class="form-check-input checkbox" type="checkbox" name="SurveyCols" value="social" checked/>
+                        {% else %}
+                            Social <input class="form-check-input checkbox" type="checkbox" name="SurveyCols" value="social"/>
+                        {% endif %}
+                        {% if 'anxiety' in ticked %}
+                            Anxiety <input class="form-check-input checkbox" type="checkbox" name="SurveyCols" value="anxiety" checked/>
+                        {% else %}
+                            Anxiety <input class="form-check-input checkbox" type="checkbox" name="SurveyCols" value="anxiety"/>
+                        {% endif %}
+                        {% if 'psychosis' in ticked %}
+                            Pyschosis <input class="form-check-input checkbox" type="checkbox" name="SurveyCols" value="psychosis" checked/>
+                        {% else %}
+                            Pyschosis <input class="form-check-input checkbox" type="checkbox" name="SurveyCols" value="psychosis"/>
+                        {% endif %}
+                        <input type="submit" value="Visualize!">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
